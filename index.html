@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>홍길동 | Publisher Portfolio</title>
+    <title>유승아 | Publisher Portfolio</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <h1 class="logo">홍길동</h1>
+      <div class="container header-inner">
+        <h1 class="logo">유승아</h1>
         <nav class="nav">
-          <a href="#about">소개</a>
-          <a href="#projects">프로젝트</a>
-          <a href="#skills">스킬</a>
-          <a href="#contact">연락</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
         </nav>
       </div>
     </header>
@@ -22,48 +20,70 @@
     <main>
       <section class="hero">
         <div class="container">
-          <p class="badge">Web Publisher</p>
-          <h2>UI를 탄탄하게, 접근성/반응형까지 깔끔하게.</h2>
-          <p class="sub">
-            마크업 구조화 · 반응형 · 웹접근성 · 크로스브라우징을 중심으로
-            작업합니다.
-          </p>
-          <div class="cta">
-            <a class="btn" href="#projects">작업물 보기</a>
-            <a class="btn ghost" href="#contact">연락하기</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <h3 class="section-title">소개</h3>
-          <p>
-            간단한 자기소개 2~3줄. 어떤 스타일로 일하는지, 강점이 뭔지 적어줘.
-          </p>
+          <p class="kicker">Web Publisher</p>
+          <h2 class="headline">Semantic · Responsive · Accessible</h2>
+          <p class="meta">React · Vue 퍼블리싱 · AG Grid / RealGrid 커스텀</p>
         </div>
       </section>
 
       <section id="projects" class="section">
         <div class="container">
-          <h3 class="section-title">프로젝트</h3>
+          <div class="section-head">
+            <h3>Projects</h3>
+          </div>
 
-          <div class="grid">
+          <div class="cards">
             <article class="card">
-              <h4>프로젝트명 1</h4>
-              <p>반응형 랜딩 페이지 / HTML·CSS·JS</p>
-              <div class="card-actions">
-                <a href="#" target="_blank" rel="noreferrer">Live</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <div class="card-top">
+                <h4>[SK텔레콤 서비스에이스] e-HR 모바일</h4>
+                <p class="card-meta">Markup · Mobile Web · Publishing List</p>
+              </div>
+              <div class="card-links">
+                <a
+                  href="./projects/project-01/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  List Open</a
+                >
               </div>
             </article>
 
             <article class="card">
-              <h4>프로젝트명 2</h4>
-              <p>웹접근성 개선 / 시맨틱 마크업</p>
-              <div class="card-actions">
-                <a href="#" target="_blank" rel="noreferrer">Live</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <div class="card-top">
+                <h4>[SK텔레콤 서비스에이스] e-HR 자기신고서</h4>
+                <p class="card-meta">Markup · Desktop Web · Publishing List</p>
+              </div>
+              <div class="card-links">
+                <a
+                  href="./projects/project-02/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  List Open</a
+                >
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <h4>한국체육산업개발 대관예약 시스템</h4>
+                <p class="card-meta">Markup · Responsive · Publishing List</p>
+              </div>
+              <div class="card-links">
+                <a
+                  href="./projects/project-03/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  List Open</a
+                >
+                <a
+                  href="https://www.ksponco.or.kr/culture/index.do"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Live</a
+                >
               </div>
             </article>
           </div>
@@ -72,42 +92,55 @@
 
       <section id="skills" class="section">
         <div class="container">
-          <h3 class="section-title">스킬</h3>
-          <ul class="tags">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>SCSS</li>
-            <li>JS</li>
-            <li>Responsive</li>
-            <li>A11y</li>
-            <li>Git</li>
-          </ul>
-        </div>
-      </section>
+          <div class="section-head">
+            <h3>Skills</h3>
+          </div>
 
-      <section id="contact" class="section">
-        <div class="container">
-          <h3 class="section-title">연락</h3>
-          <p>Email: your@email.com</p>
-          <p>
-            <a
-              href="https://github.com/username"
-              target="_blank"
-              rel="noreferrer"
-              >GitHub</a
-            >
-            ·
-            <a href="https://www.notion.so/" target="_blank" rel="noreferrer"
-              >Notion</a
-            >
-          </p>
+          <section class="skill-block">
+            <h4 class="skill-title">Framework</h4>
+            <ul class="chips">
+              <li>React</li>
+              <li>Vue</li>
+            </ul>
+          </section>
+
+          <section class="skill-block">
+            <h4 class="skill-title">UI Libraries</h4>
+            <ul class="chips">
+              <li>Ant Design (antd)</li>
+              <li>Element UI</li>
+              <li>Vuetify</li>
+            </ul>
+          </section>
+
+          <section class="skill-block">
+            <h4 class="skill-title">Grid</h4>
+            <ul class="chips">
+              <li>AG Grid</li>
+              <li>RealGrid</li>
+            </ul>
+          </section>
+
+          <section class="skill-block">
+            <h4 class="skill-title">Core</h4>
+            <ul class="chips">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SCSS</li>
+              <li>JavaScript</li>
+              <li>Responsive</li>
+              <li>Web Accessibility</li>
+              <li>Cross Browsing</li>
+              <li>Git</li>
+            </ul>
+          </section>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <small>© <span id="y"></span> 홍길동. All rights reserved.</small>
+        <small>© <span id="y"></span> 유승아</small>
       </div>
     </footer>
 
