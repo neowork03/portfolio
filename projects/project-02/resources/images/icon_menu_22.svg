@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="icon_menu_22" transform="translate(-30 -335)" opacity="0.7">
+    <g id="box" transform="translate(30 335)" fill="none" stroke="rgba(204,204,204,0)" stroke-miterlimit="10" stroke-width="1">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="icon">
+      <path id="패스_3250" data-name="패스 3250" d="M260.69,1147.512l3.752,4.449a.154.154,0,0,0,.234.007l5.808-8.538" transform="translate(-208.484 -788.43)" fill="none" stroke="#fefefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="패스_2371" data-name="패스 2371" d="M455.636,207H444.995A2,2,0,0,1,443,205.005v-18.01A2,2,0,0,1,444.995,185h10.641l3.572,3.476V195" transform="translate(-403 159)" fill="none" stroke="#fefefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

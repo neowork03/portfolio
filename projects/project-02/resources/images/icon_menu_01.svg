@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="icon_menu_01" transform="translate(-26 -121)" opacity="0.7">
+    <g id="box" transform="translate(26 121)" fill="none" stroke="rgba(204,204,204,0)" stroke-miterlimit="10" stroke-width="1">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="icon_menu_01-2" data-name="icon_menu_01" transform="translate(14 -163)">
+      <g id="그룹_908" data-name="그룹 908">
+        <path id="패스_2365" data-name="패스 2365" d="M234,207H222.783A1.9,1.9,0,0,1,221,205V187a1.9,1.9,0,0,1,1.783-2h14.434A1.9,1.9,0,0,1,239,187" transform="translate(-200 108)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_2366" data-name="패스 2366" d="M240,202h-1v-1.667a1.672,1.672,0,0,0,1.581-2.21A1.707,1.707,0,0,0,238.93,197h-4.86a1.707,1.707,0,0,0-1.651,1.123,1.672,1.672,0,0,0,1.581,2.21V202h-.857a2.5,2.5,0,1,0,0,5H240a2.5,2.5,0,1,0,0-5Z" transform="translate(-200 108)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <rect id="사각형_1905" data-name="사각형 1905" width="8" height="2" rx="1" transform="translate(26 297)" fill="#fff"/>
+      </g>
+      <rect id="사각형_1906" data-name="사각형 1906" width="2" height="10" transform="translate(38 295)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

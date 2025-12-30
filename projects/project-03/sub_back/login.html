@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>로그인 - 온라인예약시스템</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="description" content="올림픽스포츠센터 수강신청, 올림픽공원 테니스장, 축구장, 수영장, 미사경정공원 예약 등 " />
+<meta name="keyword" content="올림픽공원 스포츠센터 수강신청, 미사경정공원 대관, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="올림픽공원 스포츠센터 온라인예약시스템" />
+<meta name="naver-site-verification" content="b791ef9f800aaa9bb62231dfacf3559b31822fae" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+<script type='text/javascript'>
+	ssl_mapping();
+	function ssl_mapping() {
+		var currentAddress = location.href;
+		if (currentAddress.indexOf('http://') == 0
+				&& currentAddress.indexOf('localhost') < 0
+				&& currentAddress.indexOf('121.167.227.222') < 0) {
+			currentAddress = currentAddress.replace('http://', 'https://');
+			location.href = currentAddress;
+		}
+	}
+
+	$(document).ready(function() {
+		setPageInit();
+		setLogoutUrl("/online/SSOLegacy.do?pname=spLogout");
+		
+		// TODO : 모든 서브메인의 간편 예약신청 구현 후 제거해야함
+		// 서브메인의 간편예약 구현 시 not 영역에 container 클래스 추가
+		// ex ) not(.skate_main, .soccer_main)
+		/* $("#container:not(.skate_main, .soccer_main, .swim_main, .train_main, .parking_main, .edu_main)").find(".online_area a.btn_check").click(function() {
+			location.href = "./resrvtn_aplictn.do";
+		}); */
+	});
+</script>
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 온라인 예약 시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">올림픽테니스장</a>
+			</div>
+
+			<ul class="top_menu">
+				
+					
+					
+				<li><a href="./login.do">로그인</a></li>
+				<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/member/memjoin.do" target="_blank" title="새창">회원가입</a></li>
+					
+				
+				<li><a href="//www.ksponco.or.kr" target="_blank" title="새창">KSPO&amp;CO 바로가기</a></li>
+			</ul>
+		</div>
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+				
+					
+					
+						<li class="mo"><a href="./login.do">로그인</a></li>
+					
+				
+					<li class="pc"><a href="../" class="home">메인으로</a></li>
+					<li><a href="./basket_list.do" class="cart">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="mypage">신청내역</a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+				
+					
+					
+						<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/member/memjoin.do" class="icon ic02" target="_blank" title="새창">회원가입</a></li>
+					
+				
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+
+				<!-- [D] 2019-12-20 로그인정보 추가 -->
+				
+					
+					
+						<!-- 로그인 전 -->
+						<div class="login_before">
+							<a href="./login.do" class="btn_base off">로그인</a>
+						</div>
+					
+				
+				<!-- //[D] 2019-12-20 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+		
+	<!-- [D] 2019-12-12 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		<!-- [D] 2019-12-20 로그인정보 추가 -->
+		
+			
+			
+				<!-- 로그인 전 -->
+				<p class="login_before">
+					<a href="./login.do" class="btn_txt">로그인하기</a>
+				</p>
+			
+		
+		<!-- //[D] 2019-12-20 로그인정보 추가 -->
+		<ul class="all_menu">
+			<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+			<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+			<li><a href="./usage_guide.do">시설이용안내</a></li>
+			<li><a href="./directns.do">오시는길</a></li>
+		</ul>
+		<ul class="all_menu">
+			<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+			
+				
+				
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/member/memjoin.do" class="icon ic02" target="_blank" title="새창">회원가입</a></li>
+				
+			
+			<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+			<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+			<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+		</ul>
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+			
+		
+		
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area tennis_sub">
+			<div class="inner">
+				<p class="txt">
+					삶의 활력소와 건강까지 챙기세요
+					<strong class="stress">올림픽테니스장</strong>
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+		
+	
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="./resrvtn_aplictn.html">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.html">신청방법안내</a></li>
+					<li><a href="./usage_guide.html">시설이용안내</a></li>
+					<li><a href="./directns.html">오시는길</a></li>
+				</ul>
+
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="./resrvtn_aplictn.html">일일입장 예약신청</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./aplictn_guide.html">신청방법안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./usage_guide.html">시설이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./directns.html">오시는길</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			    		<!-- location -->
+			<div class="location_area">
+				<span class="menu">홈</span>
+				<span class="menu"></span>
+
+				<strong class="menu">로그인</strong>
+			</div>
+			<!-- //location -->
+
+			<!-- title -->
+			<div class="tit_area">
+				<h1 class="tit_type01">로그인</h1>
+			</div>
+			<!-- //title -->
+
+<form id="frm" name="frm" method="post" action="">
+<input type="hidden" id="hand_phone" name="hand_phone" />
+<input type="hidden" id="member_nm" name="member_nm" />
+<input type="hidden" id="birth_date" name="birth_date" />
+<input type="hidden" id="sex_code" name="sex_code" />
+<input type="hidden" id="referer" name="referer" />
+
+		
+		
+			
+			
+			
+			<div class="login_area">
+				<!-- 홈페이지 회원 -->
+				<div class="login_box">
+					<h2 class="tit">아이디로 로그인</h2>
+					<p class="login_form">
+						<span class="label">아이디</span>
+						<input type="text" id="user_id" name="user_id" class="c_input" title="아이디 입력" placeholder="아이디">
+					</p>
+					<p class="login_form">
+						<span class="label">비밀번호</span>
+						<input type="password" id="user_pwd" name="user_pwd" class="c_input" title="비밀번호 입력" placeholder="비밀번호" onkeypress="if (13 == event.keyCode) fn_login1();">
+					</p>
+					<p class="login_ect">
+						<span class="c_chk">
+							<input type="checkbox" id="saveId" name="saveId" onclick="setSaveId();">
+							<label for="saveId">아이디 저장</label>
+						</span>
+						<a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/memjoin.do" target="_blank" title="새창" class="btn_txt">회원가입</a>
+					</p>
+					<div class="btn_area">
+						<a href="#none" class="btn_base on" onclick="fn_login1();">로그인</a>
+						<a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/meminfo_check.do" target="_blank" title="새창" class="btn_base">아이디/비밀번호 찾기</a>
+					</div>
+				</div>
+				<!-- //홈페이지 회원 -->
+			</div>
+			
+			<h3 class="tit_info">알려드립니다</h3>
+			<ul class="txt_info">
+				<li><strong>스포츠센터 수강신청, 평생교육원</strong>은 <span class="txt_orange">회원번호 및 아이디</span>를 이용한 로그인이 모두 가능합니다. 단 온라인 회원인 경우 회원번호등록에서 회원번호를 만드셔야 회원번호로 로그인이 가능합니다.</li>
+				<li><strong>테니스장, 축구장, 수영장 레인대여, 미사리 경정공원, 스케이트장</strong>을 이용하실 경우 <span class="txt_orange">홈페이지 회원(아이디, 비밀번호)</span>로그인을 하시기 바랍니다.</li>
+				<li>회원번호 찾기는 회원가입 시 등록한 본인 명의의 휴대폰만 가능합니다.</li>
+			</ul>
+			
+		
+
+</form>
+
+<script type="text/javascript" defer="defer">
+$(document).ready(function() {
+	var userId = stringUtil.isNullCheck($.cookie("userId"));
+	if(userId != ""){
+	    $("#user_id").val(userId);
+	    $("#saveId").attr("checked","checked");
+	}
+
+	var userNo = stringUtil.isNullCheck($.cookie("userNo"));
+	if(userNo != ""){
+	    $("#user_id2").val(userNo);
+	    $("#saveNo").attr("checked","checked");
+	}
+
+	var userId3 = stringUtil.isNullCheck($.cookie("userId3"));
+	if(userId3 != ""){
+	    $("#acm_user_id").val(userId3);
+	    $("#saveId3").attr("checked","checked");
+	}
+});
+function setSaveId () {
+    var ischecked = $("#saveId").is(":checked");
+    if(ischecked){
+     	$.cookie("userId",$('#user_id').val(), { expires:365, path: '/' });
+    }else{
+     	$.cookie('userId', '', { expires: -1, path: '/' });
+    }
+}
+function setSaveNo () {
+    var ischecked = $("#saveNo").is(":checked");
+    if(ischecked){
+     	$.cookie("userNo",$('#user_id2').val(), { expires:365, path: '/' });
+    }else{
+     	$.cookie('userNo', '', { expires: -1, path: '/' });
+    }
+}
+
+function setSaveId3() {
+    var ischecked = $("#saveId3").is(":checked");
+    if(ischecked){
+     	$.cookie("userId3",$('#acm_user_id').val(), { expires:365, path: '/' });
+    }else{
+     	$.cookie('userId3', '', { expires: -1, path: '/' });
+    }
+}
+
+function fn_login1() {
+	if($('#user_id').val().length < 4){
+		alert("아이디를 4자 이상 입력해 주세요.");
+		$('#user_id').focus();
+		return;
+	}
+	if($('#user_pwd').val().length < 4){
+		alert("비밀번호를 4자 이상 입력해 주세요.");
+		$('#user_pwd').focus();
+		return;
+	}
+
+	setSaveId();
+
+	$.ajax({
+		url: "../login/login_check.do;jsessionid=lAQ2IvGiEU1u1RT0u985zsrvTUWbIBYtP9kYGMddVuU4nmpYSDfi3YzxiPzHISO7.newweb_servlet_online",
+		data: $("#frm").serialize(),
+		method: "POST",
+		dataType: "json",
+		success:function(data){
+			if (data.login_check < 1) {
+				alert('아이디 또는 비밀번호가 틀렸습니다. 확인 후 다시 로그인하시기 바랍니다.');
+				$('#frm').each( function (){ this.reset(); });
+				$('#user_id').focus();
+				return;
+			}
+			$("#frm").attr("action", "../login/login_submit.do");
+			$("#frm").submit();
+		},
+		error:function(){
+			alert('로그인 중 오류가 발생하였습니다.');
+			return;
+		}
+	});
+}
+function fn_login2() {
+	if($('#user_id2').val().length < 1){
+		alert("회원번호를 입력해 주세요.");
+		$('#user_id2').focus();
+		return;
+	}
+	if($('#user_pwd2').val().length != 6){
+		alert("생년월일 6자리를 입력해 주세요. (예)140101");
+		$('#user_pwd2').focus();
+		return;
+	}
+
+	setSaveNo();
+
+	$.ajax({
+		url: "../login/login_checkMember.do;jsessionid=lAQ2IvGiEU1u1RT0u985zsrvTUWbIBYtP9kYGMddVuU4nmpYSDfi3YzxiPzHISO7.newweb_servlet_online",
+		data: $("#frm").serialize(),
+		method: "POST",
+		dataType: "json",
+		success:function(data){
+			if (data.login_checkMember < 1) {
+				alert('회원번호 또는 생년월일이 틀렸습니다. 확인 후 다시 로그인하시기 바랍니다.');
+				$('#frm').each( function (){ this.reset(); });
+				$('#user_id2').focus();
+				return;
+			}
+			$("#frm").attr("action", "../login/login_submit2.do");
+			$("#frm").submit();
+		},
+		error:function(){
+			alert('로그인 중 오류가 발생하였습니다.');
+			return;
+		}
+	});
+}
+
+function fn_login3() {
+	if($('#acm_user_id').val().length < 4){
+		alert("아이디를 4자 이상 입력해 주세요.");
+		$('#acm_user_id').focus();
+		return;
+	}
+	if($('#acm_user_pwd').val().length < 4){
+		alert("비밀번호를 4자 이상 입력해 주세요.");
+		$('#acm_user_pwd').focus();
+		return;
+	}
+
+	setSaveId3();
+
+	$.ajax({
+		url: "../login/acm_login.do",
+		data: $("#frm").serialize(),
+		method: "POST",
+		dataType: "json",
+		success:function(data){
+			if (data.error_msg) {
+				alert(data.error_msg);
+				$('#frm').each( function (){ this.reset(); });
+				$('#acm_user_id').focus();
+				return;
+			}
+			location.replace(document.referrer);
+		},
+		error:function(){
+			alert('로그인 중 오류가 발생하였습니다.');
+			return;
+		}
+	});
+}
+
+// 회원번호 찾기
+// byVal : cert:휴대폰, ipin:아이핀
+function fn_idFind(byVal)
+{
+	if (byVal == "ipin") {
+		window.open('../login/ipin_request.do', 'IPINWindow', 'width=450, height=500, resizable=0, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200' );
+	}
+	else {
+		//한국모바일인증 휴대폰 본인확인 팝업페이지를 띄웁니다.
+		window.open("../login/cert_request.do", 'CertWin','width=425, height=550');
+	}
+}
+
+// 회원번호 찾기 휴대폰 본인확인 후 처리
+function fn_goFindId(txtPhone_no, txtNm, txtBirth_Y_Md, txtSex_Cd )
+{
+	$('#hand_phone').val(txtPhone_no);
+	$('#member_nm').val(txtNm);
+	$('#birth_date').val(txtBirth_Y_Md);
+	$('#sex_code').val(txtSex_Cd);
+
+	document.getElementById("frm").action = "./login_check_2.do";
+    document.getElementById("frm").submit();
+}
+</script>
+
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/company/traffic.do" target="_blank" title="새창">찾아오시는길</a></li>
+					<li><a href="./sitemap.do">사이트맵</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="../skate/index.do" class="logo"><img src="../images/common/foot_logo.gif" alt="한국체육산업개발주식회사"></a>
+				<div class="mark_area">
+					<a href="#none"><img src="../images/common/icon_mark01.gif" alt="웹접근성품질인증마크"><span class="txt">웹접근성품질인증</span></a>
+					<a href="#none"><img src="../images/common/icon_mark02.gif" alt="개인정보보호우수사이트 인증마크"><span class="txt">개인정보보호<br>우수사이트 인증</span></a>
+				</div>
+				<div class="info">
+					<p class="company">사업자등록번호 : 215-81-12034, 대표자 : 김사엽</p>
+					<address>
+						주소 (05540) 서울시 송파구 올림픽로 424(방이동) 올림픽역도경기장 내
+					</address>
+					<p class="copyright">COPYRIGHT 2019 © KSPO&amp;CO ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

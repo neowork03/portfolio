@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="e-HR" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>e-HR</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr_custom.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script type="text/javascript" src="../flatpickr/ko.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>휴가 신청</h1>
+				<a href="#" class="btnNav" role="button"><span>Menu</span></a>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container bgColor2">
+				<!-- content -->
+				<div class="content">
+					<!-- contTopWrap -->
+					<div class="contTopWrap">
+						<div class="formWrap">
+							<div class="fieldGroup">
+								<!-- <span class="tit">휴가 유형</span> -->
+								<select class="select col" title="휴가 유형">
+									<option value="">휴가 유형</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- //contTopWrap -->
+
+					<!-- formWrap -->
+					<div class="formWrap">
+						<div class="formHolder">
+							<strong class="tit">시작일</strong>
+							<div class="cal">
+								<div class="inputList">
+									<input
+										type="text"
+										id="calender"
+										title="날짜선택 입력"
+										placeholder="날짜선택을 입력해 주세요."
+									/>
+									<a
+										href="#"
+										class="btnCalendar"
+										title="날짜선택 새창열림"
+										role="button"
+										><span class="blind">날짜선택</span></a
+									>
+								</div>
+							</div>
+						</div>
+						<strong class="tit">시간</strong>
+						<!-- radioList -->
+						<div class="formArray">
+							<div class="radioList">
+								<input type="radio" id="rdo11" name="aa" checked="checked" />
+								<label for="rdo11">오전</label>
+							</div>
+							<div class="radioList">
+								<input type="radio" id="rdo12" name="aa" />
+								<label for="rdo12">오후</label>
+							</div>
+						</div>
+						<!--// radioList -->
+						<div class="formHolder">
+							<strong class="tit">종료일</strong>
+							<div class="cal">
+								<div class="inputList">
+									<input
+										type="text"
+										id="calender2"
+										title="날짜선택 입력"
+										placeholder="날짜선택을 입력해 주세요."
+									/>
+									<a
+										href="#"
+										class="btnCalendar"
+										title="날짜선택 새창열림"
+										role="button"
+										><span class="blind">날짜선택</span></a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="formHolder">
+							<strong class="tit">일수</strong>
+							<div class="inputList">
+								<input type="text" title="타이틀 입력" placeholder="4일" />
+								<!-- <a href="#" title="입력내용삭제" class="btnReset" role="button"
+									>입력내용삭제</a
+								> -->
+							</div>
+						</div>
+						<div class="formHolder">
+							<strong class="tit">사유</strong>
+							<!--  textarea -->
+							<div class="areaList">
+								<textarea
+									class=""
+									rows="3"
+									id=""
+									placeholder="내용을 입력하세요"
+									title="내용을 입력해주세요."
+								></textarea>
+							</div>
+							<!--  //textarea -->
+						</div>
+					</div>
+					<!-- //formWrap -->
+
+					<!--  button -->
+					<div class="btnWrap inr">
+						<button type="button" class="btn btnCancel">취소</button>
+						<button type="button" class="btn">신청</button>
+					</div>
+					<!--  //button -->
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<!-- <div class="footer">
+				<div class="copyright">© TELECOM SERVICE Corp.</div>
+			</div> -->
+			<!-- //footer -->
+		</div>
+		<!--  Flatpickr  -->
+		<script>
+			flatpickr.localize(flatpickr.l10ns.ko);
+			flatpickr("#calender");
+			$("#calender").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+			$("#calender2").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+		</script>
+		<!-- // Flatpickr  -->
+	</body>
+</html>

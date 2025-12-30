@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta name="description" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="keyword" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+
+<title>한국체육산업개발주식회사 - 대관예약시스템</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 대관예약시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">대관예약시스템</a>
+			</div>
+		</div>
+		
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+					<li><a href="#" class="logout">로그인</a></li>
+					<li><a href="#" >회원가입</a></li>
+					<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창"><span> KSPO&amp;CO 바로가기</span></a></li>
+				</ul>
+			</nav>
+			
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+				<!-- [D] 로그인정보 추가 -->
+						<!-- 로그인 후 -->
+						<div class="login_after">
+							<div class="login_inner">
+								<p class="txt">유승아님 안녕하세요.</p>
+								<a href="#" class="btn_base mid logout">로그아웃</a>
+							</div>
+						</div>
+				<!-- //[D] 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+				
+	<!-- 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		
+		<h3 class="stit">대관예약절차안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관예약절차</a></li>
+			<li><a href="#">올림픽 시설물 대관운영 규정</a></li>
+			<li><a href="#">올림픽 시설물 대관시행 세칙</a></li>
+		</ul>
+		
+		<h3 class="stit">대관이용안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">Q&A</a></li>
+			<li><a href="#">담당자 연락처</a></li>
+		</ul>
+		
+		<h3 class="stit">대관예약</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관 모의계산기</a></li>
+			<li><a href="#">대관 신청서 작성</a></li>
+		</ul>
+		
+		<h3 class="stit">마이페이지</h3>
+		<ul class="all_menu">
+			<li><a href="#">회원정보 수정</a></li>
+			<li><a href="#">신청내역 확인</a></li>
+			<li><a href="#">서브계정 추가</a></li>
+		</ul>
+	
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	 <!--//모바일-전체메뉴 -->
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area culture_sub">
+			<div class="inner">
+				<p class="txt">					
+					<strong class="stress">대관예약시스템</strong>
+					올림픽시설물 대관은<br> 편리하게 안전하게, 투명하게 운영됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="#" class="">대관예약절차안내</a></li>
+					<li><a href="#">대관이용안내</a></li>
+					<li><a href="#">대관예약</a></li>
+					<li><a href="#" class="">마이페이지</a></li>
+				</ul>
+
+				<!-- 모바일-2nd메뉴 -->	
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="#">대관예약절차안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관예약</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">마이페이지</a></div>
+						</div>
+					</div>
+					<!--//Swiper -->
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			<form id="frm" method="GET">
+				<!-- <input type="hidden" name="notice_seq" /> -->
+				<input type="hidden" name="pageIndex" value="1" />
+				<input type="hidden" name="type_gbn" value="" />
+				<!-- location -->
+				<div class="location_area">
+					<span class="menu">홈</span>
+					<span class="menu">대관예약절차안내</span>
+					<strong class="menu">올림픽시설물 대관 운영 시행세칙</strong>
+				</div>
+				<!-- //location -->
+           
+				<!-- title -->
+				<div class="tit_area">
+					<h1 class="tit_type01">올림픽시설물 대관 운영 시행세칙</h1>
+				</div>
+				<!-- //title -->
+				
+			<!-- tab -->
+			<ul class="tab_list_ty2">
+				<li><a href="GUI-01-30.html"><span class="line">제1장 총칙</span></a></li>
+				<li><a href="?tab_no=2"><span class="line">제2장 대관운영(제1절)</span></a></li>
+				<li><a href="?tab_no=3"><span class="line">제2장 대관운영(제2절)</span></a></li>
+				<li><a href="?tab_no=4"><span class="line">제2장 대관운영(제3절)</span></a></li>
+				<li><a href="?tab_no=5"><span class="line">제3장 입장 및 안전관리, 광고 등</span></a></li>
+				<li><a href="?tab_no=6"><span class="line">제4장 시설관리</span></a></li>
+				<li><a href="?tab_no=6"><span class="line">제5장 양도 및 전대금지 등</span></a></li>
+				<li><a href="?tab_no=6"><span class="line">부칙등</span></a></li>
+			</ul>
+			<!-- //tab -->
+				
+			<!-- 시행세칙 -->			
+			<div class="privacy_con">
+				<h4 class="mt0">제3장  입장 및 안전관리, 광고 등</h4>
+
+				<h5>제 15 조 (호수면 대관)</h5>
+				<p>호수면 대관은 국민체육진흥법 제2조에서 정한 경기단체 중 대한체육회, 대한장애인체육회의 회원종목단체 및 가맹단체에서 주최 또는 주관하여 등록된 선수들이 행하는 
+					운동경기에 대해 대관을 승인한다.</p>
+				
+				<h5>제 16 조 (대관료의 납부)</h5>
+				<ul class="txt_num">
+					<li><span class="num">1</span> 대관사용자가 시설물을 대관하기 위해서는 예상대관료를 지정한 기일 내에 납부하여야 하며 기한 내 미납 시는 대관승인을 취소할 수 있다.</li>
+					<li><span class="num">2</span> 계약금 및 잔금의 납입기일은 사용예정일이 60일 이내인 경우에는 대관승인일로부터 10일 이내 지정일까지 납부하여야 하며, 사용예정일이 60일 이후인 경우에는 계약금은 14일 이내, 잔금은 30일 전까지 납부함을 원칙으로 한다. 단, 대관 신청자가 정당한 사유로 잔금 납부기일을 연기 요청할 경우 행사 예정일 10일 전까지 납부기일을 연기할 수 있다.</li>
+					<li><span class="num">3</span> 계약금은 예상대관료의 30%로 한다.</li>
+				</ul>
+				
+				<h5>제 17 조 (대관료 계산방법)</h5>
+				<ul class="txt_num">
+					<li><span class="num">1</span> 규정 제4조 4호에 의한 대관료의 계산은 대관요율표에 의하며, 기본대관료 구간산정은 준비, 행사진행기간 및 철거작업 등을 포함한 실사용 구간을 말한다.</li>
+					<li><span class="num">2</span> 대관사용자가 승인 받은 대관기간 전후로 초과하여 사용하였을 경우에는 다음 각 호의 초과사용료를 징수한다.
+						<ul class="txt_num2">
+							<li>① 2시간 이하는 해당 기본대관료의 20% 징수	</li>
+							<li>② 2시간 초과 ～ 3시간 이하는 해당 기본대관료의 40% 징수</li>
+							<li>③ 3시간 초과 ～ 4시간 이하는 해당 기본대관료의 60% 징수</li>
+							<li>④ 4시간 초과 시는 해당 기본대관료의 100% 징수</li>
+						</ul>	
+					</li>
+					<li><span class="num">3</span> 장기행사시 기본대관료 계산방법은 다음과 같다.
+						<ul class="txt_num2">
+							<li>① 장기행사라 함은 행사준비 및 철거기간을 제외한 실제 행사기간이 7일 이상인 행사를 말한다.</li>
+							<li>② 장기행사의 기본대관료 계산방법은 실사용구간만 징수한다.</li>
+						</ul>							
+					</li>
+				</ul>
+				
+				<h5>제 18 조 (대관료 정산) </h5>
+				<ul class="txt_num">
+					<li><span class="num">1</span>체육산업은 대관에 따른 시설사용이 종료된 후 20일 이내에 예상대관료와 실제 발생한 대관료를 정산하여 부족한 대관료는 대관사용자로 
+						하여금 추가납부토록 조치하고, 예상대관료가 실제 발생한 대관료를 초과하였을 경우에는 이를 대관사용자에게 환불하여야 한다.</li>
+					<li><span class="num">2</span> 제1항의 대관사용자가 추가 납부하여야 할 대관료의 납부기일은 납부통지일로부터 20일 이내로 하며, 납부지정일을 초과할 때에는 매 지체일수마다 연리 15%의 연체료를 부과한다.</li>
+				</ul>
+				
+				<h5>제 19 조 (대관료의 반환)</h5>
+				<ul class="txt_num">
+					<li><span class="num">1</span>체육산업의 귀책사유 및 재난 또는 이에 준하는 사회적 문제로 시설사용이 불가능하거나 행사가 이루어 지지 못 할 경우 체육산업은 예상대관료 전액을 반환하여야 하며, 대관 사용자는 이로 인한 손해배상을 청구하지 못한다. 단, 재난 또는 이에 준하는 사회적 문제로 인한 대관료 반환은 공정성을 기하기 위해 규정 제10조에 의거 대관심사 위원회에서 결정한다. 다만, 기본대관료가 300만원 이하인 옥외행사의 경우 우천, 미세먼지 나쁨상태 등 기상 상태로 인해 행사진행이 어려워 대관 사용자가 명확한 증빙자료와 함께 취소 요청할 경우와 전염병 위기경보가 ‘심각’ 이상인 단계에서 대관사용자가 취소 요청할 경우에는 대관료 반환 심의 절차를 생략할 수 있다.</li>
+					<li><span class="num">2</span>규정 제13조에 의해 대관승인이 취소되는 경우에는 예상대관료 중 기본대관료를 반환하지 않는다.</li>
+					<li><span class="num">3</span>규정 제14조에 의해 시설사용이 중지되었을 경우에는 예상대관료에서 사용한 기간의 대관료와 잔여기간의 기본대관료를 반환 하지 않는다.</li>
+				</ul>		
+				
+				<h5>제 20 조 (취소위약금)</h5>
+				<ul class="txt_num">
+					<li><span class="num">1</span>대관사용자가 대관승인을 받은 후 대관신청을 취소할 경우 다음 각 호의 기준에 의거 위약금을 징수한다.
+						<ul class="txt_num2">
+							<li>① 계약금 납부 후 취소 시는 사용예정일과 관계없이 계약금 전액	</li>
+							<li>② 잔금 납부 후 취소 시
+								<ul class="txt_basic">
+									<li>가. 사용예정일 10일전은 계약금에 기본대관료의 20%를 합산한 금액</li>
+									<li>나. 사용예정일 7일전은 계약금에 기본대관료의 50%를 합산한 금액.</li>
+									<li>다. 사용예정일 1일전은 계약금에 기본대관료 전액을 합산한 금액</li>
+								</ul>								
+							</li>
+						</ul>	
+					</li>
+					<li><span class="num">2</span> 취소위약금은 예상대관료를 초과하여 징수하지 않는다.</li>					
+					<li><span class="num">3</span> 전항 각호에 명시한 사용예정일이라 함은 대관승인기간중의 첫째날을 말한다.</li>
+					<li><span class="num">4</span> 대관승인이 확정된 후 대관사용자가 대관기간을 변경하는 경우에는 대관사용을 취소한 것으로 본다. 다만, 체육산업과 대관사용자가 대관기간 전에 상호 협의하여 일정을 조정할 경우에는 그러하지 아니한다.</li>
+					<li><span class="num">5</span> 제1항의 기간계산은 대관사용자가 대관취소신청서(서식 제2호)를 접수시킨 날로부터 대관사용예정일 전일까지로 한다.</li>
+				</ul>				
+				
+				<h5>제 21 조 (대관장소 시설물 설치 금지)</h5>
+				<p>옥외시설 잔디지역의 대관행사시 천막 등 시설물 설치는 금지한다. 부득이 행사진행에 필요할 경우 설치수수료를 징수한다.</p>	
+							
+			</div>
+	        <!-- //시행세칙 -->					
+		
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+        
+
+	</div>
+	<!-- //container -->
+    
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="sub/GUI-02-10.html" target="_blank" title="새창">대관이용안내</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="#" class="logo"></a>
+				<div class="info">
+					<address>
+						서울시 송파구 올림픽로 424 올림픽역도경기장내 (05540)
+					</address>
+					<p>
+					    <ul class="company">	
+							<li>사업자등록번호 : 215-81-12034</li>
+							<li>대표자 : 김사엽 </li>
+							<li>고객안내전화 : 02-2180-3564 </li>
+							<li>팩스 : 0000-0000 </li>
+						</ul>	
+					</p>
+					<p class="copyright">COPYRIGHT 2020 © KSPO&amp;CO. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

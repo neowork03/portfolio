@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1440" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>자기 신고서 작성|e-HR 서비스에이스</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/style.css" />
+    <script
+      type="text/javascript"
+      src="../resources/js/jquery-3.6.0.js"
+    ></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- Top menu -->
+      <header>
+        <h1>
+          <a href="main.html"
+            ><img
+              src="../resources/images/logo.svg"
+              alt="서비스에이스|SK텔레콤"
+          /></a>
+        </h1>
+        <ul class="my_info">
+          <li><span class="info">info</span>홍길동님</li>
+          <li>
+            <a href="#"><span class="logout">logout</span>로그아웃</a>
+          </li>
+        </ul>
+      </header>
+      <!-- //Top menu -->
+      <!-- container -->
+      <div id="container">
+        <!-- SNB -->
+        <div id="snb">
+          <a href="main.html" class="home">Home</a>
+          <div class="snb_title">
+            <span>e-HR 자기 신고서</span>
+          </div>
+          <ul class="nav">
+            <li>
+              <a href="#"
+                ><span class="icon menu01"></span
+                ><span>자기 신고서 생성</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="icon menu02"></span
+                ><span>자기 신고서 변경</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="icon menu03"></span
+                ><span>자기 신고서 검수자 관리</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="icon menu04"></span
+                ><span>평가 키워드 관리</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="selected"
+                ><span class="icon menu05"></span
+                ><span>자기 신고서 작성 현황</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- //SNB -->
+        <!-- Contents -->
+        <div class="contents">
+          <!-- title_area -->
+          <div class="title_area">
+            <nav class="breadcrumb">
+              <a href="#">Home</a>
+              <span>자기 신고서 작성현황</span>
+              <strong>조직별 세부 현황</strong>
+            </nav>
+            <h3 class="title">조직별 세부 현황</h3>
+          </div>
+          <!-- //title_area -->
+
+          <!-- cont -->
+          <div class="cont">
+            <!-- 현황 -->
+            <section >
+                <div class="org_box">
+                    <!-- head_area -->
+                     <div class="head_area">
+                        <dl>
+                            <dt>조직선택</dt>
+                            <dd>
+                                <div class="select" style="width: 250px">
+                                    <label for="select1-1" class="trigger"><span>전체</span><i class="icon"></i></label>
+                                    <select id="select1-1">
+                                        <option value="" selected="">option 1</option>
+                                        <option value="">option 2</option>
+                                        <option value="">option 3</option>
+                                        <option value="">option 4</option>
+                                    </select>
+                                    </div>
+                            </dd>
+                        </dl>
+                  </div>
+                  <!-- //head_area -->
+                </div>
+                  
+              <div class="org_wrap box_wrap">
+                <!-- 조직이름 -->
+                <div class="box">
+                  <div class="organ type01">
+                    <div class="icon"></div>
+                    <dl>
+                      <dt class="">조직이름</dt>
+                      <dd>경영지원본부</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- //조직이름 -->
+                <!-- 대상자 수 -->
+                <div class="box">
+                  <div class="organ type02">
+                    <div class="icon"></div>
+                    <dl>
+                      <dt>대상자수</dt>
+                      <dd>
+                        <span class="count">3,200</span><em>명</em>
+                    </dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- //대상자 수 -->
+                <!--자기신고서 작성 완료-->
+                <div class="box">
+                  <div class="organ type03">
+                    <div class="icon"></div>
+                    <dl>
+                      <dt>자기신고서 작성 완료</dt>
+                      <dd>
+                        <span class="count">2,200</span><em>명</em>
+                    </dd>
+                    </dl>
+                  </div>
+                </div>
+                <!--//자기신고서 작성 완료-->
+                <!--평가자 F/B 완료-->
+                <div class="box">
+                  <div class="organ type04">
+                    <div class="icon"></div>
+                    <dl>
+                      <dt>평가자 F/B 완료</dt>
+                      <dd>
+                        <span class="count">1,800</span><em>명</em>
+                    </dd>
+                    </dl>
+                </div>
+                <!--//평가자 F/B 완료-->
+              </div>
+            </section>
+            <!-- // 현황 -->
+
+               <div class="table_top">
+                  <h3></h3>
+                    <div class="btn_wrap right">
+                      <button class="border btn exl">엑셀다운</button>
+                    </div>
+                  </div>   
+                <div class="table_box_wrap bT ">
+                  <!-- box -->
+                  <div class="box bL mgb20">
+                    <!-- board_list -->
+                    <div class="board_list nobor">
+                      <table class="list">
+                        <caption>
+                          항목 상세 표
+                        </caption>
+                        <colgroup>                          
+                          <col style="width: 12%">
+                          <col style="width: 12%">
+                          <col style="width: 15%">
+                          <col>
+                          <col style="width: 16%">
+                          <col style="width: 15%">
+                          <col style="width: 15%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                          <th scope="row" colspan="7" class="point">
+                            평가자 <span>2</span>명
+                          </th>
+                        </tr>
+                          <tr>
+                            <th scope="row">사번</th>
+                            <th scope="row">성명</th>
+                            <th scope="row">본부</th>
+                            <th scope="row">팀/센터</th>
+                            <th scope="row">그룹</th>
+                            <th scope="row">직책</th>
+                            <th scope="row">자기신고서</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                             <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- //board_list -->
+                  </div>
+                  <!-- //box -->
+                  <!-- box -->
+                  <div class="box mgb20">
+                    <!-- board_list -->
+                    <div class="board_list nobor">
+                      <table class="list">
+                        <caption>
+                          항목 상세 표
+                        </caption>
+                        <colgroup>                          
+                          <col style="width: 12%">
+                          <col style="width: 12%">
+                          <col style="width: 15%">
+                          <col>
+                          <col style="width: 16%">
+                          <col style="width: 15%">
+                          <col style="width: 15%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                          <th scope="row" colspan="7" class="point">
+                            피평가자 <span>2</span>명
+                          </th>
+                        </tr>
+                          <tr>
+                            <th scope="row">사번</th>
+                            <th scope="row">성명</th>
+                            <th scope="row">본부</th>
+                            <th scope="row">팀/센터</th>
+                            <th scope="row">그룹</th>
+                            <th scope="row">직책</th>
+                            <th scope="row">자기신고서</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                             <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101003</td>
+                            <td>홍길동</td>
+                            <td>경영지원본부</td>
+                            <td>경영기획팀</td>
+                            <td>CS마케팅3그룹</td>
+                            <td>고객보호실장</td>
+                            <td>제출완료</td>
+                          </tr>
+                          <tr>
+                            <td>1101002</td>
+                            <td>홍길동</td>
+                            <td>유선본부</td>
+                            <td>무선사업지원센터</td>
+                            <td>로밍2그룹</td>
+                            <td>그룹장</td>
+                            <td>제출완료</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- //board_list -->
+                  </div>
+                  <!-- //box -->
+                </div>
+          </div>
+          <!-- //cont -->
+        </div>
+        <!-- //Contents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

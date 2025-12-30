@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="e-HR" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>e-HR</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr_custom.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script type="text/javascript" src="../flatpickr/ko.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>건강관리</h1>
+				<a href="#" class="btnNav" role="button"><span>Menu</span></a>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container bgColor3">
+				<!-- content -->
+				<div class="content">
+					<!-- contTopWrap -->
+					<div class="contTopWrap">
+						<div class="formWrap">
+							<div class="fieldGroup">
+								<span class="topGuide"
+									>확진시 담당자에게 즉시 연락하길 바랍니다.</span
+								>
+							</div>
+						</div>
+					</div>
+					<!-- //contTopWrap -->
+
+					<!-- formWrap -->
+					<div class="formWrap">
+						<div class="formHolder">
+							<strong class="tit">확진일</strong>
+							<div class="cal">
+								<div class="inputList">
+									<input
+										type="text"
+										id="calender"
+										title="날짜선택 입력"
+										placeholder="날짜선택을 입력해 주세요."
+									/>
+									<a
+										href="#"
+										class="btnCalendar"
+										title="날짜선택 새창열림"
+										role="button"
+										><span class="blind">날짜선택</span></a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="formHolder">
+							<strong class="tit">확진경로</strong>
+							<select class="select" title="구분">
+								<option value="">선택</option>
+							</select>
+						</div>
+						<div class="formHolder">
+							<strong class="tit">격리해제일</strong>
+							<div class="cal">
+								<div class="inputList">
+									<input
+										type="text"
+										id="calender2"
+										title="날짜선택 입력"
+										placeholder="날짜선택을 입력해 주세요."
+									/>
+									<a
+										href="#"
+										class="btnCalendar"
+										title="날짜선택 새창열림"
+										role="button"
+										><span class="blind">날짜선택</span></a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="formHolder">
+							<strong class="tit">특이사항</strong>
+							<!--  textarea -->
+							<div class="areaList">
+								<textarea
+									class=""
+									rows="3"
+									id=""
+									placeholder="내용을 입력하세요"
+									title="내용을 입력해주세요."
+								></textarea>
+							</div>
+							<!--  //textarea -->
+						</div>
+					</div>
+					<!-- //formWrap -->
+					<!--  button_full -->
+					<div class="btnWrap inr">
+						<button type="button" class="btn full">제출</button>
+					</div>
+					<!--  // button_full -->
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<!-- <div class="footer">
+				<div class="copyright">© TELECOM SERVICE Corp.</div>
+			</div> -->
+			<!-- //footer -->
+		</div>
+		<!--  Flatpickr  -->
+		<script>
+			flatpickr.localize(flatpickr.l10ns.ko);
+			flatpickr("#calender");
+			$("#calender").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+			$("#calender2").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+		</script>
+		<!-- // Flatpickr  -->
+	</body>
+</html>

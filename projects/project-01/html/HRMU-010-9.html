@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="e-HR" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="#" />
+    <title>e-HR</title>
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+  </head>
+  <body>
+    <!-- wrapper -->
+    <div class="wrapper">
+      <!-- header -->
+      <div class="header">
+        <a href="#" class="btnBack" role="button"><span>Back</span></a>
+        <h1>popup</h1>
+        <a href="#" class="btnNav" role="button"><span>Menu</span></a>
+      </div>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- content -->
+        <div class="content">
+          <br /><br /><br />
+          <!-- 센터 팝업 호출:Confirm -->
+          <div class="btnWrap pop">
+            <button
+              type="button"
+              class="btn"
+              onclick="fullLayerPop();return false;"
+            >
+              팝업(Full Layer)
+            </button>
+          </div>
+
+          <!-- popWrap -->
+          <div class="popWrap fullLayerPop">
+            <div class="popInner">
+              <h1>일별근무현황(미계획휴무자상세)</h1>
+              <div class="popCont">
+                <!--wrapTblDefault -->
+					<div class="wrapTblDefault">
+						<div class="tblHeader">
+							<h2 class="defTit">미계획휴무자상세</h2>
+						</div>
+						<table cellpadding="0" cellspacing="0" class="thCenter">
+							<caption>
+								테이블 제목 정보 입력
+							</caption>
+							<colgroup>
+								<col style="width: auto" />
+								<col style="width: 18%" />								
+								<col style="width: 18%" />
+								<col style="width: 18%" />
+							</colgroup>
+							<thead>
+								<tr class="type2">
+									<th scope="col">부서</th>
+									<th scope="col">내근</th>
+									<th scope="col">재택</th>
+									<th scope="col">재택율</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="al">유선본부</th>
+									<td>45</td>
+									<td>12</td>
+									<td>88%</td>
+								</tr>
+								<tr>
+									<td class="al">무선본부</th>
+									<td>45</td>
+									<td>12</td>
+									<td>88%</td>
+								</tr>
+								<tr>
+									<td class="al">마케팅본부</th>
+									<td>45</td>
+									<td>12</td>
+									<td>88%</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td>합계</th>
+									<td>78</td>
+									<td>20</td>
+									<td>88%</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				<!-- //wrapTblDefault -->	
+                <br/>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+                <p>스크롤 테스트입니다.</p>
+              </div>
+
+              <div class="popBtnWrap">
+                <a
+                  href="javascript:;"
+                  onclick="popClose(this);return false;"
+                  class="popClose"
+                  title="해당 창을 닫습니다." 
+                  ></a>
+              </div>
+            </div>
+          </div>
+          <!-- //popWrap -->
+        </div>
+        <!-- //content -->
+      </div>
+      <!-- //container -->
+    </div>
+  </body>
+</html>

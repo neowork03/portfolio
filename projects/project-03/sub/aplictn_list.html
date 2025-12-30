@@ -1,0 +1,1695 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>올림픽테니스장 - 온라인예약시스템</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="description" content="올림픽스포츠센터 수강신청, 올림픽공원 테니스장, 축구장, 수영장, 미사경정공원 예약 등 " />
+<meta name="keyword" content="올림픽공원 스포츠센터 수강신청, 미사경정공원 대관, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="올림픽공원 스포츠센터 온라인예약시스템" />
+<meta name="naver-site-verification" content="b791ef9f800aaa9bb62231dfacf3559b31822fae" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+<script type='text/javascript'>
+	ssl_mapping();
+	function ssl_mapping() {
+		var currentAddress = location.href;
+		if (currentAddress.indexOf('http://') == 0
+				&& currentAddress.indexOf('localhost') < 0
+				&& currentAddress.indexOf('121.167.227.222') < 0) {
+			currentAddress = currentAddress.replace('http://', 'https://');
+			location.href = currentAddress;
+		}
+	}
+
+	$(document).ready(function() {
+		setPageInit();
+		setLogoutUrl("/online/SSOLegacy.do?pname=spLogout");
+		
+		// TODO : 모든 서브메인의 간편 예약신청 구현 후 제거해야함
+		// 서브메인의 간편예약 구현 시 not 영역에 container 클래스 추가
+		// ex ) not(.skate_main, .soccer_main)
+		/* $("#container:not(.skate_main, .soccer_main, .swim_main, .train_main, .parking_main, .edu_main)").find(".online_area a.btn_check").click(function() {
+			location.href = "./resrvtn_aplictn.do";
+		}); */
+	});
+</script>
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 온라인 예약 시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">올림픽테니스장</a>
+			</div>
+
+			<ul class="top_menu">
+				
+					
+				<li><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+				<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+				<li><a href="//www.ksponco.or.kr" target="_blank" title="새창">KSPO&amp;CO 바로가기</a></li>
+			</ul>
+		</div>
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+				
+					
+						<li class="mo"><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+					
+					
+				
+					<li class="pc"><a href="../" class="home">메인으로</a></li>
+					<li><a href="./basket_list.do" class="cart">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="mypage">신청내역</a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+				
+					
+						<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+
+				<!-- [D] 2019-12-20 로그인정보 추가 -->
+				
+					
+						<!-- 로그인 후 -->
+						<div class="login_after">
+							<div class="login_inner">
+								<p class="txt">유승아님 안녕하세요.</p>
+								<a href="#" class="btn_base mid logout">로그아웃</a>
+							</div>
+						</div>
+					
+					
+				
+				<!-- //[D] 2019-12-20 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+		
+	<!-- [D] 2019-12-12 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		<!-- [D] 2019-12-20 로그인정보 추가 -->
+		
+			
+				<!-- 로그인 후 -->
+				<p class="login_after">
+					<span class="member">유승아</span>
+					<a href="#none" class="btn_logout logout">로그아웃</a>
+				</p>
+			
+			
+		
+		<!-- //[D] 2019-12-20 로그인정보 추가 -->
+		<ul class="all_menu">
+			<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+			<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+			<li><a href="./usage_guide.do">시설이용안내</a></li>
+			<li><a href="./directns.do">오시는길</a></li>
+		</ul>
+		<ul class="all_menu">
+			<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+			
+				
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+				
+				
+			
+			<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+			<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+			<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+		</ul>
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+
+	
+	<script type="text/javascript">
+	<!--
+	$(document).ready(fn_basket_length);
+	function fn_basket_length(){
+		$.ajax({
+			url: "./tennis_mbasket_list.do",
+			type:"POST",
+			dataType: "json",
+			success:function(data){
+				if(data.ss_check > 0){
+					var basket_length = data.tennis_basket_list.length;
+
+					if(basket_length > 0){
+						var inner_html = "<em class=\"num\">" + basket_length + "</em>";
+						$("a.cart").append(inner_html);
+					}
+				}
+			}
+		});
+	}
+	//-->
+	</script>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+			
+		
+		
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area tennis_sub">
+			<div class="inner">
+				<p class="txt">
+					삶의 활력소와 건강까지 챙기세요
+					<strong class="stress">올림픽테니스장</strong>
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+		
+	
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="./resrvtn_aplictn.do">일일입장 예약신청</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./aplictn_guide.do">신청방법안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./usage_guide.do">시설이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./directns.do">오시는길</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			<!-- location -->
+			<div class="location_area">
+				<span class="menu">홈</span>
+				<span class="menu">올림픽테니스장</span>
+				<strong class="menu">신청내역</strong>
+			</div>
+			<!-- //location -->
+
+			<!-- title -->
+			<div class="tit_area">
+				<h1 class="tit_type01">신청내역</h1>
+			</div>
+			<!-- //title -->
+
+			<p class="txt_type01">수강/예약/대관 신청내역 및 결제내역을 확인 가능합니다.</p>
+
+<form id="frm" name="frm" action="./aplictn_list.do" method="post"><input type="hidden" id="refundType" value="" />
+<input type="hidden" name="month"  id="month" value=""/>
+<!-- [필수]거래구분(수정불가) -->
+<input type="hidden" name="EP_tr_cd" value="00201000"/>
+<!-- [필수]요청자 IP -->
+<input type="hidden" name="req_ip" value="118.131.223.220" />
+<input type="hidden" name="mgr_txtype" value="40" />
+<input type="hidden" name="org_cno" id="org_cno" />
+<input type="hidden" name="page_gubun" />
+<input type="hidden" name="req_id" value="globalst"/>
+<input type="hidden" name="EP_sc_id"/>
+<input type="hidden" name="rtn_uri" value="../tennis/aplictn_list.do"/>
+<input type="hidden" name="reserveMSeq" id="reserveMSeq" />
+<input type="hidden" name="reserveDSeq"  id="reserveDSeq" />
+<input type="hidden" name="month_idx" value="0"/>
+			<div class="date_srch">
+				<div class="month_area">
+					<h2 class="tit">기간별 조회</h2><!-- [D] 2019-12-12 기간별조회 h2태그로 수정 -->
+					<span class="month_con">
+						<a href="#none" class="month" onclick="fn_aplictn_month_search(1);">1개월</a>
+						<a href="#none" class="month" onclick="fn_aplictn_month_search(2);">2개월</a>
+						<a href="#none" class="month" onclick="fn_aplictn_month_search(3);">3개월</a>
+						<a href="#none" class="month" onclick="fn_aplictn_month_search(6);">6개월</a>
+					</span>
+				</div>
+				<div class="all_area">
+					<div class="calendar_con">
+						<input type="text" id="search_before_day" name="search_before_day" class="c_input datepicker" title="시작일자 년도 월 일 입력" placeholder="YYYY.MM.DD" value="2020.09.13">
+						<span class="unit">~</span>
+						<input type="text" id="search_day" name="search_day" class="c_input datepicker" title="종료일자 년도 월 일 입력" placeholder="YYYY.MM.DD" value="2020.10.13">
+					</div>
+					<a href="#none" class="btn_srch" onclick="fn_aplictn_search();">조회</a>
+				</div>
+			</div>
+</form><p class="txt_type04">(단위 : 원)</p>
+			<table class="data_list">
+				<caption>올림픽스케이트장 신청내역</caption>
+				<colgroup>
+					<col style="width:6%;">
+					<col style="width:25%;">
+					<col>
+					<col style="width:20%;">
+					<col style="width:17%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">
+						전체<br>
+						<span class="c_chk txt_no">
+							<input type="checkbox" id="chkAll" disabled="disabled">
+							<label for="chkAll">선택</label>
+						</span>
+						</th>
+						<th scope="col">구분 / 접수처<br>결제일자 / 예약일자</th>
+						<th scope="col">종목 / 내용</th>
+						<th scope="col">시작기간 / 종료기간</th>
+						<th scope="col">결제금액 / 상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						 <td colspan="5">
+							신청내역이 없습니다.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		<h2 class="tit_info">알려드립니다</h2>
+		<ul class="txt_info">
+			<li class="txt_orange">
+				환불은 개시일 당일 예약시간 1시간 전까지 환불신청은 전체금액이 환불 가능 합니다. 예약시간 1시간 미만은 환불신청이 불가합니다.
+			</li>
+			<li>2시간 이상을 예약하여 사용 중 1시간(또는 2시간) 사용 후, 잔여시간의 환불요청은 1시간전 전액환불 가능합니다.</li>
+			<li>우천 등 천재지변으로 인한 환불 요청은 전액 환불 가능합니다. </li>			
+			<li>예약을 취소하시려면 '결제취소' 버튼을 눌러주시기 바랍니다.</li>			
+			<li class="txt_orange">코트변경은 동일한 가격 내에서 가능합니다.</li>
+		</ul>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	//월선택 버튼 상태 유지를 위해 세팅
+	$("span.month_con").children("a.month").each(function() {
+		$(this).click(function(e) {
+			e.preventDefault();
+			$("span.month_con").children("a.month").each(function() {
+				$(this).removeClass("on");
+			});
+			$(e.target).addClass("on");
+			$("input[name=month_idx]").val($(e.target).index());
+		});
+	});
+	$("#search_before_day, #search_day").change(function() {
+		$("span.month_con").children("a.month").each(function() {
+			$(this).removeClass("on");
+		});
+		$("input[name=month_idx]").val("-1");
+	});
+
+	if ($("input[name=month_idx]").val() != "-1") {
+		$("span.month_con").children("a.month").eq($("input[name=month_idx]").val()).addClass("on");
+	}
+});
+
+// 카드번호 숫자입력 및 자동 포커싱
+function fn_validateCardNo(obj, maxLength, nextObj) {
+	// 숫자와 백스페이스, 탭, 방향키만 입력
+	if(event.keyCode != 8 && event.keyCode != 9 && (event.keyCode < 37 || event.keyCode > 40)  && isNaN(Number(event.key)))
+		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+
+	else if(maxLength && $(obj).val().length == maxLength && event.keyCode != 8)
+		$("#" + nextObj).focus();
+}
+
+function fn_checkBetween() {
+
+  //시작일자 값
+  var  search_before_day  =    $("#search_before_day").val( );
+
+  //시작일자 10자리 변수
+  var search_before10 = "";
+
+  //시작일자 8자리 변수
+  var search_before8 = "";
+
+  //시작일자의 문자열 길이
+  var search_before_day_len = search_before_day.length;
+
+
+  //종료일자
+  var  search_day  =    $("#search_day").val( );
+
+  //종료일자 10자리 변수
+  var search10 = "";
+
+  //종료일자 8자리 변수
+  var search8 = "";
+
+
+   // 시작일자  8자리일 경우
+   if (  search_before_day_len == 8 )  {
+
+        // 시작년도
+        var year = search_before_day.substr(0,4);
+
+        // 시작월
+        var month = search_before_day.substr(4,2);
+
+        //시작일
+        var day = search_before_day.substr(6,2);
+
+        // 시작일자 8자리
+        search_before8  =  year + month + day;
+
+        //시작일자가 문자열의 길이가 10자리일 경우
+        }  else if (  search_before_day_len == 10 )  {
+
+         //년도
+          var year = search_before_day.substr(0,4);
+
+         //월
+          var month = search_before_day.substr(5,2);
+
+          //일
+          var day = search_before_day.substr(8,2);
+
+         // 시작일자 10자리
+         search_before10 = year + month + day;
+
+       }
+
+      // 종료일자 길이
+       var search_day_len = search_day.length;
+
+       if (  search_day_len == 8 )  {
+
+             //년도
+             var year = search_day.substr(0,4);
+
+            //월
+             var month = search_day.substr(4,2);
+
+             //일
+             var day = search_day.substr(6,2);
+
+            // 8자리
+             search8  =  year + month + day;
+
+            //10자리
+        }   else if (  search_day_len == 10 )  {
+
+          //년도
+          var year = search_day.substr(0,4);
+
+          //월
+          var month = search_day.substr(5,2);
+
+          //일
+          var day = search_day.substr(8,2);
+
+          // 10자리 저장
+          search10 = year + month + day;
+
+       }
+
+        if (  search_before_day_len == 10  &&  search_day_len == 10)  {
+
+             if  (  search_before10  >  search10    ) {
+
+                   return false;
+             }
+        }
+
+
+         if (  search_before_day_len == 10  &&  search_day_len == 8)  {
+
+             if  (  search_before10  >  search8    ) {
+
+                   return false;
+             }
+        }
+
+
+         if (  search_before_day_len == 8  &&  search_day_len == 8)  {
+
+             if  (  search_before8  >  search8    ) {
+
+                   return false;
+             }
+        }
+
+
+         if (  search_before_day_len == 8  &&  search_day_len == 10)  {
+
+             if  (  search_before8  >  search10    ) {
+
+                   return false;
+             }
+        }
+
+      return true;
+
+
+  }  //  fn_checkBetween()  end
+
+function fn_checkNum(ByVal) {
+
+    var  temp = ByVal;
+
+   // 숫자 아님
+   if (isNaN(temp) ==  true)  {
+
+   return  false;
+
+   // 숫자
+   }  else {
+
+    return true;
+   }
+
+}
+
+function fn_check_sdate() {
+
+  //시작일자
+  var  search_before_day  =    $("#search_before_day").val( );
+
+  var search_before_day_len = search_before_day.length;
+
+
+
+   if (  search_before_day_len != 8 && search_before_day_len != 10) {
+
+       alert(   "시작일자를 8자리 또는 10자리로 입력하십시오 예: 20191218  또는 2019.12.18" );
+       return false;
+   }  else {
+
+       // 시작일자의 문자열의 길이가 8자리일 경우
+       if (  search_before_day_len == 8 )  {
+
+       if ( !fn_checkNum(search_before_day)) {
+
+           alert("시작일자가 숫자가 아닙니다. 정확히 입력하십시오");
+        } else {
+
+             var year = search_before_day.substr(0,4);
+
+             var month = search_before_day.substr(4,2);
+
+             if (month < 01  || month >= 13 ) {
+                 alert("월을 정확히 입력하십시오 입력하신 월은 " +  month + "입니다.");
+                 return false;
+             }  //  if  end
+
+             var day = search_before_day.substr(6,2);
+
+              if (day < 01  || day >= 32 ) {
+                 alert("일을 정확히 입력하십시오 입력하신 일은 " +  day + "입니다.");
+
+                 return false;
+             }  // if  end
+
+        }  // else end
+
+
+
+
+       }  // if  end
+
+        // 시작일자의 문자열의 길이가 10자리일 경우
+       if (  search_before_day_len == 10 )  {
+
+          var year = search_before_day.substr(0,4);
+
+
+            if ( !fn_checkNum(year)) {
+              alert("시작일자의 년도가 숫자가 아닙니다. 정확히 입력하십시오" + "입력하신 년도는 " +  year + "입니다");
+              return false;
+
+            }
+
+             var month = search_before_day.substr(5,2);
+
+
+            if ( !fn_checkNum(month)) {
+              alert("시작일자의 월이 숫자가 아닙니다. 정확히 입력하십시오" + "입력하신 월은 " +  month + "입니다");
+              return false;
+
+            }
+
+            if (month < 01  || month >= 13 ) {
+                 alert("월을 정확히 입력하십시오 입력하신 월은 " +  month + "입니다.");
+
+                 return false;
+            }  //  if  end
+
+            var day = search_before_day.substr(8,2);
+
+            if ( !fn_checkNum(day)) {
+              alert("시작일자의 일이 숫자가 아닙니다. 정확히 입력하십시오 " + "입력하신 일은 " +  day + "입니다");
+              return false;
+
+            }
+
+            search_before_day = year + month + day;
+
+
+            if ( !fn_checkNum(search_before_day)) {
+
+              alert("시작일자가 숫자가 아닙니다. 정확히 입력하십시오");
+            } else {
+
+             var year = search_before_day.substr(0,4);
+
+             var month = search_before_day.substr(4,2);
+
+             if (month < 01  || month >= 13 ) {
+                 alert("월을 정확히 입력하십시오 입력하신 월은 " +  month + "입니다.");
+
+                 return false;
+             }  //  if end
+
+             var day = search_before_day.substr(6,2);
+
+              if (day < 01  || day >= 32 ) {
+                 alert("일을 정확히 입력하십시오 입력하신 일은 " +  day + "입니다.");
+
+                 return false;
+             }  // if end
+
+        }  // else end
+
+
+       }  // if end
+
+   }  //  else end
+
+   return true;
+
+}  //  fn_check_sdate()  시작 함수 end
+
+function fn_check_edate() {
+
+ //종료일자
+  var  search_day  =    $("#search_day").val( );
+
+  var search_day_len = search_day.length;
+
+
+
+   if (  search_day_len != 8 && search_day_len != 10) {
+
+       alert(   "종료일자를 8자리 또는 10자리로 입력하십시오 예: 20191218  또는 2019.12.18" );
+       return false;
+   }  else {
+
+       if (  search_day_len == 8 )  {
+
+
+       if ( !fn_checkNum(search_day)) {
+
+           alert("종료일자가 숫자가 아닙니다. 정확히 입력하십시오");
+        } else {
+
+             var year = search_day.substr(0,4);
+
+             var month = search_day.substr(4,2);
+
+             if (month < 01  || month >= 13 ) {
+                 alert("월을 정확히 입력하십시오 입력하신 월은 " +  month + "입니다.");
+
+                 return false;
+             }  //  if
+
+             var day = search_day.substr(6,2);
+
+              if (day < 01  || day >= 32 ) {
+                 alert("일을 정확히 입력하십시오 입력하신 일은 " +  day + "입니다.");
+
+                 return false;
+             }  // if
+
+
+
+        }  // else
+
+
+       }  // if
+
+
+       if (  search_day_len == 10 )  {
+
+          var year = search_day.substr(0,4);
+
+
+            if ( !fn_checkNum(year)) {
+              alert("종료일자의 년도가 숫자가 아닙니다. 정확히 입력하십시오" + "입력하신 년도는 " +  year + "입니다");
+              return false;
+
+            }
+
+             var month = search_day.substr(5,2);
+
+
+              if ( !fn_checkNum(month)) {
+              alert("종료일자의 월이 숫자가 아닙니다. 정확히 입력하십시오" + "입력하신 월은 " +  month + "입니다");
+              return false;
+
+            }
+
+             if (month < 01  || month >= 13 ) {
+                 alert("월을 정확히 입력하십시오 입력하신 월은 " +  month + "입니다.");
+
+                 return false;
+             }  //  if
+
+             var day = search_day.substr(8,2);
+
+
+              if ( !fn_checkNum(day)) {
+              alert("종료일자의 일이 숫자가 아닙니다. 정확히 입력하십시오 " + "입력하신 일은 " +  day + "입니다");
+              return false;
+
+            }
+
+             search_day = year + month + day;
+
+
+
+       if ( !fn_checkNum(search_day)) {
+
+           alert("종료일자가 숫자가 아닙니다. 정확히 입력하십시오");
+        } else {
+
+             var year = search_day.substr(0,4);
+
+             var month = search_day.substr(4,2);
+
+             if (month < 01  || month >= 13 ) {
+                 alert("월을 정확히 입력하십시오 입력하신 월은 " +  month + "입니다.");
+
+                 return false;
+             }  //  if
+
+             var day = search_day.substr(6,2);
+
+              if (day < 01  || day >= 32 ) {
+                 alert("일을 정확히 입력하십시오 입력하신 일은 " +  day + "입니다.");
+
+                 return false;
+             }  // if
+
+        }  // else
+
+
+
+       }  // if
+
+
+
+   }  //  else
+
+   return true;
+
+  }   //  fn_check_edate()  종료 함수 end
+
+function fn_current_date() {
+	var today = new Date();
+    var dd     = today.getDate();                // 일
+    var mm    = today.getMonth()+1;          // 월
+    var yyyy    = today.getFullYear();           //  년
+    var current_date;                             //  현재 날자
+
+    if(dd<10) {
+       dd='0'+dd;
+    }
+
+    if(mm<10) {
+      mm='0'+mm;
+    }
+
+   // 문자로 변환(현재 날자)
+	
+    //current_date = yyyy+ mm.toString()+ dd.toString();
+    current_date = "20201013";
+
+    return current_date;
+}
+
+
+
+// 현재 날자에서 빼기 ( default - 1 개월 전 )
+function dateAdd(sDate, v, t) {
+
+
+	var yy = parseInt(sDate.substr(0, 4), 10);
+
+	var mm = parseInt(sDate.substr(4, 2), 10);
+
+	var dd = parseInt(sDate.substr(6,2), 10);
+
+	if(t == "d"){
+
+		d = new Date(yy, mm - 1, dd + v);
+
+	}else if(t == "m"){
+
+		d = new Date(yy, mm - 1 + v, dd);
+
+	}else if(t == "y"){
+
+		d = new Date(yy + v, mm - 1, dd);
+
+	}else{
+
+		d = new Date(yy, mm - 1, dd + v);
+
+	}
+
+
+	yy = d.getFullYear();
+
+	mm = d.getMonth() + 1; mm = (mm < 10) ? '0' + mm : mm;
+
+	dd = d.getDate(); dd = (dd < 10) ? '0' + dd : dd;
+
+	return '' + yy + '.' +  mm  + '.' + dd;
+
+}
+
+function fn_aplictn_search() {
+
+   if(  !fn_check_sdate() )  {
+
+     alert("시작 날자 입력 오류로 조회 작업을 취소합니다");
+     return false;
+
+   }
+
+
+   if(  !fn_check_edate() )  {
+
+     alert("종료 날자 입력 오류로 조회 작업을 취소합니다");
+     return false;
+
+   }
+
+
+    if(  !fn_checkBetween()  )  {
+
+     alert("시작날자가 종료날자보다 크므로 작업을 취소합니다");
+     return false;
+
+   }
+
+document.getElementById("frm").action = "./aplictn_list.do";
+document.getElementById("frm").submit();
+
+}
+
+function fn_aplictn_month_search(month) {
+	var current_date =   fn_current_date();
+	var before_date =  	 dateAdd(current_date, -month, "m");
+	// 시작일자
+	$("#search_before_day").val(before_date);
+	//종료일자(현재일자)
+	  var yy =current_date.substr(0, 4);
+	  var mm = current_date.substr(4, 2);
+	  var dd = current_date.substr(6,2);
+	  var current_d = yy + "." + mm + "." + dd;
+	  // 종료일자
+	  $("#search_day").val(current_d );
+}
+
+function fn_checkbox_cnt(formID) {
+   return $("#frm_list" + formID + " input[name='listChk']:checked").length;
+}
+
+function receipt(trnNo, type){
+	$(event.srcElement).hasClass("apply_receipt")
+	
+	if(!trnNo) {
+		if($(event.srcElement).hasClass("apply_receipt"))
+			alert("잘못된 영수증번호입니다. 고객센터로 문의해주시기 바랍니다.");
+		else
+			alert("취소되지 않는 결제번호입니다.");
+		return;
+	}
+	
+	var payment    = "01"; // 결제방식(01 : 신용카드)
+	var receiptUrl = "http://office.easypay.co.kr/receipt/ReceiptBranch.jsp";
+	receiptUrl += "?controlNo=" + trnNo + "&payment=" + payment;
+	    
+	window.open(receiptUrl,"MEMB_POP_RECEIPT", 'toolbar=0,scroll=1,menubar=0,status=0,resizable=0,width=380,height=700');
+}
+
+function fn_pay_cncl_req(formID, trnNo) {
+	var check_cnt = fn_checkbox_cnt(formID);
+	var selectedFormJQName = "#frm_list" + formID
+	var selectedSeqList = {
+		reserveMSeq: null,
+		reserveDSeqList: []
+	};
+	
+    if ( check_cnt == 0) {
+    	alert("환불하실 항목을 선택해주세요.");
+   		return;
+    }
+
+	var receiptVal;
+	$(selectedFormJQName +  " input[name='listChk']:checked").each(function(i, e) {
+		receiptVal = $(e).val().split('/');
+		
+		if ( receiptVal[2] != "0" && receiptVal[2] != "11" && receiptVal[2] != "12" && receiptVal[2] != "13" ) {
+			alert("결제완료 건만 취소가 가능합니다." );
+			return false;
+		}
+		
+		// checkbox의 value가 변경될 경우 receiptVal 수정 필요
+		selectedSeqList.reserveDSeqList.push(receiptVal[6]);
+	});
+	
+	if ( receiptVal[2] != "0" && receiptVal[2] != "11" && receiptVal[2] != "12" && receiptVal[2] != "13"  )
+		return;
+	
+	// selectedItemList의 reserveMSeq가 모두 동일하다는 가정하에 유효
+	selectedSeqList.reserveMSeq = receiptVal[5];
+ 
+	$.ajax({
+		url: "./tennis_cancel_validate.do",
+		type: "POST",
+		data: JSON.stringify(selectedSeqList),
+		dataType: "json",
+		contentType: "application/json",
+		success: function(obj){
+			var data = obj.data;
+			
+			if (data.overTime != 0) {
+				alert("마감 및 정산으로 인해 매일 23시 50분~00시 10분까지\n온라인취소가 불가능합니다.\n\n00시 10분 이후에 이용 부탁드립니다.");
+				return;
+			}
+			
+			// 환불 타입 설정
+			$("#frm input#refundType").val(data.refundType);
+	        switch(data.refundType) {
+	        // 당일 취소
+	        case "TODAY":
+				if (confirm("같은 시간에 결제하신 것까지 전체 취소됩니다. \n취소하시겠습니까?") === false)
+					return;
+				
+				fn_directRefund(trnNo);
+				break;
+				
+			// 마감
+	        case "CLOSED":
+				alert("현재 환불 신청 기간이 마감되어 신청이 불가합니다.");
+				return;
+				
+	        default:
+				if(data.isSameType != 1) {
+					alert("예약일이 지난 항목과 지나지 않은 항목은 같이 환불 신청할 수 없습니다.");
+					return;
+				}
+				else if(!confirm("체크한 항목의 결제를 취소하시겠습니까?\n환불 승인은 영업시간(주중 09시~18시) 내에 가능합니다")){
+					return;
+				}
+	
+				fn_showRefundTerms(formID, selectedSeqList);
+	        }
+
+		},
+		error: function(){
+			alert("마감시간 확인 중 오류가 발생하였습니다.");
+		} 
+	});
+}
+
+// 당일 결제취소
+function fn_directRefund(trnNo) {
+	var param = {
+		trnNo: trnNo
+	};
+	
+  	$.ajax({
+		url: "./pg_tennis_cancel.do",
+		type: "POST",
+		data: JSON.stringify(param),
+		dataType: "json",
+		contentType: "application/json"
+  	})
+  	.done(function() {
+  		location.reload();
+  	})
+  	.fail(function() {
+  		alert("결제취소 처리 중 오류가 발생하였습니다.\n잠시 후 다시 시도해주세요.");
+  	});
+}
+
+// 환불정보 및 약관 노출
+function fn_showRefundTerms(formID, selectedSeqList) {
+    $("#tblList" + formID + " tfoot #row1").remove();
+    $("#tblList" + formID + " tfoot #row2").remove();
+	
+    // 기상악화 환불
+    if($("#frm input#refundType").val() !== '1') {
+    	appendRefundTerms();
+    	return;
+    }
+    
+	$.ajax({
+		url: "./getRefundAmt.do",
+		type: "POST",
+		data: JSON.stringify(selectedSeqList),
+		dataType: "json",
+		contentType: "application/json"
+	})
+	.done(function(data) {
+		var refundInfoList = data.refundInfoList;
+		
+		var html = '<tr class="bg01" id="row1">'
+                 + '<td class="refund_ment" colspan="5">미세먼지와 우천때문에 회차별로 강습을 못한 경우 일할 환불해드립니다. (10%공제없이 일할 환불)<br>'
+                 + '<strong class="txt_sky">미신청시 환불되지 않습니다. 신청 기한은 2월 2일까지 입니다.</strong></td>'
+                 + '</tr>'
+                 + '<tr class="bg02" id="row1">'
+                 + '<td colspan="2">환불회차</td>'
+                 + '<td>환불일수</td>'
+                 + '<td colspan="2">환불금액</td>'
+                 + '</tr>';
+                 
+        var totalAmt = 0;
+        for(var idx in refundInfoList) {
+        	totalAmt += refundInfoList[idx].badwthrAmt;
+        	
+            html += '<tr class="bg03" id="row1">'
+                  + '<td colspan="2">' + refundInfoList[idx].ordinal + '회차</td>'
+                  + '<td>' + refundInfoList[idx].totalBadwthr + '일</td>'
+                  + '<td colspan="2">' + numberUtil.isComma(refundInfoList[idx].badwthrAmt) + '</td>'
+                  + '</tr>'
+        }
+        
+        html += '<tr class="bg02" id="row1">'
+              + '<td colspan="2"><strong>총 환불금액</strong></td>'
+              + '<td colspan="3" class="txt_orange">' + numberUtil.isComma(totalAmt) + '원</td>'
+              + '</tr>'
+        
+        appendRefundTerms(html);
+	})
+	.fail(function() {
+		alert("환불금액 조회를 실패하였습니다. 잠시 후 다시 시도해주세요.");
+	});
+	
+	// 환불약관 최종 노출
+	function appendRefundTerms(html) {
+		
+	    html += '<tr class="bg01" id="row1">'
+	          + '<td colspan="5" class="agree_con">'
+	          + '<div class="refund_agree">'
+	          + '<h3 class="tit_type02">환불동의약관</h3>'
+	          + '<div class="box">'
+	          + '<h4 class="tit">개인정보 수집·제공 동의</h4>'
+	          + '<ol>'
+	          + '<li><span class="num">1.</span>수집·이용목적 : 올림픽테니스장 예약 환불</li>'
+	          + '<li><span class="num">2.</span>수집 항목 : (필수) 이름, 생년월일, 연락처(본인, 보호자)</li>'
+	          + '<li><span class="num">3.</span><strong class="txt_orange">보유기간 : 환불신청일로부터 3년</strong></li>'
+	          + '<li>'
+	          + '<span class="num">4.</span>귀하는 개인정보 수집·이용 동의를 거부할 수 있습니다. 다만, 동의 거부 시에는 환불신청 서비스를 받을 수 없습니다. <br>'
+	          + '위의 목적으로 개인정보 수집‧이용에 동의합니다.'
+	          + '</li>'
+	          + '</ol>'
+	          + '</div>'
+	          + '<div class="txt">'
+	          + '위의 약관 및 정책에 동의 하십니까?'
+	          + '<div class="form_group">'
+	          + '<span class="c_rdo">'
+	          + '<input type="radio" id="agreeType01_' + formID + '" name="agreeType">'
+	          + '<label for="agreeType01_' + formID + '">동의</label>'
+	          + '</span>'
+	          + '<span class="c_rdo">'
+	          + '<input type="radio" id="agreeType02_' + formID + '" name="agreeType">'
+	          + '<label for="agreeType02_' + formID + '">미동의</label>'
+	          + '</span>'
+	          + '</div>'
+	          + '</div>'
+
+	          + '<div class="box">'
+	          + '<h4 class="tit"> 신용정보 수집·제공 동의</h4>'
+	          + '<ol>'
+	          + '<li><span class="num">1.</span>수집·이용 목적 : 올림픽테니스장 예약 환불</li>'
+	          + '<li><span class="num">2.</span>수집 항목 : 회원카드번호, 카드 유효기간</li>'
+	          + '<li><span class="num">3.</span>보유기간 : 환불 승인일로부터 3일 이내</li>'
+	          + '<li>'
+	          + '<span class="num">4.</span>귀하는 개인정보 수집‧이용 동의를 거부할 수 있습니다. 다만, 동의 거부 시에는 환불신청 서비스를 받을 수 없습니다. <br>'
+	          + '위의 목적으로 개인정보 수집‧이용에 동의합니다.'
+	          + '</li>'
+	          + '</ol>'
+	          + '</div>'
+	          + '<div class="txt">'
+	          + '위의 약관 및 정책에 동의 하십니까?'
+	          + '<div class="form_group">'
+	          + '<span class="c_rdo">'
+	          + '<input type="radio" id="agreeType03_' + formID + '" name="agreeType2">'
+	          + '<label for="agreeType03_' + formID + '">동의</label>'
+	          + '</span>'
+	          + '<span class="c_rdo">'
+	          + '<input type="radio" id="agreeType04_' + formID + '" name="agreeType2">'
+	          + '<label for="agreeType04_' + formID + '">미동의</label>'
+	          + '</span>'
+	          + '</div>'
+	          + '</div>'
+					
+	          + '<div class="btn_area">'
+	          + '<a href="#none" class="btn_base mid off" onclick="fn_cnfrm_refnd_agree(' + formID + ');">동의</a>'
+	          + '<a href="#none" class="btn_base mid" onclick="fn_cnfrm_refnd_cncl(' + formID + ');">취소</a>'
+	          + '</div>'
+	          + '</div>'
+	          + '</td>'
+	          + '</tr>'
+	          + '</div>';
+	    $("#tblList" + formID + " tfoot").append(html);
+	}
+}
+
+function fn_tooltip_open(div_id) {
+	$(div_id).css("display","block");
+}
+
+function fn_tooltip_close(div_id) {
+	$(div_id).css("display","none");
+}
+
+function fn_cnfrm_refnd_agree(formID) {
+	var agreeType01 = $("#agreeType01_" + formID);
+	if (agreeType01.is(":checked") == false) {
+		alert("환불동의약관에 동의하셔야 환불신청이 가능합니다.");
+		agreeType01.focus();
+		return;
+	}
+	var agreeType03 = $("#agreeType03_" + formID);
+	if (agreeType03.is(":checked") == false) {
+		alert("환불동의약관에 동의하셔야 환불신청이 가능합니다.");
+		agreeType03.focus();
+		return;
+	}
+	
+    $("#tblList" + formID + " tfoot #row1").remove();
+	
+	var html = '<!-- 취소사유 -->'
+	         + '<tr class="bg01" id="row2">'
+	         + '<th scope="row" colspan="2">'
+	         + '취소사유 '
+	         + '<div class="icon_info">'
+	         + '<a href="#none" onclick=fn_tooltip_open("#cancelReason") class="icon"><img src="../images/content/icon_qna_info.png" alt="안내"></a>'
+	         + '<div id="cancelReason" class="layer_area" tabindex="0" style="display: none;">'
+	         + '<span class="tit">취소사유</span>'
+	         + '<div class="con">'
+	         + '<span class="txt_orange">관리자의 승인 후 취소</span>가 되며 질병이나 천재지변인 상황인 경우 현장에 서류제출 후 10% 공제없이 환불 처리 가능합니다. 단, 종목 및 스포츠센터별로 상이하므로 각각의 취소환불 규정에 의해서 환불됩니다.'
+	         + '</div>'
+	         + '<a href="#none" onclick=fn_tooltip_close("#cancelReason") class="close"><img src="../images/content/icon_layer_close.png" alt="닫기"></a>'
+	         + '</div>'
+	         + '</div>'
+	         + '</th>'
+	         + '<td colspan="3" class="ldata">'
+	         + '<select id="refundReasonCode" name="refundReasonCode" class="c_select" style="width:40%;" title="취소사유선택" onchange="fn_change_refund_reason(' + formID + ');">'
+	         + '<option value="" selected="selected">선택하세요</option>'
+         
+             + '<option value="2">개인 사유로 취소</option>'
+         
+             + '<option value="3">단순 변심으로 취소</option>'
+         
+             + '<option value="1">다른 수강 잘못 신청</option>'
+         
+             + '<option value="4">기타</option>'
+         
+             + '<option value="99">기상악화</option>'
+         
+	         + '</select> '
+	         + '<input id="refundReasonDetail" name="refundReasonDetail" type="text" class="c_input" style="width:58%;" title="취소사유입력" placeholder="취소사유입력" maxlength="100" disabled="disabled">'
+	         + '</td>'
+	         + '</tr>'
+	         + '<!-- //취소사유 -->'
+	         + '<!-- [D] 2019-12-27 카드번호 추가 -->'
+	         + '<tr class="bg01" id="row2">'
+	         + '<th scope="row" colspan="2">'
+	         + '카드번호 '
+	         + '<div class="icon_info">'
+	         + '<a href="#none" onclick=fn_tooltip_open("#cardNumber") class="icon"><img src="../images/content/icon_qna_info.png" alt="안내"></a>'
+	         + '<div id="cardNumber" class="layer_area" tabindex="0" style="display: none;">'
+	         + '<span class="tit">카드번호</span>'
+	         + '<div class="con">'
+	         + '아멕스카드나 다이너스카드인 경우 마지막칸 자리수를<br>3자리로 입력해주세요.'
+	         + '</div>'
+	         + '<a href="#none" onclick=fn_tooltip_close("#cardNumber") class="close"><img src="../images/content/icon_layer_close.png" alt="닫기"></a>'
+	         + '</div>'
+	         + '</div>'
+	         + '</th>'
+	         + '<td colspan="3" class="ldata">'
+	         + '<span class="card_area">'
+	         + '<input type="text" id="creditNo1" name="creditNo1" class="c_input" style="width:18%;" maxlength="4" title="카드번호 첫번째자리 입력"> '
+	         + '<input type="password" id="creditNo2" name="creditNo2" class="c_input" style="width:18%;" maxlength="4" title="카드번호 두번째자리 입력"> '
+	         + '<input type="password" id="creditNo3" name="creditNo3" class="c_input" style="width:18%;" maxlength="4" title="카드번호 세번째자리 입력"> '
+	         + '<input type="text" id="creditNo4" name="creditNo4" class="c_input" style="width:18%;" maxlength="4" title="카드번호 네번째자리 입력"> '
+	         + '</span>'
+	         + '</td>'
+	         + '</tr>'
+	         + '<!-- //[D] 2019-12-27 카드번호 추가 -->'
+	         + '<!-- 카드유효기간 -->'
+	         + '<tr class="bg01" id="row2">'
+	         + '<th scope="row" colspan="2">'
+	         + '카드유효기간 '
+	         + '<div class="icon_info">'
+	         + '<a href="#none" onclick=fn_tooltip_open("#cardNum") class="icon"><img src="../images/content/icon_qna_info.png" alt="안내"></a>'
+	         + '<div id="cardNum" class="layer_area" tabindex="0" style="display: none;">'
+	         + '<span class="tit">카드유효기간</span>'
+	         + '<div class="con">'
+	         + '카드 앞면에 있는 MONTH / YEAR 차례대로 입력해주세요. 전체 환불 후 재승인시 필요한 정보입니다.'
+	         + '</div>'
+	         + '<a href="#none" onclick=fn_tooltip_close("#cardNum") class="close"><img src="../images/content/icon_layer_close.png" alt="닫기"></a>'
+	         + '</div>'
+	         + '</div>'
+	         + '</th>'
+	         + '<td colspan="3" class="ldata">'
+	         + '<p class="card_num">'
+	         + '<input type="text" id="vpMonth" name="vpMonth" class="c_input" style="width:26%;" title="카드유효기간 월 입력" placeholder="월(예시:03)" minlength="2" maxlength="2"> '
+	         + '<input type="text" id="vpYear" name="vpYear" class="c_input" style="width:26%;" title="카드유효기간 년도 입력" placeholder="년도(예시:24)" minlength="2" maxlength="2"> '
+	         + '</p>'
+	         + '</td>'
+	         + '</tr>'
+	         + '<!-- //카드유효기간 -->'
+	         + '<tr class="bg01" id="row2">'
+	         + '<td colspan="5">'
+	         + '<a href="#none" class="btn_base mid off" onclick="fn_cnfrm_paymt_cncl(' + formID + ');">확인</a>'
+	         + '<a href="#none" class="btn_base mid" onclick="fn_cncl_paymt_cncl(' + formID + ');">취소</a>'
+	         + '</td>'
+	         + '</tr>';
+    $("#tblList" + formID + " tfoot").append(html);
+	
+	// 환불 종류에 따라 사유 필터링
+	var refundType = $("#frm input#refundType").val();
+	var selRefundReasonCode = ("#frm_list" + formID + " #row2 #refundReasonCode");
+	
+	switch(refundType) {
+		case "0":
+			//$(selRefundReasonCode).children("option[value=99]").attr("style", "display: none;");
+			$(selRefundReasonCode).children("option[value=99]").remove();
+			break;
+		case "1":
+			$(selRefundReasonCode).attr("style", "width:40%; background: #e4e4e4;");
+			
+			$(selRefundReasonCode).children("option[value!=99]").remove();
+			$(selRefundReasonCode).children("option[value=99]").attr("selected", "selected");
+			$("#frm_list" + formID + " #row2 #refundReasonDetail").val("미세먼지 및 우천으로 인한 환불");
+			break;
+	}
+
+	console.log($("#creditNo1"));
+	$("#creditNo1").keydown(function(e) { fn_validateCardNo(this, 4, "creditNo2"); });
+	$("#creditNo2").keydown(function(e) { fn_validateCardNo(this, 4, "creditNo3"); });
+	$("#creditNo3").keydown(function(e) { fn_validateCardNo(this, 4, "creditNo4"); });
+	$("#creditNo4").keydown(function(e) { fn_validateCardNo(this); });
+	
+	/*
+	fn_toggleNonView(formID, 1);
+	fn_toggleView(formID, 2);
+	fn_toggleView(formID, 3);
+	fn_toggleView(formID, 4);
+	fn_toggleView(formID, 5);
+	*/
+}
+
+function fn_cnfrm_refnd_cncl(formID) {
+	if (confirm("취소신청을 그만하시겠습니까?") == false) {
+		return;
+	}
+	fn_toggleNonView(formID, 1);
+	fn_initFrstStep(formID);
+}
+
+function fn_cnfrm_paymt_cncl(formID) {
+	var d = {
+			refundReasonCode: null,
+			refundReasonDetail: null,
+			creditNo1: null,
+			creditNo2: null,
+			creditNo3: null,
+			creditNo4: null,
+			vpMonth: null,
+			vpYear: null,
+			items: []
+		};
+	
+	// 취소 사유
+	var selectedFormJQName =  "#tblList" + formID
+	var selectedObj = $(selectedFormJQName + " #refundReasonCode option:selected");
+	if (selectedObj.val() === "") {
+		alert("취소사유를 선택해주세요.");
+		$(selectedFormJQName + " #refundReasonCode").focus();
+		return;
+	}
+	d['refundReasonCode'] = $(selectedFormJQName + " #refundReasonCode").val()
+
+	// 취소 상세 사유
+	if (selectedObj.val() === "4" || selectedObj.text() === "기타") {
+		if ($(selectedFormJQName + " #refundReasonDetail").val() === "") {
+			alert("취소사유(기타)를 입력해주세요.");
+			$(selectedFormJQName + " #refundReasonDetail").focus();
+			return;
+		}
+	}
+	d['refundReasonDetail'] = $(selectedFormJQName + " #refundReasonDetail").val()
+	
+	// 카드 번호
+	var creditNoLimitLength = [4, 4, 4, 3];
+	for(var i in creditNoLimitLength) {
+		var obj = $(selectedFormJQName + " #creditNo" + (parseInt(i) + 1));
+		var isError = false;
+						
+		console.log(obj);
+						
+		if(stringUtil.isStringByte(obj.val()) < creditNoLimitLength[i]) {
+			alert("카드 번호를 입력해주세요.");
+			isError = true;
+		}
+						
+		if(numberUtil.isNumberCheck(obj.val()) === false) {
+			alert("카드 번호는 숫자만 입력 가능합니다.");
+			isError = true;
+		}
+						
+		if(isError) {
+			obj.focus();
+			return;
+		}
+						
+		d["creditNo" + (parseInt(i) + 1)] = obj.val();
+	}
+
+	// 카드 유효기간
+	if (stringUtil.isStringByte($(selectedFormJQName + " #vpMonth").val()) < 2) {
+		alert("카드 유효기간(월)을 입력해주세요.");
+		$(selectedFormJQName + " #vpMonth").focus();
+		return;
+	}
+	if (numberUtil.isNumberCheck($(selectedFormJQName + " #vpMonth").val()) === false) {
+		alert("카드 유효기간(월)을 숫자 2자리로 입력해주세요.");
+		$(selectedFormJQName + " #vpMonth").focus();
+		return;
+	}
+	d['vpMonth'] = $(selectedFormJQName + " #vpMonth").val()
+
+	if (stringUtil.isStringByte($(selectedFormJQName + " #vpYear").val()) < 2) {
+		alert("카드 유효기간(년)을 입력해주세요.");
+		$(selectedFormJQName + " #vpYear").focus();
+		return;
+	}
+	if (numberUtil.isNumberCheck($(selectedFormJQName + " #vpYear").val()) === false) {
+		alert("카드 유효기간(년)을 숫자 2자리로 입력해주세요.");
+		$(selectedFormJQName + " #vpYear").focus();
+		return;
+	}
+	d['vpYear'] = $(selectedFormJQName + " #vpYear").val()
+
+	// 체크된 행의 값을 추려냄
+	$(selectedFormJQName).find("tr[name='lesson_item']").each(function(idx, el) {
+		
+		if ($(el).find("input[name='listChk']").is(":checked")) {
+			var tmpObj = {
+					upCode: "01",
+					reserveMSeq: $(el).find("input[name='reserveMSeq']").val(),
+					reserveDSeq: $(el).find("input[name='reserveDSeq']").val(),
+					trnNo: $(el).find("input[name='trnNo']").val()
+			}
+			
+			d.items.push(tmpObj);
+		}
+	})
+	
+	$.ajax({
+		  type: "POST",
+		  url: "./refund_req.do",
+		  data: JSON.stringify(d),
+		  dataType: "json",
+		  contentType : "application/json;charset=utf-8"
+	})
+	.done(function(data) {
+		if(data.errorCode === 0) {
+			alert("환불신청이 완료되었습니다.");
+		} else {
+			alert(data.errorMsg);
+		}
+		
+		location.reload(true);
+	})
+	.fail(function() {
+		alert('결제취소 실패');
+	});
+ }
+
+function fn_change_refund_reason(formID) {
+	var selectedFormJQName =  "#frm_list" + formID
+	var selectedObj = $(selectedFormJQName + " #refundReasonCode option:selected");
+	if (selectedObj.val() === "4" || selectedObj.text() === "기타") {
+		$(selectedFormJQName + " #refundReasonDetail").prop("disabled", "");
+		$(selectedFormJQName + " #refundReasonDetail").focus();
+	}
+	else {
+		$(selectedFormJQName + " #refundReasonDetail").prop("disabled", "disabled");
+	}
+}
+
+function fn_cncl_paymt_cncl(formID) {
+	fn_toggleNonView(formID, 2);
+	fn_toggleNonView(formID, 3);
+	fn_toggleNonView(formID, 4);
+	fn_toggleNonView(formID, 5);
+	fn_initFrstStep(formID);
+	fn_initSecndStep(formID);
+}
+
+//1단계 약관동의 라디오 버튼 초기화
+function fn_initFrstStep(formID) {
+	$("#frm_list" + formID + " input:radio[name^=agreeType]").each(function() {
+		$(this).prop("checked", "");
+	});
+}
+//2단계 취소사유, 카드번호, 유효기간 초기화
+function fn_initSecndStep(formID) {
+	var selectedFormJQName =  "#frm_list" + formID
+
+	$(selectedFormJQName + " #refundReasonCode").val("");
+	$(selectedFormJQName + " #refundReasonDetail").val("");
+	$(selectedFormJQName + " input[name^=creditNo]").val("");
+	$(selectedFormJQName + " input[name^=vp]").val("");
+}
+
+//  -----------------  < 코트변경  >------------------------------------------------- //
+//  ----------------------------------------------------------------------------------- //
+function class_change(formID)  {
+	var selectedFormJQName =  "#frm_list" + formID
+   fn_toggleNonView(formID, 3);
+
+    var check_cnt = fn_checkbox_cnt(formID);
+
+     if ( check_cnt == 0 ) {
+		alert("코트변경하실 항목을 1개만 선택해주세요.");
+		return;
+     }    else if ( check_cnt > 1) {
+		alert("복수선택이 불가합니다. 1개만 선택해주세요.");
+		return;
+     }
+
+     // 예약 마스터 시퀀스
+	 $(selectedFormJQName +  " #reserveMSeq").val("");
+
+	 // 예약 디테일 시퀀스
+	 $(selectedFormJQName +  " #reserveDSeq").val("");
+
+
+	 // ------------------------------------------------------------------------------------------------------/
+     //     체크되었을 경우 inner function 처리  함수
+     // ------------------------------------------------------------------------------------------------------/
+	 $(selectedFormJQName +  " input[name='listChk']:checked").each(function(i, e){
+
+       var chkVal=  $(e).val( );
+
+       // 배열
+       var receiptMap = {};
+
+       // 체크된 행의 trnNo: 트랜잭션 번호, 금액값을 분리
+       var receiptVal = chkVal.split('/');
+
+       // trnNo: 트랜잭션 번호
+       receiptMap[receiptVal[0]] = receiptVal[0];
+
+       // dStTagCode: 결제상태코드 : 0:결제, 4:취소
+       receiptMap[receiptVal[2]] = receiptVal[2];
+
+       // onoffCode: 온라인 오프라인 코드:  온라인('O') :현재는 null
+       receiptMap[receiptVal[3]] = receiptVal[3];
+
+
+      // reservationDate: 예약일
+      receiptMap[receiptVal[4]] = receiptVal[4];
+
+      var reservationDate = receiptMap[receiptVal[4]]
+
+      // reserveMSeq: 예약 마스터 시퀀스
+      receiptMap[receiptVal[5]] = receiptVal[5];
+
+       // reserveDSeq: 예약 디테일 시퀀스
+      receiptMap[receiptVal[6]] = receiptVal[6];
+
+      var current_date =  fn_current_date();     //  현재 날자
+
+      var year = reservationDate.substr(0,4);
+      var month = reservationDate.substr(5,2);
+      var day = reservationDate.substr(8,2);
+
+      var reservationDt =  year + month + day;
+
+      
+      if (current_date >= reservationDt) { // 예약일 전일까지 변경가능 
+    	  alert('예약일자가 경과하여 코트를 변경할 수 없습니다.')
+    	  return
+      }
+      
+      // 결제상태 체크 0:결제, 4:취소
+      if ( receiptMap[receiptVal[2]] != "0" ) {
+
+         if (  receiptMap[receiptVal[2]] == "4") {
+           alert("결제상태가 취소이므로 코트변경을  취소합니다" );
+           return ;
+         }
+
+          alert("결제상태가 결제가 아니므로 코트변경을 취소합니다" );
+          return ;
+
+      }
+
+
+       // 온/오프라인 코드 체크 onLine: 'O'  현재는 onLine이 null값이다.  차후에는 결제 시 ONOFF_CODE : 온라인 오프라인 코드 column에  'O'를 넣어준다
+        // 차후에는 'O'를 넣어준 후에 아래를 푼다.
+
+       /*
+       if ( receiptMap[receiptVal[3]] != "O" ) {
+
+           alert("온라인으로 결제를 하지 않아서 영수증 출력을 취소합니다" );
+           return;
+
+       }  */
+
+      // 예약 마스터 시퀀스
+      var reserveMSeq = receiptMap[receiptVal[5]];
+
+      // 예약 디테일 시퀀스
+      var reserveDSeq = receiptMap[receiptVal[6]];
+
+	 // 전송
+	 $(selectedFormJQName).attr( "action", "./class_change.do?reserveMSeq=" + reserveMSeq + "&reserveDSeq=" + reserveDSeq);
+	 $(selectedFormJQName).submit();
+
+	 });  //   inner  function  end
+
+
+
+}  // outer function  end
+/* 
+$("form[name='frm_list']").each(function(idx, el1) {
+	$(el1).submit(function( event ) {
+		event.preventDefault();
+		
+		console.log($(this).serializeArray());
+		var d = []
+		// 체크된 행의 값을 추려냄
+		$(this).find("tr[name='lesson_item']").each(function(idx, el) {
+			
+			if ($(el).find("input[name='listChk']").is(":checked")) {
+				var aRecord = {}
+				aRecord['org_cno'] = $(el).find("input[name='org_cno']").val()
+				aRecord['trnNo'] = $(el).find("input[name='trnNo']").val()
+				aRecord['rcvAmt'] = $(el).find("input[name='rcvAmt']").val()
+				aRecord['dStTagCode'] = $(el).find("input[name='dStTagCode']").val()
+				aRecord['onoffCode'] = $(el).find("input[name='onoffCode']").val()
+				aRecord['settlementDat'] = $(el).find("input[name='settlementDat']").val()
+				aRecord['reserveMSeq'] = $(el).find("input[name='reserveMSeq']").val()
+				aRecord['reserveDSeq'] = $(el).find("input[name='reserveDSeq']").val()
+				d.push(aRecord)
+			}
+		})
+		alert(JSON.stringify(d))
+	});
+});
+ */
+function fn_toggleView(formID, no) {
+	$('#frm_list' + formID + ' #row' + no).show()
+}
+
+function fn_toggleNonView(formID, no) {
+	$('#frm_list' + formID + '  #row' + no).hide()
+}
+
+function toggleCheckAll(frm, checked) {
+	var c = $("#"+frm+" input[name='listChk']")
+	$("#"+frm+" input[name='listChk']:not(:disabled)").each(function(idx, el) {
+		$(el).prop('checked', !checked).trigger("click");
+	})
+}
+</script>
+
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/company/traffic.do" target="_blank" title="새창">찾아오시는길</a></li>
+					<li><a href="./sitemap.do">사이트맵</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="../skate/index.do" class="logo"><img src="../images/common/foot_logo.gif" alt="한국체육산업개발주식회사"></a>
+				<div class="mark_area">
+					<a href="#none"><img src="../images/common/icon_mark01.gif" alt="웹접근성품질인증마크"><span class="txt">웹접근성품질인증</span></a>
+					<a href="#none"><img src="../images/common/icon_mark02.gif" alt="개인정보보호우수사이트 인증마크"><span class="txt">개인정보보호<br>우수사이트 인증</span></a>
+				</div>
+				<div class="info">
+					<p class="company">사업자등록번호 : 215-81-12034, 대표자 : 김사엽</p>
+					<address>
+						주소 (05540) 서울시 송파구 올림픽로 424(방이동) 올림픽역도경기장 내
+					</address>
+					<p class="copyright">COPYRIGHT 2019 © KSPO&amp;CO ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

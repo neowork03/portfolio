@@ -1,0 +1,8 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.778 6h12.444c.322 0 .778.334.778 1v7c0 .666-.456 1-.778 1H1.778C1.456 15 1 14.666 1 14V7c0-.666.456-1 .778-1z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <mask id="lnrmutggia" fill="#fff">
+        <path d="M4 7V3.889c0-1.032.421-2.02 1.172-2.75A4.059 4.059 0 0 1 8 0c1.06 0 2.078.41 2.828 1.139A3.835 3.835 0 0 1 12 3.889V7"/>
+    </mask>
+    <path d="M2 7a2 2 0 1 0 4 0H2zm2-3.111H2h2zM10 7a2 2 0 1 0 4 0h-4zM6 7V3.889H2V7h4zm0-3.111c0-.483.197-.957.566-1.316L3.777-.295A5.835 5.835 0 0 0 2 3.889h4zm.566-1.316C6.936 2.213 7.452 2 8 2v-4A6.059 6.059 0 0 0 3.777-.295l2.789 2.868zM8 2c.548 0 1.063.212 1.434.573l2.789-2.868A6.059 6.059 0 0 0 8-2v4zm1.434.573c.37.359.566.833.566 1.316h4c0-1.58-.646-3.084-1.777-4.184L9.434 2.573zM10 3.889V7h4V3.889h-4z" fill="#333" mask="url(#lnrmutggia)"/>
+    <path d="M8 11.111V10" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,785 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<meta name="theme-color" content="#00adef">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>대관예약시스템 - 한국체육산업개발주식회사 Publishing List</title>
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/common/favicon.ico" type="image/x-icon">
+
+
+<style type="text/css">
+* {margin:0;padding:0;font-family:'Malgun Gothic','맑은 고딕',Apple Gothic,arial,helvetica,sans-serif;font-weight:400;}
+body {min-width:980px;padding:0 20px 50px 20px;font-size:12px;}
+a {color:#444;text-decoration:none;}
+a:hover {color:#444;}
+a:visited, a:focus, a:active {color:#444;}
+h1 {font-size:30px;margin:20px 0 10px 0;letter-spacing:-1px;font-weight:600;}
+h1 img {height:42px;margin:2px 5px 0 0;vertical-align:middle;}
+.info {
+	position:absolute;
+	right:25px;
+	top:41px;
+}
+.guide {margin:10px 0 5px 0;text-align:right;}
+h2 {padding:10px 0 10px 15px;font-size:13px;border:0px solid #003e6e;border-bottom:none;background:#003e6e;color:#fff;font-weight:500;}
+caption {display:none;}
+div.cont {border-top:1px solid #003e6e;}
+table {border-collapse:collapse;width:100%;border-spacing:0;}
+
+table thead th {padding:7px 3px;border:1px solid #ccc;background:#edeff4;font-size:13px;}
+table tbody td {padding:7px 3px;background:#e4e4e4;border:1px solid #ccc;text-align:center;color:#898989;font-size:11px;/*display:none;*/}
+table tbody td.left {padding:7px 10px;text-align:left;}
+table tbody td.url {padding:7px 10px;text-align:left;}
+table tbody tr.hidden td {display:table-cell;background:#e4e4e4;color:#898989;text-decoration:line-through;}
+table tbody tr.temp td {display:table-cell;background:#fdf0dc;color:#444;}
+table tbody tr.ing td {display:table-cell;background:#d9eafd;opacity:0.3}
+table tbody tr.ed td {display:table-cell;background:#fff;}
+table tbody tr.ed:hover td {background:#e1eefc;}
+
+.tab {margin-bottom:10px;overflow:hidden;}
+.tab div {float:right;border-radius:5px;overflow:hidden;}
+.tab a {position:relative;float:left;min-width:100px;padding:10px;background:#eee;border-right:solid 1px #fff;font-size:13px;color:#666;text-align:center;transition:all 0.3s;}
+.tab a:last-child {border:none;}
+.tab a:hover {background:#ccc;}
+.tab a.on {background:#009fe3;color:#fff;}
+.tab a.on:hover {background:#0086bf;}
+.proc_wrap {margin:30px 0 -35px 0;}
+.proc_wrap strong {color:#009fe3;font-weight:bold;}	
+.red {color:#ea2f56!important;}
+	
+.ico {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico.add {background:#019ee3;}
+.ico.modify {background:#e30101;}
+.ico.ing {background:#53b100;}
+.mgB10 {margin-bottom:10px;}
+.pdB10 {padding-bottom:10px;}
+.ico1 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico1 {background:#019ee3;}
+.ico1 {background:#e30101;}
+.ico1 {background:#53b100;}
+.ico2 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico2 {background:#019ee3;}
+.ico2 {background:#e30101;}
+.ico2 {background:#53b100;}
+.ico3 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico3 {background:#019ee3;}
+.ico3 {background:#e30101;}
+.ico3 {background:#53b100;}
+.ico4 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico4 {background:#019ee3;}
+.ico4 {background:#e30101;}
+.ico4 {background:#53b100;}
+.ico5 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico5 {background:#019ee3;}
+.ico5 {background:#e30101;}
+.ico5 {background:#53b100;}
+.ico6 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico6 {background:#019ee3;}
+.ico6 {background:#e30101;}
+.ico6 {background:#53b100;}
+.ico7 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico7 {background:#019ee3;}
+.ico7 {background:#e30101;}
+.ico7 {background:#53b100;}
+.ico8 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico8 {background:#019ee3;}
+.ico8 {background:#e30101;}
+.ico8 {background:#53b100;}
+.ico9 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico9 {background:#019ee3;}
+.ico9 {background:#e30101;}
+.ico9 {background:#53b100;}
+.ico10 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico10 {background:#019ee3;}
+.ico10 {background:#e30101;}
+.ico10 {background:#53b100;}
+.ico11 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico11 {background:#019ee3;}
+.ico11 {background:#e30101;}
+.ico11 {background:#53b100;}
+.ico12 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico12 {background:#019ee3;}
+.ico12 {background:#e30101;}
+.ico12 {background:#53b100;}
+.ico13 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico13 {background:#019ee3;}
+.ico13 {background:#e30101;}
+.ico13 {background:#53b100;}
+.ico14 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico14 {background:#019ee3;}
+.ico14 {background:#e30101;}
+.ico14 {background:#53b100;}
+.ico15 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico15 {background:#019ee3;}
+.ico15 {background:#e30101;}
+.ico15 {background:#53b100;}
+.ico16 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico16 {background:#019ee3;}
+.ico16 {background:#e30101;}
+.ico16 {background:#53b100;}
+.ico17 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico17 {background:#019ee3;}
+.ico17 {background:#e30101;}
+.ico17 {background:#53b100;}
+.ico18 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico18 {background:#019ee3;}
+.ico18 {background:#e30101;}
+.ico18 {background:#53b100;}
+.ico19 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico19 {background:#019ee3;}
+.ico19 {background:#e30101;}
+.ico19 {background:#53b100;}
+.ico20 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico20 {background:#019ee3;}
+.ico20 {background:#e30101;}
+.ico20 {background:#53b100;}
+.ico21 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico21 {background:#019ee3;}
+.ico21 {background:#e30101;}
+.ico21 {background:#53b100;}
+.ico22 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico22 {background:#019ee3;}
+.ico22 {background:#e30101;}
+.ico22 {background:#53b100;}
+.ico23 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico23 {background:#019ee3;}
+.ico23 {background:#e30101;}
+.ico23 {background:#53b100;}
+.ico24 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico24 {background:#019ee3;}
+.ico24 {background:#e30101;}
+.ico24 {background:#53b100;}
+.ico25 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico25 {background:#019ee3;}
+.ico25 {background:#e30101;}
+.ico25 {background:#53b100;}
+.ico26 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico26 {background:#019ee3;}
+.ico26 {background:#e30101;}
+.ico26 {background:#53b100;}
+.ico27 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico27 {background:#019ee3;}
+.ico27 {background:#e30101;}
+.ico27 {background:#53b100;}
+.ico28 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico28 {background:#019ee3;}
+.ico28 {background:#e30101;}
+.ico28 {background:#53b100;}
+.ico29 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico29 {background:#019ee3;}
+.ico29 {background:#e30101;}
+.ico29 {background:#53b100;}
+.ico30 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico30 {background:#019ee3;}
+.ico30 {background:#e30101;}
+.ico30 {background:#53b100;}
+.ico31 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico31 {background:#019ee3;}
+.ico31 {background:#e30101;}
+.ico31 {background:#53b100;}
+.ico32 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico32 {background:#019ee3;}
+.ico32 {background:#e30101;}
+.ico32 {background:#53b100;}
+.ico33 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico33 {background:#019ee3;}
+.ico33 {background:#e30101;}
+.ico33 {background:#53b100;}
+.ico34 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico34 {background:#019ee3;}
+.ico34 {background:#e30101;}
+.ico34 {background:#53b100;}
+.ico35 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico35 {background:#019ee3;}
+.ico35 {background:#e30101;}
+.ico35 {background:#53b100;}
+.ico36 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico36 {background:#019ee3;}
+.ico36 {background:#e30101;}
+.ico36 {background:#53b100;}
+.ico37 {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico37 {background:#019ee3;}
+.ico37 {background:#e30101;}
+.ico37 {background:#53b100;}
+</style>
+<script type="text/javascript" src="../resources/admin/js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.each($("td.url > a"), function(i,v){
+		$(v).text($(v).attr("href"));
+	});
+	
+	var locN = $('tbody tr').length;
+	var locTemp = $('tbody tr.temp').length;
+	var locHidn = $('tbody tr.hidden').length;
+	var locEd = $('tbody tr.ed').length;
+
+	var locNa = locN - locTemp - locHidn;
+	var locTotalC = locEd/locNa;
+	var locTotal = locTotalC.toFixed(2) * 100;
+	
+	$('.proc_wrap').append('<div class=\"proc\"><p>총 퍼블리싱 페이지 수 : <strong>' + locNa + '</strong></p><p>완료된 퍼블리싱 페이지 수 : <strong>' + locEd + '</strong></p><p>진척율 : <strong>' + locTotal + ' %</strong></p></div>');
+});
+	
+</script>
+</head>
+
+<body>
+<h1 class="" style="margin-left:5px; "><img src="images/layout/logo_admin.png" alt="kspo&co"> Publishing List  </h1>
+<p class="info"></p>
+<p class="guide"></p>
+
+<!-- wrap -->
+    <div id="wrap">
+        <!-- h2>LOGIN</h2>
+        <div class="cont">
+        <!-- table>
+            <caption></caption>
+            <colgroup>
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:*;">
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="ed">
+                    <td>로그인(공통)</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./lgn/GUI-00-001.html" target="_blank">./lgn/GUI-00-001.html </a></td>
+                    <td>2018.03.30</td>
+                    <td class="red">디자인 컨펌(2018.03.23)</td>
+                </tr>
+                <tr class="ed">
+                    <td>&nbsp;</td>
+                    <td>아이디찾기(popup_win)</td>
+                    <td></td>
+                    <td class="url"><a href="./lgn/GUI-01-001.html" target="_blank">./lgn/GUI-01-001.html </a></td>
+                    <td>2018.03.30<i class="ico add">추가</i></td>
+                    <td class="red">페이지 추가(화면정의서_2차 관리자 2018 03 26  V2.6)</td>
+                </tr>
+                <tr class="ed">
+                    <td>&nbsp;</td>
+                    <td>아이디찾기 결과(popup_win)</td>
+                    <td></td>
+                    <td class="url"><a href="./lgn/GUI-01-002.html" target="_blank">./lgn/GUI-01-002.html </a></td>
+                    <td>2018.03.30<i class="ico add">추가</i></td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td>&nbsp;</td>
+                    <td>비밀번호찾기(popup_win)</td>
+                    <td></td>
+                    <td class="url"><a href="./lgn/GUI-02-001.html" target="_blank">./lgn/GUI-02-001.html </a></td>
+                    <td>2018.03.30<i class="ico add">추가</i></td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td>&nbsp;</td>
+                    <td>비밀번호찾기 결과(popup_win)</td>
+                    <td></td>
+                    <td class="url"><a href="./lgn/GUI-02-002.html" target="_blank">./lgn/GUI-02-002.html </a></td>
+                    <td>2018.03.30<i class="ico add">추가</i></td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td>&nbsp;</td>
+                    <td>경고 팝업_01(popup_win)</td>
+                    <td></td>
+                    <td class="url"><a href="./lgn/GUI-03-001.html" target="_blank">./lgn/GUI-03-001.html </a></td>
+                    <td>2018.03.30<i class="ico add">추가</i></td>
+                    <td class="red">&nbsp;</td>
+                </tr>  
+                <tr class="ed">
+                    <td>&nbsp;</td>
+                    <td>경고 팝업_02(popup_win)</td>
+                    <td></td>
+                    <td class="url"><a href="./lgn/GUI-03-002.html" target="_blank">./lgn/GUI-03-002.html </a></td>
+                    <td>2018.03.30<i class="ico add">추가</i></td>
+                    <td class="red">&nbsp;</td>
+                </tr>                                  
+            </tbody>
+        </table>
+    </div>
+
+	
+	<!-- Admin 관리자 -->
+    <!--h2>Admin 관리자</h2>
+    <div class="cont">
+    	<table>
+            <caption></caption>
+            <colgroup>
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:7%;">
+                <col span="1" style="width:*;">
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:25%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="ed">
+                    <td>관리자 로그인</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/UI-30-10.html" target="_blank">admin/sub/UI-30-10.html</a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">(주)대륙제관_홈페이지_스토리보드_V1.5-20200512-2.pptx (2020.05.14 문서 기준)</td>
+                </tr>               
+                <tr class="ed">
+                    <td>대시보드</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-00-10.html" target="_blank">admin/sub/ADM-00-10.html</a></td>
+                    <td>2020.05.18</td>
+                    <td class="red"></td>
+                </tr>            
+                <tr class="ed">
+                    <td>사용자관리</td>
+                    <td>사용자관리(리스트)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="admin/sub/ADM-10-10.html" target="_blank">admin/sub/ADM-10-10.html</a></td>
+                    <td>2020.05.18</td>
+                    <td class="red"></td>
+                </tr>
+                <tr class="ed">
+                    <td></td>
+                    <td>사용자관리(등록/수정)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="admin/sub/ADM-10-15.html" target="_blank">admin/sub/ADM-10-15.html</a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr>      
+                <tr class="ed">
+                    <td>공통관리</td>
+                    <td>공통코드관리</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-20-10.html" target="_blank">admin/sub/ADM-20-10.html </a></td>
+                    <td>2020.06.03  </td>
+                    <td class="red">&nbsp;</td>
+                </tr>    
+                <tr class="ed">
+                    <td>게시판관리</td>
+                    <td>공지사항/자료실(리스트)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-30-10.html" target="_blank">admin/sub/ADM-30-10.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr> 
+                <tr class="ed">
+                    <td></td>
+                    <td>공지사항/자료실(등록/수정)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-30-15.html" target="_blank">admin/sub/ADM-30-15.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr> 
+                <tr class="ed">
+                    <td>인증&수상내역</td>
+                    <td>인증&수상내역(리스트)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="admin/sub/ADM-35-10.html" target="_blank">admin/sub/ADM-35-10.html </a></td>
+                    <td>2020.05.26 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>     
+                <tr class="ed">
+                    <td></td>
+                    <td>인증&수상내역(등록/수정)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="admin/sub/ADM-35-15.html" target="_blank">admin/sub/ADM-35-15.html </a></td>
+                    <td>2020.05.26 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>                                
+                <tr class="ed">
+                    <td>제품관리</td>
+                    <td>제품관리(리스트)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="admin/sub/ADM-40-10.html" target="_blank">admin/sub/ADM-40-10.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr>                 
+                <tr class="ed">
+                    <td></td>
+                    <td>제품관리(등록/수정)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="admin/sub/ADM-40-15.html" target="_blank">admin/sub/ADM-40-15.html </a></td>
+                    <td>2020.06.04  </td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td>담당자관리</td>
+                    <td>담당자(리스트)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-50-10.html" target="_blank">admin/sub/ADM-50-10.html </a></td>
+                    <td>2020.06.03 </td>
+                    <td class="red">&nbsp;</td>
+                </tr> 
+                <tr class="ed">
+                    <td></td>
+                    <td>담당자(등록/수정)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-50-15.html" target="_blank">admin/sub/ADM-50-15.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr>  
+                <tr class="ed">
+                    <td>팝업관리</td>
+                    <td>팝업관리(리스트)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-60-10.html" target="_blank">admin/sub/ADM-60-10.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr>                 
+                <tr class="ed">
+                    <td></td>
+                    <td>팝업(등록/수정)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-60-15.html" target="_blank">admin/sub/ADM-60-15.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr> 
+                <tr class="ed">
+                    <td>문의사항관리</td>
+                    <td>문의사항(리스트)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-70-10.html" target="_blank">admin/sub/ADM-70-10.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr>                  
+                <tr class="ed">
+                    <td></td>
+                    <td>문의사항(상세)</td>
+                    <td></td>
+                    <td class="url"><a href="admin/sub/ADM-70-15.html" target="_blank">admin/sub/ADM-70-15.html </a></td>
+                    <td>2020.05.18</td>
+                    <td class="red">&nbsp;</td>
+                </tr>                                                                  
+            </tbody>
+        </table>
+    </div>
+    <!-- //Admin 관리자 -->
+    
+    <!-- 사용자 -->
+    <h2>대관예약시스템 - 사용자(반응형)</h2>
+    <div class="cont">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:7%;">
+                <col span="1" style="width:*;">
+                <col span="1" style="width:12%;">
+                <col span="1" style="width:25%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="ed">
+                    <td>메인</td>
+                    <td>&nbsp;</td>
+                    <td></td>
+                    <td class="url"><a href="main/GUI-00-10.html" target="_blank">main/GUI-00-10.html</a></td>
+                    <td>2020.11.23  </td>
+                    <td class="red">스토리보드_사용자_한국체육산업개발(주)_V2.3(2020.11.19 문서 기준)</td>
+                </tr>
+				<tr class="ed">
+                    <td>로그인</td>
+                    <td>로그인</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-00-30.html" target="_blank">sub/GUI-00-30.html</a></td>
+                    <td>2020.11.16  </td>
+                    <td class="red">"전체메뉴-2depth" - 펼침/닫기 메뉴 (전체 페이지 적용) </td>
+                </tr>   
+                <tr class="ed">
+                    <td></td>
+                    <td>아이디/비밀번호 찾기</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-00-31.html" target="_blank">sub/GUI-00-31.html</a></td>
+                    <td>2020.11.16  </td>
+                    <td class="red">&nbsp;</td>
+                </tr>   
+				<tr class="ed">
+                    <td></td>
+                    <td>아이디/비밀번호 찾기 결과</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-00-32.html" target="_blank">sub/GUI-00-32.html</a></td>
+                    <td>2020.11.16  </td>
+                    <td class="red">&nbsp;</td>
+                </tr>  
+				<tr class="ed">
+                    <td></td>
+                    <td>아이디/비밀번호 찾기 결과 2</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-00-33.html" target="_blank">sub/GUI-00-33.html</a></td>
+                    <td>2020.11.16  </td>
+                    <td class="red">&nbsp;</td>
+                </tr>  
+				
+                <tr class="ed">
+                    <td>회원가입</td>
+                    <td>1단계(회원유형 선택)</td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUI-00-40.html" target="_blank">sub/GUI-00-40.html</a></td>
+                    <td>2020.11.16  </td>
+                    <td class="red"> step 마우스 오버 & A링크 삭제</td>
+                </tr>   
+                <tr class="ed">
+                    <td></td>
+                    <td>2단계(약관동의)</td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUI-00-41.html" target="_blank">sub/GUI-00-41.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">약관 추가</td>
+                </tr>  
+                <tr class="ed">
+                    <td></td>
+                    <td>3단계(회원정보입력)</td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUI-00-42.html" target="_blank">sub/GUI-00-42.html</a></td>
+                    <td>2020.12.04</td>
+                    <td class="red">사업자등록증 파일첨부 input=file 형식이 아닌 button 으로 수정</td>
+                </tr> 
+                <tr class="ed">
+                    <td></td>
+                    <td></td>
+                    <td>아이디 중복확인(팝업)</td>
+                    <td class="url"><a href="sub/GUI-00-42-01.html" target="_blank">sub/GUI-00-42-01.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">팝업화면은 GUI-00-42.html 에서도 확인가능합니다.</td>
+                </tr> 
+                <tr class="ed">
+                    <td></td>
+                    <td></td>
+                    <td>사업자등록증 파일업로드(팝업)</td>
+                   	<td class="url"><a href="sub/GUI-00-42-01.html" target="_blank">sub/GUI-00-42-01.html</a></td>
+                    <td>2020.12.04 </td>
+                    <td class="red">&nbsp;</td>
+                </tr> 
+                <tr class="ed">
+                    <td></td>
+                    <td>4단계(신청완료)</td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUI-00-43.html" target="_blank">sub/GUI-00-43.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red"> step 마우스 오버 & A링크 삭제</td>
+                </tr> 
+				
+                <tr class="ed">
+                    <td>대관예약절차안내</td>
+                    <td>대관예약절차</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-01-10.html" target="_blank">sub/GUI-01-10.html</a></td>
+                     <td>2020.11.26  </td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td> </td>
+                    <td>올림픽시설물 대관운영규정</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-01-20.html" target="_blank">sub/GUI-01-20.html</a></td>
+                    <td>2020.11.17 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td> </td>
+                    <td>올림픽시설물 대관운영시행세칙</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-01-30.html" target="_blank">sub/GUI-01-30.html</a></td>
+                    <td>2020.11.18 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td>대관이용안내</td>
+                    <td>이용안내</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-02-10.html" target="_blank">sub/GUI-02-10.html</a></td>
+                    <td>2020.11.19 </td>
+                    <td class="red">캡쳐 화면 이미지는 실제 사이트 화면으로 교체 예정  </td>
+                </tr> 
+                <tr class="ed">
+                    <td> </td>
+                    <td>Q&A </td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-02-20.html" target="_blank">sub/GUI-02-20.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>   
+                <tr class="ed">
+                    <td> </td>
+                    <td>담당자연락처 </td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-02-30.html" target="_blank">sub/GUI-02-30.html</a></td>
+                    <td>2020.11.20 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>                                
+                <tr class="ed">
+                    <td>대관예약</td>
+                    <td>대관 모의계산기</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-03-10.html" target="_blank">sub/GUI-03-10.html</a></td>
+                    <td><i class="ico add">세부기획필요</i></td>
+                    <td class="red"></td>
+                </tr>      
+                <tr class="ed">
+                    <td></td>
+                    <td> 대관신청서 작성</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-03-20.html" target="_blank">sub/GUI-03-20.html</a></td>
+                    <td>2020.12.04  </td>
+                    <td class="red">수정내용 - 캘린더/리스트 X 버튼 </td>
+                </tr>   
+                 <tr class="ed">
+                    <td></td>
+                    <td> </td>
+                    <td>대관세부내용 작성</td>
+                    <td class="url"><a href="sub/GUI-03-21.html" target="_blank">sub/GUI-03-21.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td>&nbsp;</td>
+                </tr>  
+ 				<tr class="ed">
+                    <td></td>
+                    <td> </td>
+                    <td>피크닉 및 찰영 대관세부 내용</td>
+                    <td class="url"><a href="sub/GUI-03-22.html" target="_blank">sub/GUI-03-22.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">추가 페이지</td>
+                </tr>                   
+               
+                <tr class="ed">
+                    <td>마이페이지</td>
+                    <td>신청내역확인</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-04-10.html" target="_blank">sub/GUI-04-10.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>  
+				<tr class="ed">
+                    <td></td>
+                    <td>신청내역확인(신청내역없을경우)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-04-10-1.html" target="_blank">sub/GUI-04-10-1.html</a></td>
+                    <td>2020.11.26 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>
+                <tr class="ed">
+                    <td></td>
+                    <td>신청내역확인(상세)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-04-11.html" target="_blank">sub/GUI-04-11.html</a></td>
+                    <td>2020.11.16  </td>
+                    <td class="red">&nbsp;</td>
+                </tr>  
+				<tr class="ed">
+                    <td></td>
+                    <td>결제내역확인</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-04-12.html" target="_blank">sub/GUI-04-12.html</a></td>
+                    <td>2020.12.07 <i class="ico add">신규</i>  </td>
+                    <td class="red">추가 페이지</td>
+                </tr> 
+                 <tr class="ed">
+                    <td></td>
+                    <td>회원정보수정</td>
+                    <td>회원정보수정(마스터)</td>
+                    <td class="url"><a href="sub/GUI-04-20.html" target="_blank">sub/GUI-04-20.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>   
+                <tr class="ed">
+                    <td></td>
+                    <td></td>
+                    <td>회원정보수정(서브)</td>
+                    <td class="url"><a href="sub/GUI-04-21.html" target="_blank">sub/GUI-04-21.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>   
+                <tr class="ed">
+                    <td></td>
+                    <td>서브계정 추가</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-04-30.html" target="_blank">sub/GUI-04-30.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">&nbsp;</td>
+                </tr> 
+                <tr class="ed">
+                    <td></td>
+                    <td>서브계정 추가(상세)</td>
+                    <td>&nbsp;</td>
+                    <td class="url"><a href="sub/GUI-04-31.html" target="_blank">sub/GUI-04-31.html</a></td>
+                    <td>2020.11.16 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>     
+                <!--tr class="ed">
+                    <td>사이트맵 </td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUI-50-10.html" target="_blank">sub/GUI-50-10.html</a></td>
+                    <td></td>
+                    <td class="red">&nbsp;</td>
+                </tr>   
+                <tr class="ed">
+                    <td>이용약관</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUI-60-10.html" target="_blank">sub/GUI-60-10.html</a></td>
+                    <td></td>
+                    <td class="red">&nbsp;</td>
+                </tr>  
+                <tr class="ed">
+                    <td>Popup(샘플)</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUIPOP-50-10.html" target="_blank">sub/GUIPOP-50-10.html</a></td>
+                    <td>2020.10.31 </td>
+                    <td class="red">&nbsp;</td>
+                </tr>                  
+                <tr class="ed">
+                    <td>이용약관 </td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="sub/GUI-80-10.html" target="_blank">sub/GUI-80-10.html</a></td>
+                    <td>2020.06.19</td>
+                    <td class="red">&nbsp;</td-->
+                </tr>                   
+            </tbody>
+        </table>
+    </div>
+    <!-- //사용자 -->
+    
+</div>
+<!-- //wrap -->
+</body>
+</html>

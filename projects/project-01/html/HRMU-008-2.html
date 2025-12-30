@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="e-HR" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>e-HR</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr_custom.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script type="text/javascript" src="../flatpickr/ko.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>미리보기</h1>
+				<a href="#" class="btnNav" role="button"><span>Menu</span></a>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container">
+				<!-- content -->
+				<div class="content">
+					<!--topInfoSurvey  -->
+					<div class="topInfoSurvey">
+						<span class="tit">설문 제목</span>
+					</div>
+					<!-- // topInfoSurvey -->
+
+					<!-- contTopWrap -->
+					<div class="contTopWrap type2">
+						<div class="formWrap">
+							<div class="fieldGroup">
+								<div class="survey">
+									<ul>
+										<li><span class="period">설문기간</span></li>
+										<li><span class="date">2022-04-27 ~ 2022-08-03</span></li>
+									</ul>
+									<p class="review">
+										설문 항목 설명 설문 항목 설명 설문 항목 설명 설문 항목 설명
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //contTopWrap -->
+					<!-- formWrap -->
+					<div class="formWrap">
+						<strong class="tit">radio title</strong>
+						<!-- radioList -->
+						<div class="formArray full">
+							<div class="radioList">
+								<input type="radio" id="rdo11" name="aa" checked="checked" />
+								<label for="rdo11">전체</label>
+							</div>
+							<div class="radioList">
+								<input type="radio" id="rdo12" name="aa" />
+								<label for="rdo12">radio</label>
+							</div>
+							<div class="radioList">
+								<input type="radio" id="rdo13" name="aa" readonly="readonly" />
+								<label for="rdo13">radio(readonly)</label>
+							</div>
+                            <div class="radioList">
+								<input type="radio" id="rdo12" name="aa" />
+								<label for="rdo12">기타</label>
+							</div>
+                            <div class="formHolder">
+                                <div class="inputList">
+                                    <input
+                                        type="text"
+                                        title="타이틀 입력"
+                                        placeholder="가나다라마바사"
+                                    />
+                                </div>
+                            </div>
+						</div>
+					</div>
+					<!-- //formWrap -->
+					<!--  button_full -->
+					<div class="btnWrap inr">
+						<button type="button" class="btn full">제출</button>
+					</div>
+					<!--  // button_full -->
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<!-- <div class="footer">
+				<div class="copyright">© TELECOM SERVICE Corp.</div>
+			</div> -->
+			<!-- //footer -->
+		</div>
+		<!--  Flatpickr  -->
+		<script>
+			flatpickr.localize(flatpickr.l10ns.ko);
+			flatpickr("#calender");
+			$("#calender").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+		</script>
+		<!-- // Flatpickr  -->
+	</body>
+</html>

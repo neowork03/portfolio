@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="e-HR" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>e-HR</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr_custom.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script type="text/javascript" src="../flatpickr/ko.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>코로나19 확진자 현황</h1>
+				<a href="#" class="btnNav" role="button"><span>Menu</span></a>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container">
+				<!-- content -->
+				<div class="content">
+					<!-- tabs -->
+					<div class="tabs type02">
+						<ul class="tabs" role="tablist">
+							<li>
+								<a href="#tabCon021" role="tab" aria-selected="false">확진 추이</a>
+							</li>
+							<li class="selected">
+								<a href="#tabCon022" role="tab" aria-selected="true">전사 현황표</a>
+							</li>
+							<li>
+								<a href="#tabCon023" role="tab" aria-selected="false">세부 현황</a>
+							</li>
+						</ul>
+                        <!-- panels -->
+                        <div class="panels">
+                            
+                            <div id="tabCon021" aria-labelledby="확진 추이" role="tabpanel" class="panel">
+                                <!-- contTopWrap -->
+                                <div class="contTopWrap">    
+                                    <div class="formWrap">
+                                        <div class="fieldGroup">
+                                            <span class="tit">기준일</span>
+                                            <div class="cal col">
+                                                <div class="inputList">
+                                                    <input
+                                                        type="text"
+                                                        title="날짜선택 입력"
+                                                        value="2023-02-08"/>
+                                                    <a
+                                                        href="#"
+                                                        class="btnCalendar"
+                                                        title="날짜선택 새창열림"
+                                                        role="button"><span class="blind">날짜선택</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formWrap bgColor3">
+                                        <div class="roudBoxTypeWrap">
+                                            <ul>
+                                                <li>
+                                                    <div class="roudBoxType view">
+                                                        <div class="leftList">
+                                                            <p class="title">신규 확진자</p>
+                                                        </div>
+                                                        <p class="rightList">
+                                                            <strong>32</strong><span>명</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="roudBoxType view">
+                                                        <div class="leftList">
+                                                            <p class="title">누적 확진자</p>
+                                                        </div>
+                                                        <p class="rightList">
+                                                            <strong>1232</strong><span>명</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //contTopWrap -->
+                            </div>
+                            
+                            <div id="tabCon022" aria-labelledby="전사 현황표" role="tabpanel" class="panel selected">
+                                <!-- contTopWrap -->
+                                <div class="contTopWrap">    
+                                    <div class="formWrap">
+                                        <div class="fieldGroup">
+                                            <span class="tit">기준일</span>
+                                            <div class="cal col">
+                                                <div class="inputList">
+                                                    <input
+                                                        type="text"
+                                                        title="날짜선택 입력"
+                                                        value="2023-02-08"/>
+                                                    <a
+                                                        href="#"
+                                                        class="btnCalendar"
+                                                        title="날짜선택 새창열림"
+                                                        role="button"><span class="blind">날짜선택</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //contTopWrap -->
+                                <div class="wrapTblDefault">
+                                    <div class="tblHeader">
+                                        <h2 class="defTit">근무상세</h2>
+                                    </div>
+                                    <table cellpadding="0" cellspacing="0" class="thCenter">
+                                        <caption>
+                                            테이블 제목 정보 입력
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: auto">
+                                            <col style="width: 18%">								
+                                            <col style="width: 18%">
+                                            <col style="width: 18%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr class="type2">
+                                                <th scope="col">부서</th>
+                                                <th scope="col">내근</th>
+                                                <th scope="col">재택</th>
+                                                <th scope="col">재택율</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="al">유선본부
+                                                </td><td>45</td>
+                                                <td>12</td>
+                                                <td>88%</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="al">무선본부
+                                                </td><td>45</td>
+                                                <td>12</td>
+                                                <td>88%</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="al">마케팅본부
+                                                </td><td>45</td>
+                                                <td>12</td>
+                                                <td>88%</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>합계
+                                                </td><td>78</td>
+                                                <td>20</td>
+                                                <td>88%</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div id="tabCon023" aria-labelledby="세부 현황" role="tabpanel" class="panel">
+                                tabCon023
+                            </div>
+
+                        </div>
+                        <!-- //panels -->
+					</div>
+                    <!-- //tabs -->
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<!-- <div class="footer">
+				<div class="copyright">© TELECOM SERVICE Corp.</div>
+			</div> -->
+			<!-- //footer -->
+		</div>
+		<!--  Flatpickr  -->
+		<script>
+			flatpickr.localize(flatpickr.l10ns.ko);
+			flatpickr("#calender");
+			$("#calender").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+			$("#calender2").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+		</script>
+		<!-- // Flatpickr  -->
+	</body>
+</html>

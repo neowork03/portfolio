@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="54" viewBox="0 0 18 54">
+  <g id="bg_checkbox" transform="translate(-297 -9)">
+    <g id="input_checkbox" transform="translate(297 9)">
+      <g id="ico_check_off_n">
+        <g id="사각형_55" data-name="사각형 55" fill="#fff" stroke="#ccced4" stroke-width="1">
+          <rect width="18" height="18" rx="2" stroke="none"/>
+          <rect x="0.5" y="0.5" width="17" height="17" rx="1.5" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <g id="input_checkbox-2" data-name="input_checkbox" transform="translate(281 10)">
+      <g id="ico_check_on_s" transform="translate(16 16)">
+        <rect id="사각형_60" data-name="사각형 60" width="18" height="18" rx="2" transform="translate(0 1)" fill="#2d94f9"/>
+        <path id="패스_53504" data-name="패스 53504" d="M-855.429-22068.857a1.149,1.149,0,0,1-.808-.334l-3.429-3.432a1.139,1.139,0,0,1,0-1.613,1.138,1.138,0,0,1,1.616,0l2.585,2.584,5.479-5.977a1.144,1.144,0,0,1,1.615-.07,1.143,1.143,0,0,1,.07,1.615l-6.286,6.855a1.137,1.137,0,0,1-.818.371Z" transform="translate(863 22083)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="input_checkbox-3" data-name="input_checkbox" transform="translate(297 43)">
+      <g id="btn_check_on_d" transform="translate(3 2)">
+        <g id="ico_check_on_d" transform="translate(1 1)">
+          <rect id="사각형_60-2" data-name="사각형 60" width="18" height="18" rx="2" transform="translate(-4 -1)" fill="#ccced4"/>
+          <path id="패스_53504-2" data-name="패스 53504" d="M-855.429-22068.857a1.149,1.149,0,0,1-.808-.334l-3.429-3.432a1.139,1.139,0,0,1,0-1.613,1.138,1.138,0,0,1,1.616,0l2.585,2.584,5.479-5.977a1.144,1.144,0,0,1,1.615-.07,1.143,1.143,0,0,1,.07,1.615l-6.286,6.855a1.137,1.137,0,0,1-.818.371Z" transform="translate(859 22081)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="icon_menu_02" transform="translate(-12 -668)" opacity="0.7">
+    <g id="box" transform="translate(12 668)" fill="none" stroke="rgba(204,204,204,0)" stroke-miterlimit="10" stroke-width="1">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="icon_menu_02-2" data-name="icon_menu_02" transform="translate(-421 492)">
+      <g id="타원_133" data-name="타원 133" transform="translate(452 194)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <circle cx="7" cy="7" r="7" stroke="none"/>
+        <circle cx="7" cy="7" r="6" fill="none"/>
+      </g>
+      <path id="패스_2371" data-name="패스 2371" d="M459,207H444.995A2,2,0,0,1,443,205.005v-18.01A2,2,0,0,1,444.995,185h10.641l3.572,3.476V195" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="사각형_1928" data-name="사각형 1928" width="2" height="4.5" rx="1" transform="translate(458.089 197.384)" fill="#fff"/>
+      <rect id="사각형_1929" data-name="사각형 1929" width="2" height="4" rx="1" transform="translate(462.089 199.884) rotate(90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

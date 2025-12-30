@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="e-HR" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>e-HR</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../flatpickr/flatpickr_custom.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script type="text/javascript" src="../flatpickr/ko.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>근태 정보</h1>
+				<a href="#" class="btnNav" role="button"><span>Menu</span></a>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container bgColor2">
+				<!-- content -->
+				<div class="content">
+					<!-- Tabs type01 -->
+					<div class="tabs type01">
+						<ul class="tabs" role="tablist">
+							<li class="selected">
+								<a href="#" role="tab" aria-selected="false">휴가쿼터</a>
+							</li>
+							<li>
+								<a href="#" role="tab" aria-selected="true">휴가신청 현황</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //Tabs type01 -->
+
+					<!-- contTopWrap -->
+					<div class="contTopWrap">
+						<div class="formWrap">
+							<div class="fieldGroup">
+								<span class="tit">기준일</span>
+								<div class="cal col">
+									<div class="inputList">
+										<input
+											type="text"
+											id="calender"
+											title="날짜선택 입력"
+											placeholder="날짜선택을 입력해 주세요."
+										/>
+										<a
+											href="#"
+											class="btnCalendar"
+											title="날짜선택 새창열림"
+											role="button"
+											><span class="blind">날짜선택</span></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //contTopWrap -->
+
+					<h2 class="defTit">휴가일수</h2>
+					<!-- roudBoxType -->
+					<div class="roudBoxTypeWrap">
+						<ul>
+							<li>
+								<div class="roudBoxType green">
+									<div class="leftList">
+										<p class="title">체력단련</p>
+										<p class="date">2022.01.01 ~ 2022.12.31</p>
+									</div>
+									<p class="rightList">
+										<strong class="pointColor">2</strong><span>/</span>3
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="roudBoxType blue">
+									<div class="leftList">
+										<p class="title">연차휴가</p>
+										<p class="date">2022.01.01 ~ 2022.12.31</p>
+									</div>
+									<p class="rightList">
+										<strong class="pointColor">2</strong><span>/</span>3
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="roudBoxType purple">
+									<div class="leftList">
+										<p class="title">포상휴가_장기</p>
+										<p class="date">2022.01.01 ~ 2022.12.31</p>
+									</div>
+									<p class="rightList">
+										<strong class="pointColor">2</strong><span>/</span>3
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- //roudBoxType -->
+
+					<h2 class="defTit">연차휴가반환시</h2>
+					<!-- roudBoxType -->
+					<div class="roudBoxTypeWrap">
+						<ul>
+							<li>
+								<div class="roudBoxType yellow">
+									<div class="leftList">
+										<p class="title">연차휴가</p>
+										<p class="date">2022.01.01 ~ 2022.12.31</p>
+									</div>
+									<p class="rightList">
+										<strong class="pointColor">2</strong><span>/</span>3
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- //roudBoxType -->
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<!-- <div class="footer">
+				<div class="copyright">© TELECOM SERVICE Corp.</div>
+			</div> -->
+			<!-- //footer -->
+		</div>
+		<!--  Flatpickr  -->
+		<script>
+			flatpickr.localize(flatpickr.l10ns.ko);
+			flatpickr("#calender");
+			$("#calender").flatpickr({
+				dateFormat: "Y-m-d",
+				altFormat: "F j, Y",
+				minDate: "today",
+				// maxDate: new Date().fp_incr(30),
+				disableMobile: "true",
+				local: "ko",
+				showAlways: false,
+			});
+		</script>
+		<!-- // Flatpickr  -->
+	</body>
+</html>

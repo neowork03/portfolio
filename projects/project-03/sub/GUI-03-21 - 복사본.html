@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta name="description" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="keyword" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+
+<title>한국체육산업개발주식회사 - 대관예약시스템</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 대관예약시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">대관예약시스템</a>
+			</div>
+		</div>
+		
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+					<li><a href="#" class="logout">로그인</a></li>
+					<li><a href="#" >회원가입</a></li>
+					<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창"><span> KSPO&amp;CO 바로가기</span></a></li>
+				</ul>
+			</nav>
+			
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+				<!-- [D] 로그인정보 추가 -->
+						<!-- 로그인 후 -->
+						<div class="login_after">
+							<div class="login_inner">
+								<p class="txt">유승아님 안녕하세요.</p>
+								<a href="#" class="btn_base mid logout">로그아웃</a>
+							</div>
+						</div>
+				<!-- //[D] 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+				
+	<!-- 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		
+		<h3 class="stit">대관예약절차안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관예약절차</a></li>
+			<li><a href="#">올림픽 시설물 대관운영 규정</a></li>
+			<li><a href="#">올림픽 시설물 대관시행 세칙</a></li>
+		</ul>
+		
+		<h3 class="stit">대관이용안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">Q&A</a></li>
+			<li><a href="#">담당자 연락처</a></li>
+		</ul>
+		
+		<h3 class="stit">대관예약</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관 모의계산기</a></li>
+			<li><a href="#">대관 신청서 작성</a></li>
+		</ul>
+		
+		<h3 class="stit">마이페이지</h3>
+		<ul class="all_menu">
+			<li><a href="#">회원정보 수정</a></li>
+			<li><a href="#">신청내역 확인</a></li>
+			<li><a href="#">서브계정 추가</a></li>
+		</ul>
+	
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	 <!--//모바일-전체메뉴 -->
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area culture_sub">
+			<div class="inner">
+				<p class="txt">					
+					<strong class="stress">대관예약시스템</strong>
+					올림픽시설물 대관은<br> 편리하게 안전하게, 투명하게 운영됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="#" class="">대관예약절차안내</a></li>
+					<li><a href="#">대관이용안내</a></li>
+					<li><a href="#">대관예약</a></li>
+					<li><a href="#">마이페이지</a></li>
+				</ul>
+
+				<!-- 모바일-2nd메뉴 -->
+				<div class="mobmenu_wrap">
+					<ul class="items two">
+						<li class="item on"><a href="#">대관예약절차안내</a></li>  
+						<li class="item"><a href="#">대관이용안내</a></li>
+						<li class="item"><a href="#">대관예약</a></li>
+						<li class="item"><a href="#">마이페이지</a></li>
+					</ul>
+           		 </div>
+				<!-- 모바일-2nd메뉴 -->
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			<form id="frm" method="GET">
+				<!-- <input type="hidden" name="notice_seq" /> -->
+				<input type="hidden" name="pageIndex" value="1" />
+				<input type="hidden" name="type_gbn" value="" />
+				<!-- location -->
+				<div class="location_area">
+					<span class="menu">홈</span>
+                    <span class="menu">대관예약</span>
+					<strong class="menu">대관신청서 작성</strong>
+				</div>
+				<!-- //location -->
+           
+				<!-- title -->
+				<div class="tit_area">
+					<h1 class="tit_type01">대관신청서 작성</h1>
+				</div>
+				<!-- //title -->
+         
+                <div class="tbl_top_stit">
+                    <h3 class="title">신청자 정보</h3>
+                    <div class="txt_area">
+                        <em class="txt_orange">*</em> 표시는 필수 입력사항입니다.
+                    </div>                
+                </div>
+                <!--//stitle -->  				
+
+				<!-- board_write2 -->	
+				<div class="tbl_write2">
+					<div class="tr">
+						<strong>회사명(단체명) <em class="txt_orange">*</em></strong>
+						<div>
+							<span class="wi220 cont">
+						    	JYP엔터테인먼트
+						     </span>
+						</div>
+					</div>
+                    <div class="tr">
+						<strong>담당자 성명 <em class="txt_orange">*</em></strong>
+						<div>
+							<span class="wi220">
+						    	<input type="text" title="" name="" id="" placeholder="" value="">
+						     </span>
+						</div>
+					</div>
+                    <div class="tr">
+						<strong>이메일 <em class="txt_orange">*</em></strong>
+						<div>
+							<span class="wi150">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+							<span class="text">@</span>
+							<span class="wi150">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+                            <span class="wi150a mo">
+								<select name="" id="">
+									<option value="">직접입력</option>
+									<option value="01">naver.com</option>
+									<option value="02">daum.net</option>
+									<option value="03">gmail.com</option>
+								</select>
+							</span>
+						</div>
+					</div>
+            
+					<div class="tr">
+						<strong>휴대전화번호 <em class="txt_orange">*</em></strong>
+						<div>
+							<span class="wi100">
+                                <select name="" id="">
+									<option value="">010</option>
+									<option value="01">011</option>
+									<option value="02">017</option>
+									<option value="03">019</option>
+								</select>
+							</span>
+							<span class="text">-</span>
+							<span class="wi100">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+							<span class="text">-</span>
+							<span class="wi100">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+						</div>
+					</div>  
+                    <div class="tr">
+						<strong>전화번호 <em class="txt_orange">*</em></strong>
+						<div>
+							<span class="wi100">
+								<select name="" id="">
+									<option value="">02</option>
+									<option value="01">031</option>
+									<option value="02">051</option>
+									<option value="03">053</option>
+								</select>
+							</span>
+							<span class="text">-</span>
+							<span class="wi100">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+							<span class="text">-</span>
+							<span class="wi100">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+						</div>
+					</div> 
+			    </div>
+                <!-- //board_write2 -->	 
+      
+                <!--stitle -->
+                <div class="tbl_top_stit pdT30">
+                    <h3 class="title">대관세부내용</h3>
+                </div>
+                <!--//stitle --> 
+                                
+				<!-- board_write2 -->	
+				<div class="tbl_write2">
+					<div class="tr">
+						<strong>공연(행사)명 <em class="txt_orange">*</em></strong>
+						<div>
+							<span class="wi500">
+						    	<input type="text" title="" name="" id="" placeholder="" value="">
+						    </span>
+						</div>
+					</div>
+                    <div class="tr">
+						<strong>공연(행사)내용<em>*</em></strong>
+						<div>
+							<span class="wiall">
+								<textarea name="" id="" style="height:120px;"></textarea>
+							</span>
+						</div>
+					</div>
+					<div class="tr">
+						<strong>공연(행사)계획서 <em class="txt_orange">*</em></strong>
+						<div>
+                             <span class="wi350">  
+                                 <p class="b_file_area">
+                                     <input type="text" id="" class="b_file_txt input_ty w2" placeholder="선택된 파일 없음" title="첨부파일이미지 파일경로" style="width:210px;" readonly>
+                                     <a href="#" class="btn_base small off">파일첨부</a>
+                                     <input type="file" id="" class="realFile_btn" name="file_up" title="첨부파일이미지 찾아보기" onChange="">
+                                 </p>
+                             </span>
+                             <span class="exp mo">
+                             	(<em class="txt_orange">*</em> 첨부파일은 hwp, ppt, pdf만 가능합니다.)
+                             </span>
+						</div>
+					</div>
+                    <div class="tr">
+						<strong>공연(행사)개요 <em class="txt_orange">*</em></strong>
+						<div>	
+                        	<span class="exp pdR5">예상티켓가격 : </span>
+							<span class="wi100">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+                            <span class="exp">원</span>
+                            <span class="exp mo">
+                             	(<em class="txt_orange">*</em> 티켓 가격은 평균가격으로 입력하십시오.)
+                            </span> 	
+                            <br>
+                            <span class="exp pdR5 pdT10">예상입장객수 : </span>
+                            <span class="exp pdR5 pdT10">유료</span>
+							<span class="wi70 pdT10">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+                            <span class="exp pdR5 pdT10">명 / 무료 </span>
+                            <span class="wi70 pdT10">
+								<input type="text" title="" name="" id="" placeholder="" value="">
+							</span>
+                            <span class="exp pdT10">명 </span>
+						</div>
+					</div>  
+                    <div class="tr">
+						<strong>대관요율표 <em class="txt_orange">*</em></strong>
+						<div>
+							<span class="wi13">
+                             	<a href="#" class="btn_base small on" style="width:170px">대관요율표 보기</a>
+                             </span>
+						</div>
+					</div>  
+					<div class="tr">
+						<strong>사업자등록증 사본 <em class="txt_orange">*</em></strong>
+						<div>
+                             <span class="wi350"> 
+                                 <p class="b_file_area">
+                                     <input type="text" id="" class="b_file_txt input_ty w2" placeholder="선택된 파일 없음" title="첨부파일이미지 파일경로" style="width:210px;" readonly>
+                                     <a href="#" class="btn_base small off">파일첨부</a>
+                                     <input type="file" id="" class="realFile_btn" name="file_up" title="첨부파일이미지 찾아보기" onChange="">
+                                 </p>
+                             </span>
+                             <span class="exp mo">
+                             	(사업자등록증 사본.hwp)
+                             </span>
+						</div>
+					</div>  
+                    <div class="tr">
+						<strong>통장 사본 <em class="txt_orange">*</em></strong>
+						<div>
+                             <span class="wi350"> 
+                                 <p class="b_file_area">
+                                     <input type="text" id="" class="b_file_txt input_ty w2" placeholder="선택된 파일 없음" title="첨부파일이미지 파일경로" style="width:210px;" readonly>
+                                     <a href="#" class="btn_base small off">파일첨부</a>
+                                     <input type="file" id="" class="realFile_btn" name="file_up" title="첨부파일이미지 찾아보기" onChange="">
+                                 </p>
+                             </span>
+                             <span class="exp mo">
+                             	(통장 사본.png)
+                             </span>
+						</div>
+					</div>  
+                    <div class="tr">
+						<strong>파일첨부 <em class="txt_orange">*</em></strong>
+						<div>
+                             <span class="wi350">  
+                                 <p class="b_file_area">
+                                     <input type="text" id="" class="b_file_txt input_ty w2" placeholder="선택된 파일 없음" title="첨부파일이미지 파일경로" style="width:210px;" readonly>
+                                     <a href="#" class="btn_base small off">파일첨부</a>
+                                     <input type="file" id="" class="realFile_btn" name="file_up" title="첨부파일이미지 찾아보기" onChange="">
+                                 </p>
+                             </span>
+                             <span class="exp mo">
+                             	(<em class="txt_orange">*</em> 첨부파일 용량은 10M 이하만 가능합니다.)
+                             </span>
+						</div>
+					</div>  
+			    </div>
+                <!-- //board_write2 -->	 
+                                
+                <!-- btn -->
+                <div class="btn_area">
+                	<a href="#" class="btn_base">임시저장</a>
+                    <a href="GUI-04-30.html" class="btn_base off">신청서제출</a>
+                </div>
+			<!-- //btn -->                  
+   
+		  </form>
+          
+	
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="sub/GUI-02-10.html" target="_blank" title="새창">대관이용안내</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="#" class="logo"></a>
+				<div class="info">
+					<address>
+						서울시 송파구 올림픽로 424 올림픽역도경기장내 (05540)
+					</address>
+					<p>
+					    <ul class="company">	
+							<li>사업자등록번호 : 215-81-12034</li>
+							<li>대표자 : 김사엽 </li>
+							<li>고객안내전화 : 02-2180-3564 </li>
+							<li>팩스 : 0000-0000 </li>
+						</ul>	
+					</p>
+					<p class="copyright">COPYRIGHT 2020 © KSPO&amp;CO. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

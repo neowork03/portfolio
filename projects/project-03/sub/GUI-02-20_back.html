@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta name="description" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="keyword" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+
+<title>한국체육산업개발주식회사 - 대관예약시스템</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/ui-common.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 대관예약시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">대관예약시스템</a>
+			</div>
+		</div>
+		
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+					<li><a href="#" class="logout">로그인</a></li>
+					<li><a href="#" >회원가입</a></li>
+					<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창"><span> KSPO&amp;CO 바로가기</span></a></li>
+				</ul>
+			</nav>
+			
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+				<!-- [D] 로그인정보 추가 -->
+						<!-- 로그인 후 -->
+						<div class="login_after">
+							<div class="login_inner">
+								<p class="txt">유승아님 안녕하세요.</p>
+								<a href="#" class="btn_base mid logout">로그아웃</a>
+							</div>
+						</div>
+				<!-- //[D] 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+				
+	<!-- 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		
+		<h3 class="stit">대관예약절차안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관예약절차</a></li>
+			<li><a href="#">올림픽 시설물 대관운영 규정</a></li>
+			<li><a href="#">올림픽 시설물 대관시행 세칙</a></li>
+		</ul>
+		
+		<h3 class="stit">대관이용안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">Q&A</a></li>
+			<li><a href="#">담당자 연락처</a></li>
+		</ul>
+		
+		<h3 class="stit">대관예약</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관 모의계산기</a></li>
+			<li><a href="#">대관 신청서 작성</a></li>
+		</ul>
+		
+		<h3 class="stit">마이페이지</h3>
+		<ul class="all_menu">
+			<li><a href="#">회원정보 수정</a></li>
+			<li><a href="#">신청내역 확인</a></li>
+			<li><a href="#">서브계정 추가</a></li>
+		</ul>
+	
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	 <!--//모바일-전체메뉴 -->
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area culture_sub">
+			<div class="inner">
+				<p class="txt">					
+					<strong class="stress">대관예약시스템</strong>
+					올림픽시설물 대관은<br> 편리하게 안전하게, 투명하게 운영됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="#" class="">대관예약절차안내</a></li>
+					<li><a href="#">대관이용안내</a></li>
+					<li><a href="#">대관예약</a></li>
+					<li><a href="#" class="">마이페이지</a></li>
+				</ul>
+
+				<!-- 모바일-2nd메뉴 -->	
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="#">대관예약절차안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관예약</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">마이페이지</a></div>
+						</div>
+					</div>
+					<!--//Swiper -->
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			<form id="frm" method="GET">
+				<!-- <input type="hidden" name="notice_seq" /> -->
+				<input type="hidden" name="pageIndex" value="1" />
+				<input type="hidden" name="type_gbn" value="" />
+				<!-- location -->
+				<div class="location_area">
+					<span class="menu">홈</span>
+                    <span class="menu">대관이용안내</span>
+					<strong class="menu">Q&A</strong>
+				</div>
+				<!-- //location -->
+           
+				<!-- title -->
+				<div class="tit_area">
+					<h1 class="tit_type01">Q&A</h1>
+				</div>
+				<!-- //title -->
+                
+				<!-- FAQ -->
+				<ul class="accordian_ty"> 
+					<li class="list "><!-- Actice class="on" -->
+						<a href="#" class="btn"> <span> [이용문의] 굿셀이란 무엇인가요? </span></a>
+						<div class="view">
+                        	굿셀 스토어는 상품을 공급하는 프로바이더와 상품을 홍보 및 판매하는 글로벌 셀러를 연결해주는 글로벌 쇼핑몰 플랫폼입니다. <br/> 
+                            프로바이더나 글로벌 셀러는 상품 등록 및 판매에 따른 운영 비용이 전혀 들지 않으며, 누구나 쉽게 전세계 상품을 구입할 
+                            수 있습니다.
+						</div>
+					</li>
+					<li class="list">
+						<a href="#" class="btn"><span> [이용문의] 프로바이더 등록은 어떻게 하나요? </span></a>
+						<div class="view">
+							굿셀플랫폼에서 제공하는 홈페이지 접속하시어 간단한 인증절차만 거치면 누구나 상품을 등록하고 판매 할수 있습니다.<br/>  
+                            프로바이더 등록 서비스는 곧 추가 될 예정입니다.
+						</div>
+					</li>
+					<li class="list">
+						<a href="#" class="btn"> <span> [이용문의] 셀러 등록은 어떻게 하나요? </span></a>
+						<div class="view">
+							셀러 또한 굿셀 플랫폼에서 제공하는 사이트에 접속하고 간단한 개인인증만 거치면 전세계 어디에서나 자신만의 쇼핑몰을 
+                            운영 할수 있습니다.  <br/>재고의 운영 및 비용이 전혀 들지 않기 때문에 누구가 할수 있습니다. 
+						</div>
+					</li>
+					<li class="list">
+						<a href="#" class="btn"> <span> [이용문의] 상품판매에 따른 프로바이더 정산 방법은 어떻게 되나요? </span></a>
+						<div class="view">
+							프로바이더의 경우 기존의 쇼핑몰 정산 방법과 같이 프로바이더 가입 시 등록된 계좌로 현금을 입금해 드립니다
+						</div>
+					</li>                                                                     
+					<!--<li class="emp"><p>등록된 항목이 없습니다.</p></li>-->
+				</ul>
+				<!-- //FAQ -->
+                                
+           <br>
+				<!-- FAQ -->
+                <div class="faqArea">                
+                    <ul class="faqList"> 
+                        <li class="">
+                            <div class="question ">
+                                <a href="javascript:;">
+                                <span class="icon-q-tag">Q</span>
+                                    주차장 이용 및 요금은 어떻게 되나요?
+                                <span class="btn-toggle"></span>
+                                </a>
+                            </div>
+                            <div class="answer">
+                                <span class="icon-a-tag">A</span>
+                                   올림픽공원의 주차장은 사용하신 만큼 요금을 지불하시게 되는 후불제이며 일반승용차의 경우 1시간 이내 1,000원, 이후 10분당 500원씩 요금이 부과됩니다.
+                                   경차, 장애인, 국가유공자, 저공해, 다자녀(3자녀 이상) 차량은 이용요금이 50% 할인되며, 다자녀(2자녀)는 25% 할인됩니다. 대형차량(25인승 이상, 2.5톤 이상)은
+                                   12,000원 정액 요금입니다. 각각의 요금제는 1회 요금제이며 출차하셨다가 다시 입차하실 경우 주차요금을 다시 내셔야 하오니 이점 유의하시기 바랍니다. 
+                                   좀 더 자세한 내용은 올림픽공원 홈페이지 내 '공원가이드 → 교통 및 주차안내 <바로가기>'를 참고해주시기 바랍니다.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <a href="javascript:;">
+                                <span class="icon-q-tag">Q</span>
+                                    공연을 관람 후 소지품을 분실하였을 경우
+                                <span class="btn-toggle"></span>
+                                </a>
+                            </div>
+                            <div class="answer">
+                                <span class="icon-a-tag">A</span>
+                                   올림픽공원에서는 분실물 및 습득물 발생 시 공원 안내센터에서 접수하여 보관하고 있습니다. 찾고 계신 물품은 확인한 결과 현재까지 접수된 것이 없습니다. 
+                          		   추후 접수되면 바로 연락드리겠습니다. 자세한 사항에 대한 전화문의는 공원 안내센터 02) 410-1114, 2180-3564~5로 연락하시면 자세히 알려드리겠습니다.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <a href="javascript:;">
+                                <span class="icon-q-tag">Q</span>
+                                    공연 관람 시와 비관람 시의 주차요금이 차이가 있나요?
+                                <span class="btn-toggle"></span>
+                                </a>
+                            </div>
+                            <div class="answer">
+                                <span class="icon-a-tag">A</span>
+                                   올림픽공원 주차시설은 이용객의 공연관람 여부와 관계없이 상시 후불제 요금 체계로 운영되고 있습니다.단, 대형행사시 공원 내 유입 차량이 많을 것으로
+                                   예상되는 경우 기존 후불제 요금 정산 체계가 임시 선불제로 전환되며, 각 출입문 매표소에서 주차요금 정액 5,000원을 우선 결제 후 공원 내로 입차하실 수 있습니다.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <a href="javascript:;">
+                                <span class="icon-q-tag">Q</span>
+                                    올림픽공원 이용시간이 어떻게 되나요?
+                                <span class="btn-toggle"></span>
+                                </a>
+                            </div>
+                            <div class="answer">
+                                <span class="icon-a-tag">A</span>
+                                  올림픽공원의 이용시간은 도보나 자전거 출입시 오전 5시~밤 10시, 평화의광장, 만남의광장 지역은 밤 12시까지이고, 차량을 이용하여 출입하실 경우 
+                         		  오전 6시~밤 10시까지 개방하고 있습니다.(야간행사 개최시 제외) 시설물 안전과 방문객의 신변보호를 위해 밤 10시 이후에는 평화의 광장, 만남의 광장을 제외한 
+                            	  공원 안쪽으로의 출입을 금하고 있습니다.
+                            </div>
+                        </li>                          
+                        <li>
+                            <div class="question">
+                                <a href="javascript:;">
+                                <span class="icon-q-tag">Q</span>
+                                   방송은 어디서 들으면 잘 들을 수 있을까요?
+                                <span class="btn-toggle"></span>
+                                </a>
+                            </div>
+                            <div class="answer">
+                                <span class="icon-a-tag">A</span>
+                                  올림픽공원 전체에 음악방송이 나갑니다. 평화의 광장 몽촌해자나 장미정원 등 아름다운 자연을 즐기실 수 있는 곳이 많아, 오셔서 음악이 나오는 스피커 근처에 
+                            	  자리를 잡으시고 편안하게 들어주세요.
+                            </div>
+                        </li> 
+                        <li>
+                            <div class="question">
+                                <a href="javascript:;">
+                                <span class="icon-q-tag">Q</span>
+                                   올림픽공원 공연관람회원의 혜택은 무엇입니까?
+                                <span class="btn-toggle"></span>
+                                </a>
+                            </div>
+                            <div class="answer">
+                                <span class="icon-a-tag">A</span>
+                                  공연관람할인 : 조이올팍 회원만을 위한 특별 할인율로 올림픽공원에서 펼쳐지는 다양한 공연을 관람하세요.(공연별 차등 적용) <br>
+                                  ※자세한 사항은 조이올팍회원 서비스 에서 확인하실 수 있습니다.
+                            </div>
+                        </li>                         
+                        <li>
+                            <div class="question">
+                                <a href="javascript:;">
+                                <span class="icon-q-tag">Q</span>
+                                   올림픽공원에 사무실을 입주하고 싶은데 임대조건과 가능 여부에 대해 알려 주세요.
+                                <span class="btn-toggle"></span>
+                                </a>
+                            </div>
+                            <div class="answer">
+                                <span class="icon-a-tag">A</span>
+                                  올림픽공원은 대한장애인체육회 산하단체, 문화체육관광부의 승인 등록된 체육(학술)관련 단체만 입주하실 수 있으며, 그 밖의 단체 및 개인은 현재 공원 내 
+                                  입주가 불가함을 알려드립니다. 자세한 사항은 전화 (02)2180-3683(공원사업팀)으로 문의해 주시면 정성껏 답변 드리겠습니다.
+                            </div>
+                        </li>                                   
+                        <!--<li class="emp"><p>등록된 항목이 없습니다.</p></li>-->
+                    </ul>
+                </div>                
+				<!-- //FAQ -->                
+    
+                                
+               
+		  </form>
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="sub/GUI-02-10.html" target="_blank" title="새창">대관이용안내</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="#" class="logo"></a>
+				<div class="info">
+					<address>
+						서울시 송파구 올림픽로 424 올림픽역도경기장내 (05540)
+					</address>
+					<p>
+					    <ul class="company">	
+							<li>사업자등록번호 : 215-81-12034</li>
+							<li>대표자 : 김사엽 </li>
+							<li>고객안내전화 : 02-2180-3564 </li>
+							<li>팩스 : 0000-0000 </li>
+						</ul>	
+					</p>
+					<p class="copyright">COPYRIGHT 2020 © KSPO&amp;CO. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

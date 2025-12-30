@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="icon_menu_04" transform="translate(-30 -453)" opacity="0.7">
+    <g id="box" transform="translate(30 453)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="icon_menu_04-2" data-name="icon_menu_04" transform="translate(19 217)">
+      <rect id="사각형_2717" data-name="사각형 2717" width="22" height="18" rx="3" transform="translate(20 245)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_402" data-name="선 402" x1="1" y2="4" transform="translate(27 263)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_403" data-name="선 403" x1="1" y1="4" transform="translate(34 263)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_404" data-name="선 404" x2="6" transform="translate(27.985 251)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_405" data-name="선 405" x2="6" transform="translate(27.985 256)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

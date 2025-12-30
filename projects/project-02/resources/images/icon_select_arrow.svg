@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="5" viewBox="0 0 8 5">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="패스_32" data-name="패스 32" d="M0,5H8L4,0Z" fill="#898d9c" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="패스_31" data-name="패스 31" d="M0,3014H1535V0H0Z" fill="#898d9c"/>
+    </clipPath>
+  </defs>
+  <g id="ico_select_arrow" transform="translate(8 5) rotate(180)" clip-path="url(#clip-path)">
+    <g id="그룹_31" data-name="그룹 31" transform="translate(-959 -1857)" clip-path="url(#clip-path-2)">
+      <path id="패스_30" data-name="패스 30" d="M0,0H18V15H0Z" transform="translate(954 1852)" fill="#898d9c"/>
+    </g>
+  </g>
+</svg>

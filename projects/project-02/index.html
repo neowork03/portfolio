@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200" />
+    <meta name="theme-color" content="#00adef" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Publishing List</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Malgun Gothic", "맑은 고딕", Apple Gothic, arial,
+          helvetica, sans-serif;
+        font-weight: 400;
+      }
+      body {
+        min-width: 980px;
+        padding: 0 20px 50px 20px;
+        font-size: 12px;
+      }
+      a {
+        color: #444;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #444;
+      }
+      a:visited,
+      a:focus,
+      a:active {
+        color: #444;
+      }
+      h1 {
+        font-size: 30px;
+        margin: 20px 0 10px 0;
+        letter-spacing: -1px;
+        font-weight: 600;
+      }
+      h1 img {
+        height: 40px;
+        margin: 2px 5px 0 0;
+        vertical-align: top;
+      }
+      .info {
+        position: absolute;
+        right: 25px;
+        top: 40px;
+      }
+      .guide {
+        margin: 10px 0 5px 0;
+        text-align: right;
+      }
+      h2 {
+        padding: 10px 0 10px 15px;
+        font-size: 13px;
+        border: 1px solid #444;
+        border-bottom: none;
+        background: #595959;
+        color: #fff;
+        font-weight: 500;
+      }
+      caption {
+        display: none;
+      }
+      div.cont {
+        border-top: 1px solid #444;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        border-spacing: 0;
+      }
+
+      table thead th {
+        padding: 7px 3px;
+        border: 1px solid #ccc;
+        background: #eee;
+        font-size: 13px;
+      }
+      table tbody td {
+        padding: 7px 3px;
+        background: #e4e4e4;
+        border: 1px solid #ccc;
+        text-align: center;
+        color: #898989;
+        font-size: 11px; /*display:none;*/
+      }
+      table tbody td.left {
+        padding: 7px 10px;
+        text-align: left;
+      }
+      table tbody td.url {
+        padding: 7px 10px;
+        text-align: left;
+      }
+      table tbody tr.hidden td {
+        display: table-cell;
+        background: #e4e4e4;
+        color: #898989;
+        text-decoration: line-through;
+      }
+      table tbody tr.temp td {
+        display: table-cell;
+        background: #fdf0dc;
+        color: #444;
+      }
+      table tbody tr.ing td {
+        display: table-cell;
+        background: #d9eafd;
+        opacity: 0.3;
+      }
+      table tbody tr.ed td {
+        display: table-cell;
+        background: #fff;
+      }
+      table tbody tr.ed:hover td {
+        background: #dcf2f9;
+      }
+
+      .tab {
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .tab div {
+        float: right;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .tab a {
+        position: relative;
+        float: left;
+        min-width: 100px;
+        padding: 10px;
+        background: #eee;
+        border-right: solid 1px #fff;
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .tab a:last-child {
+        border: none;
+      }
+      .tab a:hover {
+        background: #ccc;
+      }
+      .tab a.on {
+        background: #009fe3;
+        color: #fff;
+      }
+      .tab a.on:hover {
+        background: #0086bf;
+      }
+      .proc_wrap {
+        margin: 30px 0 -35px 0;
+      }
+      .proc_wrap strong {
+        color: #009fe3;
+        font-weight: bold;
+      }
+      .red {
+        color: #e80000 !important;
+      }
+
+      .ico {
+        display: inline-block;
+        height: 20px;
+        margin-left: 5px;
+        padding: 0 5px;
+        border-radius: 2px;
+        font-style: normal;
+        font-size: 11px;
+        color: #fff;
+        line-height: 20px;
+      }
+      .ico.add {
+        background: #019ee3;
+      }
+      .ico.modify {
+        background: #e30101;
+      }
+      .ico.ing {
+        background: #53b100;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>[서비스에이스] 자기신고서 Publishing List</h1>
+    <p class="info"></p>
+    <p class="guide"></p>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- Common -->
+      <h2>Common</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>SRU-001-1</td>
+              <td>로그인</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/login.html" target="_blank"
+                  >./html/login.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //Common -->
+
+      <!-- 자기 신고서 생성 -->
+      <h2>자기 신고서 생성</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>SRU-002-1</td>
+              <td>자기 신고서 생성</td>
+              <td>기초정보 입력</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-002-1.html" target="_blank"
+                  >./html/SRU-002-1.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-002-2</td>
+              <td>자기 신고서 생성</td>
+              <td>공지사항 탭 추가 팝업</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-002-2.html" target="_blank">./html/SRU-002-2.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-002-3</td>
+              <td>자기 신고서 생성</td>
+              <td>평가자 지정</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-002-3.html" target="_blank"
+                  >./html/SRU-002-3.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-002-4</td>
+              <td>자기 신고서 생성</td>
+              <td>피 평가자 지정</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-002-4.html" target="_blank"
+                  >./html/SRU-002-4.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-002-5</td>
+              <td>자기 신고서 생성</td>
+              <td>평가/피평가자 최종확인</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-002-5.html" target="_blank"
+                  >./html/SRU-002-5.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-005-1</td>
+              <td>자기 신고서 열람자 관리</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-005-1.html" target="_blank">./html/SRU-005-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-005-2</td>
+              <td>자기 신고서 열람자 관리</td>
+              <td>열람자 추가 팝업</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-005-2.html" target="_blank">./html/SRU-005-2.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-006-1</td>
+              <td>평가 키워드 관리</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-006-1.html" target="_blank">./html/SRU-006-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-007-1</td>
+              <td>자기신고서 작성현황</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-007-1.html" target="_blank"
+                  >./html/SRU-007-1.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-007-2</td>
+              <td>자기신고서 작성현황</td>
+              <td>조직별 세부 현황</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-007-2.html" target="_blank">./html/SRU-007-2.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-008-1</td>
+              <td>자기 신고서 조회</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-008-1.html" target="_blank">./html/SRU-008-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //자기 신고서 생성 -->
+      <!-- 자기 신고서 작성 -->
+      <h2>자기 신고서 작성</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>SRU-009-1</td>
+              <td>자기 신고서 작성</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-009-1.html" target="_blank"
+                  >./html/SRU-009-1.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-010-1</td>
+              <td>자기 신고서 F/B 작성</td>
+              <td>목록</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-010-1.html" target="_blank"
+                  >./html/SRU-010-1.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-010-2</td>
+              <td>자기 신고서 F/B 작성</td>
+              <td>작성하기</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/SRU-010-2.html" target="_blank"
+                  >./html/SRU-010-2.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-010-3</td>
+              <td>자기 신고서 F/B 작성</td>
+              <td>키워드 선택 팝업</td>
+              <td></td>
+              <td class="url">
+                <span>장점키워드</span
+                ><a href="./html/SRU-010-3.html" target="_blank"
+                  >./html/SRU-010-3-1.html</a
+                ><br />
+                <span>보완키워드</span
+                ><a href="./html/SRU-010-3-2.html" target="_blank"
+                  >./html/SRU-010-3-2.html</a
+                >
+              </td>
+              <td>2022.08.21</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-010-4</td>
+              <td>자기 신고서 F/B 작성</td>
+              <td>F/B 상세보기</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-010-4.html" target="_blank">./html/SRU-010-3.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //자기 신고서 작성 -->
+      <!-- 자기 신고서 열람 -->
+      <h2>자기 신고서 열람</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>SRU-011-1</td>
+              <td>자기 신고서 열람</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-011-1.html" target="_blank">./html/SRU-011-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-012-1</td>
+              <td>평가/피평가자 확인</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-012-1.html" target="_blank">./html/SRU-012-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-013-1</td>
+              <td>시스템 관리</td>
+              <td>자기신고서 관리자)</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-013-1.html" target="_blank">./html/SRU-013-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-013-2</td>
+              <td>시스템 관리</td>
+              <td>자기신고서 관리자</td>
+              <td>(검수담당자 추가 팝업)</td>
+              <td class="url">
+                <!-- <a href="./html/SRU-013-2.html" target="_blank">./html/SRU-013-2.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-013-3</td>
+              <td>시스템 관리</td>
+              <td>자기신고서 관리자</td>
+              <td>(전수담당자 추가 팝업)</td>
+              <td class="url">
+                <!-- <a href="./html/SRU-013-3.html" target="_blank">./html/SRU-013-3.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-014-1</td>
+              <td>시스템 관리</td>
+              <td>SAP 데이터 동기화</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-014-1.html" target="_blank">./html/SRU-014-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-015-1</td>
+              <td>시스템 관리</td>
+              <td>SAP Interface 로그</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-015-1.html" target="_blank">./html/SRU-015-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>SRU-016-1</td>
+              <td>시스템 관리</td>
+              <td>접속 로그</td>
+              <td></td>
+              <td class="url">
+                <!-- <a href="./html/SRU-016-1.html" target="_blank">./html/SRU-016-1.html</a> -->
+              </td>
+              <td></td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //자기 신고서 작성 -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

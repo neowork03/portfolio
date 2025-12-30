@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="icon_menu_06" transform="translate(-12 -732)" opacity="0.7">
+    <g id="box" transform="translate(12 732)" fill="none" stroke="rgba(204,204,204,0)" stroke-miterlimit="10" stroke-width="1">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="icon_menu_06-2" data-name="icon_menu_06" transform="translate(-1669 207)">
+      <path id="패스_3164" data-name="패스 3164" d="M1698.971,556H1693a3,3,0,0,1-3-3V537a3,3,0,0,1,3-3h15a3,3,0,0,1,3,3v5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_372" data-name="선 372" x2="11" transform="translate(1695 540)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_373" data-name="선 373" x2="6" transform="translate(1695 545)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle id="타원_239" data-name="타원 239" cx="5" cy="5" r="5" transform="translate(1702 546)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="패스_3165" data-name="패스 3165" d="M1705,551l1.5,1.5,2.5-2.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

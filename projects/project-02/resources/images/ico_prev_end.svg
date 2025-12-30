@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #707070;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="_" data-name="&lt;" transform="translate(2 4.164)">
+    <rect id="area" class="cls-1" width="32" height="32" transform="translate(-2 -4.164)"/>
+    <g id="icon" transform="translate(0 0.836)">
+      <path id="패스_66" data-name="패스 66" class="cls-2" d="M6-10V0L0-5Z" transform="translate(11 16)"/>
+      <rect id="사각형_101444" data-name="사각형 101444" class="cls-3" width="1" height="10" transform="translate(10 6)"/>
+    </g>
+  </g>
+</svg>

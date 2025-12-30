@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>올림픽테니스장 - 온라인예약시스템</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="description" content="올림픽스포츠센터 수강신청, 올림픽공원 테니스장, 축구장, 수영장, 미사경정공원 예약 등 " />
+<meta name="keyword" content="올림픽공원 스포츠센터 수강신청, 미사경정공원 대관, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="올림픽공원 스포츠센터 온라인예약시스템" />
+<meta name="naver-site-verification" content="b791ef9f800aaa9bb62231dfacf3559b31822fae" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+<script type='text/javascript'>
+	ssl_mapping();
+	function ssl_mapping() {
+		var currentAddress = location.href;
+		if (currentAddress.indexOf('http://') == 0
+				&& currentAddress.indexOf('localhost') < 0
+				&& currentAddress.indexOf('121.167.227.222') < 0) {
+			currentAddress = currentAddress.replace('http://', 'https://');
+			location.href = currentAddress;
+		}
+	}
+
+	$(document).ready(function() {
+		setPageInit();
+		setLogoutUrl("/online/SSOLegacy.do?pname=spLogout");
+		
+		// TODO : 모든 서브메인의 간편 예약신청 구현 후 제거해야함
+		// 서브메인의 간편예약 구현 시 not 영역에 container 클래스 추가
+		// ex ) not(.skate_main, .soccer_main)
+		/* $("#container:not(.skate_main, .soccer_main, .swim_main, .train_main, .parking_main, .edu_main)").find(".online_area a.btn_check").click(function() {
+			location.href = "./resrvtn_aplictn.do";
+		}); */
+	});
+</script>
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 온라인 예약 시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">올림픽테니스장</a>
+			</div>
+
+			<ul class="top_menu">
+				
+					
+				<li><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+				<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+				<li><a href="//www.ksponco.or.kr" target="_blank" title="새창">KSPO&amp;CO 바로가기</a></li>
+			</ul>
+		</div>
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+				
+					
+						<li class="mo"><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+					
+					
+				
+					<li class="pc"><a href="../" class="home">메인으로</a></li>
+					<li><a href="./basket_list.do" class="cart">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="mypage">신청내역</a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+				
+					
+						<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+
+				<!-- [D] 2019-12-20 로그인정보 추가 -->
+				
+					
+						<!-- 로그인 후 -->
+						<div class="login_after">
+							<div class="login_inner">
+								<p class="txt">유승아님 안녕하세요.</p>
+								<a href="#" class="btn_base mid logout">로그아웃</a>
+							</div>
+						</div>
+					
+					
+				
+				<!-- //[D] 2019-12-20 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+		
+	<!-- [D] 2019-12-12 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		<!-- [D] 2019-12-20 로그인정보 추가 -->
+		
+			
+				<!-- 로그인 후 -->
+				<p class="login_after">
+					<span class="member">유승아</span>
+					<a href="#none" class="btn_logout logout">로그아웃</a>
+				</p>
+			
+			
+		
+		<!-- //[D] 2019-12-20 로그인정보 추가 -->
+		<ul class="all_menu">
+			<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+			<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+			<li><a href="./usage_guide.do">시설이용안내</a></li>
+			<li><a href="./directns.do">오시는길</a></li>
+		</ul>
+		<ul class="all_menu">
+			<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+			
+				
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+				
+				
+			
+			<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+			<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+			<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+		</ul>
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+
+	
+	<script type="text/javascript">
+	<!--
+	$(document).ready(fn_basket_length);
+	function fn_basket_length(){
+		$.ajax({
+			url: "./tennis_mbasket_list.do",
+			type:"POST",
+			dataType: "json",
+			success:function(data){
+				if(data.ss_check > 0){
+					var basket_length = data.tennis_basket_list.length;
+
+					if(basket_length > 0){
+						var inner_html = "<em class=\"num\">" + basket_length + "</em>";
+						$("a.cart").append(inner_html);
+					}
+				}
+			}
+		});
+	}
+	//-->
+	</script>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+			
+		
+		
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area tennis_sub">
+			<div class="inner">
+				<p class="txt">
+					삶의 활력소와 건강까지 챙기세요
+					<strong class="stress">올림픽테니스장</strong>
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+		
+	
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="./resrvtn_aplictn.do">일일입장 예약신청</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./aplictn_guide.do">신청방법안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./usage_guide.do">시설이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./directns.do">오시는길</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+						<!-- location -->
+			<div class="location_area">
+				<span class="menu">홈</span>
+				<span class="menu">올림픽테니스장</span>
+				<strong class="menu">결제바구니</strong>
+			</div>
+			<!-- //location -->
+
+			<!-- title -->
+			<div class="tit_area">
+				<h1 class="tit_type01">결제바구니</h1>
+			</div>
+			<!-- //title -->
+
+			<div class="tbl_top">
+				<div class="btn_area">
+					<a href="#none" class="btn_base mid off checked" onclick="selectAll();">전체선택</a>
+					<a href="#none" class="btn_base mid" onclick="remove();">삭제</a>
+				</div>
+				<p class="txt_area">체크한 항목만 계산됨(단위 : 원)</p>
+			</div>
+
+			<form id="listForm" method="post" action="./terms_agree.do">
+				<table class="data_list">
+					<caption>올림픽테니스장 예약내역</caption>
+					<colgroup>
+						<col style="width:6%;">
+						<col style="width:25%;">
+						<col>
+						<col style="width:25%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col">예약일자</th>
+							<th scope="col">종목 / 내용</th>
+							<th scope="col">결제금액</th>
+						</tr>
+					</thead>
+					<tbody id='list_tbody'>
+                    	<tr>
+	                        <td colspan="4">결제바구니내역이 없습니다.</td>
+                        </tr>
+                    </tbody>
+					<tfoot>
+						<tr>
+							<td id='td_tot_amt' colspan="4">
+								<p class="total_price">총금액  :  <strong class="stress">0원</strong></p>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</form>
+
+			<div class="btn_area">
+				<a href="#none" class="btn_base on" onclick='javascript:processPayment()'>결제하기</a>
+			</div>
+
+			<h2 class="tit_info">알려드립니다</h2>
+			<ul class="txt_info">
+				<li>
+					결제바구니에 담긴 예약 항목은 <span class="txt_orange">1시간 동안 보관</span> 되며, <span class="txt_orange">1시간이 경과할 경우 자동 취소</span> 됩니다.<br>
+				</li>
+				<li>온라인 예약취소는 당일 사용 1시간 전에는 수수료없이 취소 가능합니다.</li>
+				<li>테니스 코트 예약은 동시간에 신청할 경우 먼저 결제한 고객에게 예약 처리가 됩니다.</li>
+				<li>테니스장은 <span class="txt_orange">1인 1코트당 3시간</span>만 예약이 가능하며, 최대 <span class="txt_orange">2개 코트(총 6시간)</span> 예약이 가능합니다.</li>
+			</ul>
+<script type="text/javascript">
+function loadBasketList() {
+	$.ajax({
+		url: "./tennis_mbasket_list.do",
+		type:"POST",
+		dataType: "json",
+		data: null,	//params
+		success:function(data){
+			if(data.ss_check > 0){
+				var inner_html = "";
+				var tot_amt = 0;
+				if(data.tennis_basket_list.length > 0){
+					
+					var formHtml = ""
+					$.each(data.tennis_basket_list, function(index, obj) {
+						var userStdCnt = parseInt(obj.qty);
+						var classMemCnt = parseInt(obj.classMemCnt);
+						var classMemLimit = parseInt(obj.classMemLimit);
+						var modCnt = classMemLimit - classMemCnt;
+						var reserveDate = new Date();
+						
+						var dateStr = obj.reserveDate.replace(/\./g, '')
+						
+						var y = dateStr.substring(0,4);
+						var m =dateStr.substring(4,6);
+						var d = dateStr.substring(6);
+						
+						reserveDate.setYear(y);
+						reserveDate.setMonth(m-1);
+						reserveDate.setDate(d);
+						var dayTbl = ['일', '월', '화', '수', '목', '금', '토'];
+						
+						inner_html += '<tr><td class="pd0">';
+						inner_html += '<input type="hidden" id="court_no_' + obj.seqNo + '" name="court_no" value="' + obj.courtNo + '">';
+						inner_html += '<span class="c_chk txt_no">';
+						inner_html += '<input type="checkbox" id="seq_no' + index+ '" name="seq_no" value="' + obj.seqNo + '" checked="checked" onChange="changeTotAmt()">';
+						inner_html += '<label for="seq_no' + index+ '">선택</label></span></td><td>' + y + '.' + m + '.' + d + '('  + dayTbl[reserveDate.getDay()] + ')</td>' +
+						'<td>올림픽테니스장 / ' + obj.courtNo + '번코트, ' + obj.startT + ' ~ ' + obj.endT + (obj.lightYn === 'Y'?', (조명사용)':'') + ' </td>' +
+						'<td id="rcvAmt">' + numberUtil.isComma(obj.rcvAmt) + '</td></tr>';
+
+						tot_amt += obj.rcvAmt;
+						
+						// 약관페이지로 넘겨줄 form 데이터 구성
+						
+					});
+					
+				} else {
+					inner_html = '<tr><td colspan="4">결제바구니내역이 없습니다.</td></tr>';
+				}
+				$('#list_tbody').html(inner_html);
+				// 총 금액 변경
+				changeTotAmt();
+			}else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+			$('#tennis_basket_loading').css('display', 'none');
+		},
+		error:function(){
+			alert('스케이트강좌 결제대기 이동 에러: 비동기 데이터요청 불가');
+			$('#tennis_basket_loading').css('display', 'none');
+			return;
+		}
+	});
+}
+
+
+// 총 금액 변경
+function changeTotAmt() {
+	var selectedAmt = 0;
+
+	$(".pd0 input[type='checkbox']:checked").each(function(idx, obj) {
+		selectedAmt += parseInt($(obj).parents("tr").children("#rcvAmt").text().replace(",", ""));
+	});
+
+	if(selectedAmt > 1000)
+		selectedAmt = numberUtil.isComma(selectedAmt);
+
+	$("#td_tot_amt strong").text(selectedAmt + "원");
+}
+
+function selectAll(){
+	var isCheckedAll = $(event.srcElement).hasClass("checked");
+
+	$("#list_tbody input[name='seq_no']").prop('checked', !isCheckedAll);
+	if($(event.srcElement).hasClass("checked"))
+		$(event.srcElement).removeClass("checked");
+	else
+		$(event.srcElement).addClass("checked");
+
+	changeTotAmt();
+}
+
+function processPayment() {
+	var selectedLength = $("#list_tbody input[name='seq_no']:checked").length;
+
+	if (selectedLength === 0) {
+		alert("결제할 항목을 선택해주세요.");
+	}
+	else if (confirm('결제를 진행하시겠습니까?')) {
+		for (var i = 0; i < selectedLength; i++) {
+			
+			var val = $("#list_tbody input[name='seq_no']:checked")[i].value;
+			
+			var html = "<input type=\"hidden\" name=\"seqNo\" value=\"" + val + "\" \/>"
+
+			$('#listForm').append(html);
+		}
+		
+		$("#listForm").submit();
+	}
+}
+
+function removeAjax(seqArray) {
+	var tempPair = seqArray.splice(0, 1)
+	var param = "seq_no=" + tempPair[0].seqNo + "&court_no=" + tempPair[0].courtNo;
+
+	$.ajax({
+		url: "./tennis_mbasket_del.do",
+		type:"POST",
+		async:false,
+		dataType: "json",
+		data: param,
+		success:function(data){
+			if(data.ss_check > 0){
+				if (seqArray.length > 0) {
+					removeAjax(seqArray)
+				} else {
+					loadBasketList();
+				}
+			}else if(data.ss_check == 0){
+				alert("결제바구니내역 삭제에 실패했습니다. 다시 시도해 주세요.");
+				loadBasketList();
+			}else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+		},
+		error:function(){
+			alert('스케이트강좌 결제바구니 이동 에러: 비동기 데이터요청 불가');
+			loadBasketList();
+			return;
+		}
+	});
+}
+
+function remove() {
+	var selectedList = $("#list_tbody input[name='seq_no']:checked");
+	if (selectedList.length == 0) {
+		alert('삭제할 강좌를 선택해 주세요.');
+		return;
+	}
+
+	var paramArray = [];
+
+	$.each(selectedList, function(idx, obj) {
+		var seqNo = $(obj).val()
+		var courtNo = $("#list_tbody #court_no_" + seqNo).val();
+		paramArray.push({seqNo:seqNo, courtNo:courtNo});
+	})
+	removeAjax(paramArray);
+}
+
+$(document).ready(function(){
+	loadBasketList();
+});
+</script>
+
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/company/traffic.do" target="_blank" title="새창">찾아오시는길</a></li>
+					<li><a href="./sitemap.do">사이트맵</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="../skate/index.do" class="logo"><img src="../images/common/foot_logo.gif" alt="한국체육산업개발주식회사"></a>
+				<div class="mark_area">
+					<a href="#none"><img src="../images/common/icon_mark01.gif" alt="웹접근성품질인증마크"><span class="txt">웹접근성품질인증</span></a>
+					<a href="#none"><img src="../images/common/icon_mark02.gif" alt="개인정보보호우수사이트 인증마크"><span class="txt">개인정보보호<br>우수사이트 인증</span></a>
+				</div>
+				<div class="info">
+					<p class="company">사업자등록번호 : 215-81-12034, 대표자 : 김사엽</p>
+					<address>
+						주소 (05540) 서울시 송파구 올림픽로 424(방이동) 올림픽역도경기장 내
+					</address>
+					<p class="copyright">COPYRIGHT 2019 © KSPO&amp;CO ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,955 @@
+@charset "utf-8";
+html {
+  position: relative;
+  height: 100%;
+  display: block;
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: "Roboto", "NanumSquareRound", "맑은 고딕", "돋움", dotum,
+    sans-serif;
+  /* font-family: "Roboto", "Noto Sans KR", "맑은 고딕", "돋움", dotum, sans-serif; */
+  color: #000;
+  font-weight: normal;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /* -webkit-user-select: none; */
+  -webkit-text-size-adjust: none;
+  word-break: break-all;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+span,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+input,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+fieldset,
+iframe {
+  border: 0;
+}
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+select,
+table,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+div,
+dl,
+dd,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+button,
+p,
+pre,
+blockquote,
+menu,
+figure,
+input {
+  margin: 0;
+  padding: 0;
+}
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption {
+  display: block;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+legend,
+select,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+menu,
+button,
+a,
+span,
+strong,
+label,
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+figure,
+figcaption {
+  word-break: break-word;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+} /* 여백을 포함한 사이즈 설정*/
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea,
+button,
+option {
+  color: inherit;
+  /* font-family: "Noto Sans KR", "맑은 고딕", "돋움", dotum, sans-serif; */
+  font-family: "Roboto", "NanumSquareRound", "맑은 고딕", "돋움", dotum,
+    sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+pre,
+code,
+samp,
+kbd {
+  font-family: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+th {
+  font-weight: bold;
+}
+em,
+var,
+address {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+legend,
+fieldset,
+button,
+img {
+  border: 0 none;
+}
+input,
+select,
+textarea,
+button,
+label,
+strong,
+a,
+time {
+  vertical-align: inherit;
+}
+input,
+select,
+textarea,
+button,
+option {
+  font-family: inherit;
+  font-weight: inherit;
+}
+input,
+select,
+textarea {
+  -webkit-appearance: none; /* Safari and Chrome */
+  -moz-appearance: none; /* Firefox */
+  appearance: none; /* 화살표 없애기 공통*/
+}
+input[type="text"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; /* Safari and Chrome */
+  -moz-appearance: none; /* Firefox */
+  appearance: none; /* 화살표 없애기 공통*/
+}
+button,
+select,
+option {
+  color: inherit;
+  text-transform: none;
+}
+select {
+  border-radius: 6px;
+  padding: 0 0 0 15px;
+}
+textarea {
+  resize: none;
+}
+caption,
+legend {
+  text-indent: -5000px;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  overflow: visible;
+}
+a {
+  color: inherit;
+}
+a {
+  text-decoration: none !important;
+} /* color:#777 */
+a:hover {
+  text-decoration: none;
+}
+*:focus {
+  outline: 1px solid #222;
+}
+*:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-focus-ring-color: transparent !important;
+  outline: none;
+}
+
+/** important 정의 **/
+.dib {
+  display: inline-block !important;
+}
+.al {
+  text-align: left !important;
+}
+.ac {
+  text-align: center !important;
+}
+.ar {
+  text-align: right !important;
+}
+.blind {
+  position: absolute !important;
+  top: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  font-size: 1px !important;
+  line-height: 0 !important;
+  color: transparent !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+.pointColor {
+  color: #ec373c !important;
+}
+.pointColor1 {
+  color: #ec373c !important;
+}
+.pointColor2 {
+  color: #ff7826 !important;
+}
+.pointColor3 {
+  color: #000 !important;
+}
+.pointColor4 {
+  color: #0086de !important;
+}
+.pointColor5 {
+  color: #ff6b1a !important;
+}
+
+.bdl {
+  border-left: 1px solid #ddd !important;
+}
+.bdr {
+  border-right: 1px solid #ddd !important;
+}
+.bdt {
+  border-top: 1px solid #ddd !important;
+}
+.bdb {
+  border-bottom: 1px solid #ddd !important;
+}
+.bdtNone {
+  border-top: none !important;
+}
+.bdbNone {
+  border-bottom: none !important;
+}
+.bdlNone {
+  border-left: none !important;
+}
+.bdrNone {
+  border-right: none !important;
+}
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+.fn {
+  float: none !important;
+}
+.cl {
+  clear: both;
+}
+.clfix {
+  overflow: hidden;
+}
+.block {
+  display: block !important;
+}
+.blockTbl {
+  display: table !important;
+}
+.none {
+  display: none !important;
+}
+.inblock {
+  display: inline-block !important;
+}
+.blockNone {
+  display: none !important;
+}
+.underLine {
+  text-decoration: underline !important;
+}
+/* Reset */
+.formHolder button,
+.formHolder input,
+.formHolder select {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.formHolder input,
+.formHolder select,
+.formHolder button {
+  font-size: 1.6rem;
+  vertical-align: middle;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formHolder button {
+  background-color: transparent;
+}
+strong {
+  font-weight: 700;
+}
+.formHolder input {
+  width: 100%;
+  height: 50px;
+  padding: 10px 0 10px 15px;
+  box-sizing: border-box;
+  border: 0;
+  line-height: 48px;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 1.6rem;
+  border-radius: 6px;
+}
+input:-internal-autofill-selected {
+  background-color: #fff;
+}
+.inptWrap input:focus {
+  outline: none !important;
+}
+.formHolder > ul > li {
+  margin-top: 10px;
+}
+.formHolder > ul > li:first-child {
+  margin-top: 0px;
+}
+.formHolder > ul > li:first-child .formTit {
+  margin-top: 0px;
+}
+.formHolder > ul > li > .formTit + * ~ *,
+.formHolder > ul > li .inputList + * {
+  margin-top: 5px;
+}
+.formHolder > ul > li > .formTit + * ~ .toolTipBase {
+  margin-top: 0 !important;
+}
+.formHolder > ul > li > .formTit + * ~ .areaBtnPrice {
+  margin-top: 10px;
+}
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+.inptWrap input[readonly],
+.inptWrap input[disabled] {
+  border-bottom: 2px solid #f9f9f9 !important;
+}
+
+::-webkit-input-placeholder {
+  color: #aaa;
+  text-decoration: none !important;
+  font-size: 16px;
+}
+::-webkit-input-placeholder {
+  text-decoration: none !important;
+  font-size: 16px;
+}
+::-moz-placeholder {
+  text-decoration: none !important;
+  font-size: 16px;
+}
+:-moz-placeholder {
+  text-decoration: none !important;
+  font-size: 16px;
+}
+
+/* Setting */
+.dimmed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #000;
+  opacity: 0.7;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+.hide,
+.hidden {
+  position: absolute;
+  left: -300px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  line-height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.tbl .row {
+  display: table-row;
+}
+.txL {
+  text-align: left !important;
+  justify-content: flex-start;
+}
+.txC {
+  text-align: center !important;
+  justify-content: center;
+  -webkit-justify-content: center;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.txR {
+  text-align: right !important;
+  justify-content: flex-end;
+}
+.txtArr {
+  color: #777 !important;
+}
+
+/* input 정의 */
+input[type="text"]::-ms-clear {
+  display: none;
+}
+input {
+  width: 100%;
+  height: 50px;
+  padding: 10px 0 10px 15px;
+  box-sizing: border-box;
+  border: 0;
+  line-height: 48px;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 1.6rem;
+  border-radius: 6px;
+}
+input:focus {
+  outline-style: none;
+  box-shadow: none;
+  border: 0;
+}
+input:focus {
+  border: 1px solid #222;
+  caret-color: #222;
+}
+input[type="text"]:read-only {
+  background: #fff;
+  color: #000;
+  /* background: #f8f8f8;
+	color: #777; */
+}
+input[type="text"]:read-only.sKey {
+  background: none;
+}
+input[type="password"]:read-only {
+  background: #f8f8f8;
+  color: #777;
+}
+input[type="password"]:read-only.sKey {
+  background: #fff;
+}
+input[type="tel"]:read-only,
+input[type="tel"]:disabled {
+  background: #f8f8f8;
+  color: #777;
+}
+input[type="tel"]:read-only.sKey {
+  background: none;
+}
+input[type="text"]:disabled {
+  background: #f8f8f8;
+  color: #777;
+  opacity: 1;
+}
+input[type="tel"]:disabled {
+  opacity: 1;
+}
+input[type="text"]:disabled.sKey {
+  background: none;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #ababab;
+  text-align: left;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  color: #ababab;
+  text-align: left;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  font-size: 1.6rem;
+  color: #ababab;
+  text-align: left;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  font-size: 1.6rem;
+  color: #ababab;
+  text-align: left;
+}
+/* textarea */
+textarea:focus {
+  outline-style: none;
+  box-shadow: none;
+  border: 0;
+  border: 1px solid #222;
+}
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  line-height: 20px;
+  white-space: normal;
+  font-size: 1.6rem;
+}
+.textArea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  line-height: 20px;
+  white-space: normal;
+  font-size: 1.6rem;
+}
+textarea[readonly="readonly"] {
+  border: 1px solid #e5e5e5;
+  background-color: #f2f2f2;
+}
+textarea[readonly="readonly"]:focus {
+  border-color: #e5e5e5 !important;
+}
+/* 포커스 컬러 변경 */
+.formWrap textarea:focus {
+  border-color: #222;
+  caret-color: #222;
+}
+.formWrap .areaList {
+  position: relative;
+}
+.formWrap .areaList label {
+  display: block;
+}
+.formWrap .areaChart {
+  position: relative;
+  margin-top: 10px;
+}
+.areaChart {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #bebebe;
+  border-radius: 6px;
+  line-height: 20px;
+  white-space: normal;
+  font-size: 1.6rem;
+}
+/* title 정의 */
+.defTit {
+  position: relative;
+  margin: 20px 0 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+}
+.roudBoxTypeWrap + .defTit {
+  margin: 30px 0 10px;
+}
+strong.tit + .roudBoxTypeWrap {
+  margin-top: 0px;
+}
+.defTit2 {
+  position: relative;
+  margin: 20px 0 15px;
+  font-size: 15px;
+}
+.defSubTit {
+  position: relative;
+  margin: 12px 0 5px;
+  font-size: 14px;
+  color: #000;
+}
+.tblTit {
+  font-size: 14px;
+  color: #000;
+}
+.formTit {
+  position: relative;
+  display: block;
+  margin: 15px 0 7px;
+  font-size: 1.8rem;
+  overflow: hidden;
+}
+strong.tit {
+  position: relative;
+  display: block;
+  margin: 20px 0 9px;
+  font-size: 1.8rem;
+  color: #000;
+}
+.titStar {
+  position: absolute;
+  top: 1px;
+  display: inline-block;
+  color: #ec373c;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+}
+span.emph::after {
+  display: inline-block;
+  color: transparent;
+  width: 11px;
+  height: 12px;
+  margin-left: 0.5rem;
+  background: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.848 11.1998L5.376 8.15981L7.904 11.1998L9.312 10.1758L7.264 6.84781L10.752 5.40781L10.208 3.77581L6.56 4.6398L6.24 0.799805H4.512L4.192 4.67181L0.544 3.77581L0 5.40781L3.456 6.84781L1.44 10.1758L2.848 11.1998Z' fill='%23EC373C'/%3E%3C/svg%3E%0A")
+    center center no-repeat;
+}
+.formTit .unit {
+  display: inline-block;
+  margin-left: 8px;
+  font-weight: normal;
+  font-size: 12px;
+  color: #777;
+}
+
+/* form 정의*/
+.formWrap {
+  margin-top: 10px;
+}
+.formWrap > ul > li {
+  margin-top: 10px;
+}
+.formWrap > ul > li:first-child {
+  margin-top: 0px;
+}
+.formWrap > ul > li:first-child .formTit {
+  margin-top: 0px;
+}
+.formWrap > ul > li > .formTit + * ~ *,
+.formWrap > ul > li .inputList + * {
+  margin-top: 5px;
+}
+.formWrap > ul > li:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+/* checkbox, radio 정의 */
+input[type="radio"],
+input[type="checkbox"] {
+  overflow: hidden;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* input[type="radio"],
+input[type="checkbox"] {
+	overflow: hidden;
+	width: 26px;
+	height: 26px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 84px auto;
+	line-height: 0;
+	font-size: 0;
+	border-radius: 0;
+} */
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 90%;
+  width: calc(100% - 40px);
+  width: -webkit-calc(100% - 40px);
+  margin-left: 4px;
+  vertical-align: middle;
+  /* text-align: left; */
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label[for="slidePopup"] {
+  max-width: 88%;
+}
+input[type="radio"] {
+  width: 26px;
+  height: 26px;
+  background: url("../images/common/ico_radio_n.svg");
+  background-size: 26px auto;
+}
+input[type="radio"]:checked {
+  width: 26px;
+  height: 26px;
+  background: url("../images/common/ico_radio_o.svg");
+  background-size: 26px auto;
+}
+input[type="radio"][readonly="readonly"],
+input[type="radio"][disabled="disabled"] {
+  width: 26px;
+  height: 26px;
+  background: url("../images/common/ico_radio_n.svg");
+  background-size: 26px auto;
+  opacity: 0.5;
+}
+input[type="checkbox"] {
+  width: 26px;
+  height: 26px;
+  background: url("../images/common/ico_checkbox_n.svg");
+  background-size: 26px auto;
+}
+input[type="checkbox"]:checked {
+  width: 26px;
+  height: 26px;
+  background: url("../images/common/ico_checkbox_o.svg");
+  background-size: 26px auto;
+}
+input[type="checkbox"][readonly="readonly"],
+input[type="checkbox"][disabled="disabled"] {
+  width: 26px;
+  height: 26px;
+  background: url("../images/common/ico_checkbox_n.svg");
+  background-size: 26px auto;
+  opacity: 0.5;
+}
+input[type="checkbox"]:checked[disabled="disabled"] {
+  width: 26px;
+  height: 26px;
+  background: url("../images/common/ico_checkbox_n.svg");
+  background-size: 26px auto;
+  opacity: 0.5;
+}
+input[type="radio"] + label > span,
+input[type="checkbox"] + label > span {
+  display: none;
+}
+input[type="radio"] + label .pointColor,
+input[type="checkbox"] + label .pointColor {
+  display: inline-block;
+  letter-spacing: -0.5px;
+}
+
+.radioList,
+.checkList {
+  margin-top: 15px;
+}
+.radioLine,
+.checkLine {
+  display: inline;
+  margin-right: 10px;
+}
+.radioList:first-child {
+  margin-top: 0;
+}

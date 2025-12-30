@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+
+<meta name="description" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="keyword" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+
+<title>한국체육산업개발주식회사 - 대관예약시스템</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 대관예약시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">대관예약시스템</a>
+			</div>
+		</div>
+		
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+					<li><a href="#" class="logout">로그인</a></li>
+					<li><a href="#" >회원가입</a></li>
+					<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창"><span> KSPO&amp;CO 바로가기</span></a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			
+            <!-- PC-전체메뉴 -->
+			<div class="allmenu_area">
+            	<div class="top">
+                	<h2 class="tit_type05">전체메뉴</h2>
+                </div>
+				<!--h2 class="tit_type02">전체메뉴</h2-->
+				<ul class="all_menu view">
+					<li>
+						<strong class="sMenu arrow">대관예약절차안내</strong>
+						<ul>
+							<li><a href="#">대관예약절차</a></li>
+							<li><a href="#">올림픽시설물 대관운영규정</a></li>
+							<li><a href="#">올림픽시설물 대관운영시행세칙</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">대관이용안내</strong>
+						<ul>
+							<li><a href="#">이용안내</a></li>
+							<li><a href="#">Q&A </a></li>
+							<li><a href="#">담당자연락처</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">대관예약</strong>
+						<ul>
+							<li><a href="#">대관 모의계산기</a></li>
+							<li><a href="#">대관신청서 작성</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">마이페이지</strong>
+						<ul>
+							<li><a href="#">신청내역확인</a></li>
+							<li><a href="#">회원정보수정</a></li>
+							<li><a href="#">서브계정 추가</a></li>
+						</ul>
+					</li> 
+				</ul>
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+	        <!-- //PC-전체메뉴 -->  
+		</div>
+				
+	<!-- 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		
+		<h3 class="stit">대관예약절차안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관예약절차</a></li>
+			<li><a href="#">올림픽 시설물 대관운영 규정</a></li>
+			<li><a href="#">올림픽 시설물 대관시행 세칙</a></li>
+		</ul>
+		
+		<h3 class="stit">대관이용안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">Q&A</a></li>
+			<li><a href="#">담당자 연락처</a></li>
+		</ul>
+		
+		<h3 class="stit">대관예약</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관 모의계산기</a></li>
+			<li><a href="#">대관 신청서 작성</a></li>
+		</ul>
+		
+		<h3 class="stit">마이페이지</h3>
+		<ul class="all_menu">
+			<li><a href="#">회원정보 수정</a></li>
+			<li><a href="#">신청내역 확인</a></li>
+			<li><a href="#">서브계정 추가</a></li>
+		</ul>
+	
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	 <!--//모바일-전체메뉴 -->
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+		
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area culture_sub">
+			<div class="inner">
+				<p class="txt">					
+					<strong class="stress">대관예약시스템</strong>
+					올림픽시설물 대관은<br> 편리하게 안전하게, 투명하게 운영됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+		
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="#" class="">대관예약절차안내</a></li>
+					<li><a href="#">대관이용안내</a></li>
+					<li><a href="#">대관예약</a></li>
+					<li><a href="#" class="">마이페이지</a></li>
+				</ul>
+
+				<!-- 모바일-2nd메뉴 -->	
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="#">대관예약절차안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관예약</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">마이페이지</a></div>
+						</div>
+					</div>
+					<!--//Swiper -->
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			<form id="frm" method="GET">
+				<!-- <input type="hidden" name="notice_seq" /> -->
+				<input type="hidden" name="pageIndex" value="1" />
+				<input type="hidden" name="type_gbn" value="" />
+				<!-- location -->
+				<div class="location_area">
+					<span class="menu">홈</span>
+                    <span class="menu">회원</span>
+					<strong class="menu">회원가입</strong>
+				</div>
+				<!-- //location -->
+           
+				<!-- title -->
+				<div class="tit_area">
+					<h1 class="tit_type01">회원가입</h1>
+				</div>
+				<!-- //title -->
+                
+                <div class="info-mem">                
+                    <p class="box">
+                        <span class="mo">올림픽공원 </span> <strong class="txt_sky">대관예약시스템 회원가입</strong>을 환영합니다.
+                    </p>    
+                    <!-- step -->     
+                    <div class="step_area">
+                        <ol class="app_step">
+                            <li class="step01"><span class="mo">회원유형선택</span></li><!-- 선택시 class="on" --> 
+                            <li class="step02 on"><span class="mo">약관동의</span></li>
+                            <li class="step03"><span class="mo">회원정보입력</span></li>
+                            <li class="step04"><span class="mo">신청완료</span></li>
+                        </ol>
+                    </div>
+                    <!-- //step -->
+                </div>                
+
+                <!--stitle -->
+                <div class="tbl_top_stit">
+                    <h3 class="title">회원약관</h3>
+                </div>
+                <!--//stitle -->   
+
+			    <!--회원약관 -->
+               <div class="privacy_check2 privacy_check section">
+                    <div class="txt_wrap" style="">
+                        <p class="p1">올림픽공원 대관예약시스템 기업회원 이용약관</p>
+                        <!--dl>
+                            <dt class="tit1">제1장 총칙</dt>
+                            <dd></dd>
+                        </dl-->
+                        <dl>
+                            <dt class="tit2">제1조 (목적)</dt>
+                            <dd>이 규정은 88서울올림픽의 유산인 올림픽시설물을 활용한 시설 대관업무의 효율적 수행을 위해 필요한 사항을 규정함을 목적으로 한다. </dd>
+                        </dl>  
+                         <dl>
+                            <dt class="tit2">제2조 (기본 운영방향)</dt>
+                            <dd>① 국민체육진흥공단(이하 "공단"이라 한다)은 올림픽시설물의 대관 운영업무를 한국체육산업개발주식회사(이하 "체육산업"이라 한다)에 위탁하여 
+                            관리하도록 하고 위탁받은 체육산업은 관리위탁범위 내에서 운영하여야 한다.
+                            </dd>
+                            <dd> ② 체육산업은 대관업무를 운영함에 있어 공공성, 안정성 및 체육·문화의 발전에 기여될 수 있도록 관리·운영하여야 한다. </dd>
+                        </dl>
+                        <dl>
+                            <dt class="tit2">제3조 (적용범위 및 시행세칙)</dt>
+                            <dd>이 규정의 적용범위는 올림픽공원 내 경기장시설(KSPO DOME(체조경기장), 핸드볼경기장, 벨로드롬, 수영장, 테니스장,), 옥외시설, 올림픽홀, 우리금융아트홀,
+                             K-아트홀 및 미사리경정공원과 관련된 제반시설 및 설비, 부대시설로 한다. 체육산업은 공연장의 효율적인 관리와 운영을 위해 필요한 세부사항을 시행세칙으로 정할 수 있다.
+                             </dd>
+                        </dl> 
+
+                        <dl>
+                            <dt class="tit2">제4조 (용어의 정의)</dt>
+                            <dd>이 규정에서 정하는 용어의 정의는 다음 사항과 같다. </dd>
+                             <dd>
+	                            <ul class="list2">
+                                    <li>1. "대관"이라 함은 대관사용자가 해당시설물을 체육산업이 정한 소정의 절차를 거쳐 일정기간 임차 사용하는 것을 말하며, 이와 관련된 
+                                    부대시설 설치 등 부수행위를 포함한다. 단, 해당시설물에 기 임차되어 사용하고 있는 부대시설 및 행위는제외한다.</li>
+                                    <li>2. "대관사용자"라 함은 체육산업이 정한 소정의 신청절차를 이행한 후 대관승인을 받아 계약을 체결하고 일정기간 사용권한을 취득한 자를 말한다.</li>
+                                    <li>3. "대관승인"이라 함은 본 규정에 의거하여 체육산업이 대관시설물 사용을 신청한 자에게 정해진 기한 내에 해당시설물 사용을 허락한 경우를 말한다.</li>
+                                    <li>4. "대관료"라 함은 대관시설의 사용에 따른 기본대관료, 부대시설사용료 등 대관사용자에게 부과되는 일체의 금액을 말한다. </li>
+                                    <li>5. "예상대관료"라 함은 체육산업이 대관승인을 담보하기 위해 대관사용자로 하여금 일정한 기일 내에 예치토록 한 대관료의 추정액을 말한다.</li>
+                                    <li>6. "대관계약체결"이라 함은 체육산업이 정한 계약금 또는 대관료를 대관사용자가 납부 후 대관계약서에 상호 날인하는 절차를 말한다.</li>
+                                </ul>                             
+                             </dd>
+                        </dl>                           
+                        
+                        <dl>
+                            <dt class="tit2">제5조 (대관행사 구분)</dt>
+                            <dd>대관행사는 다음과 같이 구분한다. </dd>
+                             <dd>
+	                            <ul class="list2">
+                                    <li>1. "체육경기"라 함은 국민체육진흥법 제2조에서 정한 경기단체 중 대한체육회, 대한장애인체육회의 회원종목단체 및 가맹단체에서 
+                                    주최 또는 주관하여 등록된 선수들이 행하는 운동경기를 말한다.</li>
+                                    <li>2. "공공행사"라 함은 국가 또는 지방자치단체가 주최 또는 주관하는 공공목적의 비영리 행사를 말한다.</li>
+                                    <li>3. "문화예술행사"라 함은 공연을 목적으로 유료관람권을 발매하는 행사를 말한다. 단, 올림픽홀·우리금융아트홀·K-아트홀은 '공연법'에 의한 
+                                    공연행사를 말한다.</li>
+                                    <li>4. "일반행사"라 함은 위 제1호·제2호·제3호 이외의 행사를 말한다.</li>
+                                </ul>                             
+                             </dd>
+                        </dl>   
+                        
+                        <dl>
+                            <dt class="tit2">제6조 (대관의 종류)</dt>
+                            <dd>대관은 다음과 같이 각각 구분한다. </dd>
+							<dd>1. 신청시기에 따른 구분
+	                            <ul class="list1">
+                                    <li>가. 정기대관은 문화예술행사에 한하여 일정기간내 공개모집을 통해 일괄 신청 받아 시행하는 대관을 말하며, 시기 및 절차에 대한 
+                                    세부적인 사항은 체육산업이 별도로 정한 바에 따른다.</li>
+                                    <li>나. 수시대관은 정기대관 공모가 종료된 후 잔여일정에 한하여 시행하는 대관을 말한다.
+                                    <li>다. 기획공연은 공단 또는 체육산업과 공연단체가 공동으로 작품을 제작하고 대관장소 등을 투자하여 티켓매출 또는 수익을 
+                                    배분하는 방식을 말하며, 세부조건은 별도 계약에 따라 정한다.</li>
+                                </ul>
+                            </dd>	
+                            <dd>2. 대관료 산정방식에 따른 구분
+	                            <ul class="list1">
+                                    <li>가. 일반대관은 기본대관료 및 부대시설사용료 등 대관료 산정방식으로 신청한 대관을 말한다.</li>
+                                    <li>나. 기획대관은 대관료에 티켓 매출금액에 따른 수입금 배분을 추가 제안하거나, 별도의 대관료 없이 티켓 매출금액을 배분하는 
+                                    조건으로 신청한 대관 등을 말하며, 배분조건 등은 별도의 계약에 따라 정한다.</li>
+                                    <li>다. 기획공연은 공단 또는 체육산업과 공연단체가 공동으로 작품을 제작하고 대관장소 등을 투자하여 티켓매출 또는 수익을 
+                                    배분하는 방식을 말하며, 세부조건은 별도의 계약에 따라 정한다.</li>
+                                </ul>
+                            </dd>	
+                        </dl>  
+                        
+                        <dl>
+                            <dt class="tit2">7조 (대관우선배정)</dt>
+                            <dd>① 올림픽공원 내 대관시설물의 효율적 운영을 위해 체육산업은 정기대관 공모 전 다음사항에 해당하는 행사는 우선 배정 할 수 있다.
+                             단, 제1호 및 제3호의 경우 대관 신청연도, 기간에 관계없이 배정이 가능하다.
+	                            <ul class="list1">
+                                    <li>1. 문화체육관광부에서 요청한 마이스 국제행사 </li>
+                                    <li>2. KSPO DOME(체조경기장), 핸드볼경기장, 수영장, 테니스경기장에서 개최되는 체육경기</li>
+                                    <li>3. 국·내외 우수 공연작품으로 대관사업 활성화를 위해 유치 필요성이 인정된다고 판단될 경우</li>
+                                </ul>
+                            </dd>
+                            <dd>② 체육산업은 대관시설물의 효율적 운영을 위해 필요한 시설물의 일정기간을 확보하여 기획공연을 개최할 수 있다. </dd>
+                        </dl>                            
+
+                        <dl>
+                            <dt class="tit2">제8조 (대관료의 감면)</dt>
+                            <dd>① 체육산업은 대관료 감면을 문서로 요청 받은 다음 사항의 단체에서 주최 또는 주관하는 공익행사 및 비영리행사에 대해 대관료를 감면할 수 있다.
+	                            <ul class="list1">
+                                    <li>1. 문화체육관광부, 관할 기초자치단체에서 개최하는 행사 또는 올림픽시설물의 활성화 및 위상 제고에 기여된다고 인정 되는 행사 : 무상 </li>
+                                    <li>2. 대한체육회·대한장애인체육회와 그 회원종목단체 및 가맹단체 : 50%</li>
+                                </ul>
+                            </dd>
+                            <dd>② 상기 ①항에 의거 감면 적용대상 및 범위는 다음과 같다.
+	                            <ul class="list1">
+                                    <li>1. 적용대상은 올림픽공원 대관시설물, 미사리경정공원으로 한다.</li>
+                                    <li>2. 대관료를 감면 받는 경우에도 부대시설사용료 중 전수열비의 실사용요금은 별도로 납부하여야 한다.</li>
+                                </ul>                            
+                            </dd>
+                        </dl>    
+                         <dl>
+                            <dt class="tit2">제9조 (대관신청 및 공고)</dt>
+                            <dd>① 대관신청은 제3조의 대관시설에 대해 행사개최일 최소 2주일 전에 온라인 대관예약시스템으로 신청함을 원칙으로 하되, 불가피한 경우에 한정하여 
+                            이메일 등의 방법으로도 신청할 수 있다. 단, 옥외 소규모 행사, 촬영 등의 경우 행사개최일 전일까지 신청할 수 있다.</dd>
+                            <dd>② 대관 공고는 온라인 대관예약시스템을 이용하되, 필요 시 다른 매체에 공고할 수 있다.</dd>
+                        </dl>    
+                         <dl>
+                            <dt class="tit2">제10조 (대관심사위원회 구성·운영)</dt>
+                            <dd>① 체육산업은 대관신청 행사 승인 등을 결정함에 있어 객관성과 공정성을 기하기 위하여 대관심사위원회를 구성하여 운영한다.</dd>
+                            <dd>② 대관심사위원회는 대관승인 및 대관료 반환여부를 확정하기 전에 이를 심사한다. 단, 제7조 ①항 1호, 2호 또는 기본대관료가 300만원 이하인 행사는 이를 생략할 수 있다.</dd>
+                        </dl>  
+                        <dl>
+                            <dt class="tit2">제11조 (대관승인 및 계약)</dt>
+                            <dd>① 체육산업은 대관승인을 결정함에 있어 필요하다고 인정될 때에는 대관사용자에게 조건을 부가하거나 협의를 통하여 대관기간 및 일정을 조정할 수 있다.</dd>
+                            <dd>② 체육산업은 대관사용자에게 계약금을 지정기일 내에 납부토록 하고 대관사용자가 이를 이행한 경우 시설대관계약서를 작성하고 이를 상호 확인한다.</dd>
+                            <dd>③ 체육산업은 예상대관료 중 기본대관료가 300만원 이하인 행사는 대관승인문서 또는 온라인 대관예약시스템의 대관승인으로 시설대관계약서를 대체할 수 있다.</dd>
+                        </dl>                                                     
+                                                                     
+                         <dl>
+                            <dt class="tit2">제12조 (대관내용 변경)</dt>
+                            <dd>① 체육산업은 대관사용자의 대관내용(대관장소, 일정, 내용 등) 변경은 인정하지 않는 것을 원칙으로 한다. 다만, 대관사용자 측의 사정에 의하여 
+                            내용 변경이 불가피한 경우에는 체육산업의 승인을 얻어야 하며, 체육산업은 이 내용변경이 대관승인 여부에 영향을 미칠 만큼 중요한 내용의 변경이라고 
+                            판단되는 경우 대관승인을 취소할 수 있다.</dd>
+                            <dd>② 대관내용 변경은 문서로 신청하여야 하며, 대관일정 변경은 기 승인된 대관기간(사용일)의 당해연도에 한하여 변경할 수 있다.</dd>
+                        </dl>
+                        <dl>
+                            <dt class="tit2">제 13 조 (대관승인의 거절 및 취소)</dt>
+                            <dd>① 체육산업은 대관신청·승인된 행사가 다음 사항에 해당할 경우 대관승인을 거절하거나 대관승인을 취소할 수 있다.
+	                            <ul class="list1">
+                                    <li>1. 공공질서와 선량한 풍속을 해할 우려가 있는 경우 </li>
+                                    <li>2. 관련법령에 위반되는 내용의 행사를 할 우려가 있는 경우 </li>
+                                    <li>3. 관람객의 안전대책수립 등 체육산업의 정당한 요구를 이행하지 아니한 때</li>
+                                    <li>4. 올림픽시설물의 시설 및 설비를 심각히 훼손할 우려가 있거나 시설물의 관리 유지상 부적절한 행사를 목적으로 하는 경우</li>
+                                    <li>5. 대관료를 기일 내에 납부하지 아니한 때</li>
+                                    <li>6. 관계기관의 허가 또는 신고를 요하는 행사로서 대관사용자가 관련 허가를 받지 못하거나 신고를 하지 아니한 때</li>
+                                    <li>7. 대관신청내용 또는 승인조건을 달리하여 사용이 예측되는 경우</li>
+                                    <li>8. 공연당일 행사가 취소되어 관람객에게 피해를 발생시킨 경우</li>
+                                    <li>9. 올림픽공원 평화의 광장 개최행사가 공공목적이 아닌 상업적 용도로 사용되거나 사용될 우려가 있다고 대관심사위원회에서 결정한 경우</li>
+                                    <li>10. 전염병 확산으로 인해 시설물 사용이 불가능 하거나 관람객의 안전이 우려되는 경우</li>
+                                    <li>11. 기타 공원 내 행사가 부적당하다고 판단되는 경우</li>
+                                </ul>
+                            </dd>
+                            <dd>② 체육산업은 다음 사항에 해당하는 경우 대관신청 자격을 1년간 제한할 수 있다.
+	                            <ul class="list1">
+                                    <li>1. 정기대관 선정·통보 후 취소 또는 일정 등 중요내용을 변경하는 경우 단, 출연자가 질병, 사고 등의 사유로 명확한 증빙자료와 함께 취소요청 시는 예외로 함.</li>
+                                    <li>2. 수시대관 선정·통보 후 당해연도에 2회 이상 취소하는 경우</li>
+                                    <li>3. 신청서류에 허위사실이 확인될 경우</li>
+                                </ul>
+                            </dd>
+                        </dl>    
+                        <dl>
+                            <dt class="tit2">제 14 조 (시설사용중지) </dt>
+                            <dd>체육산업은 승인된 대관행사가 다음 사항에 해당할 경우 시설사용의 일부 또는 전부를 중지시키거나 시설지원을 중단할 수 있다.
+	                            <ul class="list2">
+                                    <li>1. 대관승인 후 제9조의 신청기재 사실이 허위로 밝혀졌을 경우</li>
+                                    <li>2. 이 규정이 정한 기일 내에 계약을 체결하지 않을 경우</li>
+                                    <li>3. 사전승인 없이 과다한 초대교환권을 발행한 경우</li>
+                                    <li>4. 시설의 유지관리에 현저한 지장이 있다고 인정되는 경우</li>
+                                    <li>5. 장내의 질서혼란 및 관람객의 안전사고가 우려되는 경우</li>
+                                    <li>6. 대관사용자가 대관사용권을 타인에게 양도 또는 다시 대여한 경우</li>
+                                    <li>7. 대관사용자가 체육산업의 승인없이 공연내용을 임의 변경하여 공연한 경우</li>
+                                    <li>8. 대관사용자가 계약을 위반한 행위를 하는 경우</li>
+                                    <li>9. 집단민원 등으로 인해 행사가 정상적으로 이루어지기 어렵다고 판단되는 경우</li>
+                                    <li>10. 기타 필요하다고 판단되는 경우</li>
+                                </ul>
+                            </dd>
+                        </dl>  
+                        <dl>
+                            <dt class="tit2">제 15 조 (규정의 효력) </dt>
+                            <dd>이 규정은 체육산업과 대관사용자 간 계약의 일부로 간주되며 계약서와 동일한 효력을 지닌다.</dd>
+                        </dl>   
+                        <dl>
+                            <dt class="tit2">제 16 조 (항변권)</dt>
+                            <dd>① 체육산업의 귀책사유로 인하여 계약을 체결할 수 없거나 행사 또는 공연을 진행할 수 없는 경우 등에 대관사용자는 항변할 수 있다.</dd>
+                            <dd>② 항변에 따른 사유가 객관적으로 인정되는 경우 체육산업은 그에 따른 배상 및 그에 상응하는 조치를 취해야 한다.</dd>
+                        </dl>  
+                         <dl>
+                            <dt class="tit2">제 17 조 (이 규정에 정하지 않은 사항) </dt>
+                            <dd>이 규정에 정하지 않은 사항과 규정의 해석에 관하여는 체육산업의 관련규정과 관계법령 또는 관례에 따른다.</dd>
+                        </dl>    
+                         <dl>
+                            <dt class="tit2">제 18 조 (관할법원) </dt>
+                            <dd>이 규정에 따른 분쟁이 발생할 경우, 관할법원은 체육산업 소재지 관할법원으로 한다.</dd>
+                        </dl>   
+						<dl>
+                            <dt class="tit2">제 19 조 (규정위반시의 책임) </dt>
+                            <dd>이 규정을 위반함으로써 발생하는 모든 책임은 위반자가 부담하며, 이로 인하여 상대방에게 손해를 입힐 경우에는 이를 배상해야 한다.</dd>
+                        </dl>  
+                        <dl>
+                            <dt class="tit2">제 20 조 (대관료 등 사전 승인)</dt>
+                            <dd>체육산업은 대관요율표, 집기․비품, 광고요율표 등 변경시 공단에 사전에 승인을 득하여야 한다.</dd>
+                        </dl> 
+                         <dl>
+                            <dt class="tit2">부 칙</dt>
+                            <dd>제 1 조 (시행일)<br>
+                            이 규정은 이사회 의결을 거쳐 국민체육진흥공단의 승인을 받은 날부터 시행한다.</dd>
+                        </dl>                                                                                              
+                        <!--dl>
+                            <dt class="tit3">3. 연락받을 전화번호</dt>
+                            <dd>
+                                <ul class="list1">
+                                    <li>수집한 개인정보는 문의사항의 답변 및 회신을 위해서만 사용되며, 문의자의 문의 목적 달성 즉시 해당 개인정보는 파기됩니다.</li>
+                                    <li>위의 내용에 대해 동의하지 않는 경우 당사 유선 연락처를 통해 직접 문의해 주시기 바랍니다. </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="tit3">개인정보의 수집하는 목적 및 항목</dt>
+                            <dd>
+                                <ul class="list4">
+                                    <li>수집목적 : 개인 식별 및 본인여부 확인, 불량고객의 부정 이용 방지, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 작성글 삭제 의사 확인</li>
+                                    <li>필수항목 : 이름, 전화번호, 이메일, 비밀번호</li>
+                                    <li>선택항목 : 휴대전화번호</li>
+                                    <li>개인정보 수집방법 : 홈페이지(고객문의) 개인정보 수집</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="tit3">개인정보의 처리 및 보유기간</dt>
+                            <dd>상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 고객정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용합니다. 또한, 위의 보관 기간이 지난 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.</dd>
+                            <dd>
+                                <ul class="list4">
+                                    <li>보존항목 : 고객문의, 불만 또는 분쟁처리에 관한 안내 및 민원 회신 등의 기록</li>
+                                    <li>보존근거 : 전자상거래 등에서의 소비자보호에 관한 법률</li>
+                                    <li>보존기간 : 3년</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="tit4">부동의에 따른 고지사항</dt>
+                            <dd>위 개인정보 제공에 대해서 부동의할 수 있으나, 이 경우 게시판의 내용 입력을 할 수 없어 민원처리가 불가능합니다.</dd>
+                        </dl-->
+                    </div>
+                    <!--div class="check_area">
+                        <span><input type="radio" name="agree2" id="agree2_1" class="agreeY" value=""><label for="agree2_1">동의함</label></span><span><input type="radio" name="agree2" id="agree2_2" checked="" value=""><label for="agree2_2">동의안함</label></span>
+                    </div-->
+                    <div class="check_area">
+                        <span class="pr_chk">
+                          	 <input type="checkbox" id="agree01" name="agree01">
+                        	 <label for="agree01">위 회원약관에 동의합니다.</label>
+                        </span>            
+                    </div>
+                    
+                </div>     
+                <!--//회원약관 -->   
+
+                <!--stitle -->
+                <div class="tbl_top_stit pdT30">
+                    <h3 class="title">개인정보처리방침</h3>
+                </div>
+                <!--//stitle --> 
+                                  
+			   <!--개인정보처리방침 -->
+               <div class="privacy_check2 privacy_check section">
+                    <div class="txt_wrap" style="">
+                        <!--p class="p1">개인정보처리방침</p-->
+                        <p class="p1">한국체육산업개발㈜ (이하 ＇한국체육산업개발'이라 함)가 취급하는 모든 개인정보는 관련 법령에 근거하여 수집, 보유 및 처리되고 있습니다. <br>
+                        [개인정보보호법] 은 이러한 개인정보의 취급에 대한 일반적 규범을 제시하고 있으며, 한국체육산업개발은 이러한 법령의 규정에 따라 수집, 보유 및 처리하는 개인정보를 
+                        공공업무의 적절한 수행과 이용자의 권익을 보호하기 위해 적법하고 적정하게 취급할 것입니다.<br>
+                        또한, 한국체육산업개발은 관련 법령에서 규정한 바에 따라 보유하고 있는 개인정보에 대한 열람, 정정, 삭제, 처리 정지 요구 등 이용자의 권익을 존중하며, 
+                        이용자는 이러한 법령상 권익의 침해 등에 대하여 행정심판법에서 정하는 바에 따라 행정심판을 청구할 수 있습니다. <br>
+                        한국체육산업개발은 개인정보보호법 제 30조에 따라 정보주체의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록
+                        다음과 같은 개인정보처리방침을 수립 · 공개하고 있으며, 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p>
+                        <p class="p1" style="font-weight:500">본 방침은 2020년 1월 23일부터 시행합니다.</strong> </p>
+                        <dl>
+                            <dt class="tit2">제1조 (개인정보의 처리 목적) </dt>
+                            <dd>① 한국체육산업개발은 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경되는 경우에는 
+                            개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+                            	<ul class="list2">
+                                    <li>가. 홈페이지 회원 가입 및 관리 
+                                    	<ul class="list3">
+                                          <li>회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별/인증, 회원자격 유지관리, 제한적인 본인확인제 시행에 따른 본인확인, 서비스 부정 이용 방지, 
+                                          고지사항 전달, 맞춤형 정보제공을 위한 기초자료 수집 등을 목적으로 개인정보를 처리합니다. </li>
+                                        </ul>
+                                    </li>
+                                    <li>나. 스포츠센터 회원 가입 및 관리
+	                                    <ul class="list3">
+                                            <li>회원 가입의사 확인, 스포츠센터 이용에 따른 본인 식별/인증, 회원자격 유지관리, 수강료 결제, 제한적인 본인확인제시행에 따른 본인확인, 
+                                            서비스 부정 이용 방지, 맞춤형 정보제공을 위한 기초자료 수집 등을 목적으로 개인정보를 처리합니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>다. 월주차 회원 가입 및 관리
+	                                    <ul class="list3">
+                                            <li>월주차 이용 의사 확인, 월주차 이용에 따른 본인 식별/인증, 제한적인 본인확인제 시행에 따른 본인확인, 서비스 부정 이용 방지, 
+                                            맞춤형 정보제공을 위한 기초자료 수집 등을 목적으로 개인정보를 처리합니다. </li>
+                                        </ul>
+                                    </li>
+                                    <li>라. 민원사무 처리
+	                                    <ul class="list3">
+                                            <li>침해사고 등 민원처리, 민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락·통지, 처리결과 통보 등의 목적으로 
+                                            개인정보를 처리합니다. </li>
+                                        </ul>
+                                    </li>
+                                    <li>마. 홍보 및 교육에 활용
+	                                    <ul class="list3">
+                                            <li>신규 서비스 안내 및 맞춤 서비스 제공, 업무처리 결과, 이벤트 정보 제공 및 참여기회 제공, 접속빈도 파악 또는 회원의 서비스 
+                                            이용에 대한 통계 등을 목적으로 개인정보를 처리합니다. </li>
+                                        </ul>
+                                    </li>
+                            	</ul>
+                            </dd>                            
+                            <dd>② 한국체육산업개발이 개인정보보호법 제32조에 따라 등록·공개하는 개인정보파일의 처리목적은 다음과 같습니다.</dd>
+                            <dd>
+                                <table class="data_list1">
+                                    <caption>시설현황 상세</caption>
+                                    <colgroup>
+                                        <col style="width:5%">
+                                        <col style="width:14%">
+                                        <col style="width:*">
+                                        <col style="width:33%"> 
+                                        <col style="width:17%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="">순번</th>
+                                            <th scope="col">개인정보파일의 명칭</th>
+                                            <th scope="col">운영근거 / 처리목적</th>
+                                            <th scope="col">개인정보파일에 기록되는 개인정보의 항목</th>
+                                            <th scope="col">보유 건수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>홈페이지회원</td>
+                                            <td>회원약관 및 정보주체의 동의/ 회원제 온라인 서비스 이용 및 본인확인 등</td>
+                                            <td>이름, ID, 비밀번호, 이메일, 생년월일, 휴대전화번호</td>
+                                            <td>79,573 건 ('20.1.16 기준)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>회원관리</td>
+                                            <td>회원약관 및 정보주체의 동의/ 스포츠센터 수강신청, 민원 회신 및 본인확인 등</td>
+                                            <td>이름, 생년월일, 휴대전화번호, 사진(14세미만아동의 경우) 법정대리인 휴대전화번호 및 관계, 수강 결제에 필요한 정보</td>
+                                            <td>105,124 건 ('20.1.16 기준)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>월주차 회원</td>
+                                            <td>관련 규정 및 정보주체의 동의/ 월주차 출입, 관리 및 이용료 정산 등</td>
+                                            <td>이름, 휴대전화번호, 차종, 차량번호, 결제에 필요한 정보</td>
+                                            <td>356 건 ('20.1.16 기준)</td>
+                                        </tr>                                                                                                      
+                                    </tbody>
+                                </table>
+                            </dd>
+                        </dl>  
+                         <dl>
+                            <dt class="tit2">제2조 (개인정보의 처리 및 보유 기간)</dt>
+                            <dd>① 한국체육산업개발은 법령에 따른 개인정보 보유․이용기간 또는 정보주체(만 14세 미만인 경우 법정대리인을 말함)로부터 개인정보를 수집시에 동의받은 개인정보 
+                            보유․이용기간 내에서 개인정보를 처리․보유합니다. 다만, 이용자가 만14세 미만 아동의 경우 법정대리인 동의 후 개인정보를 수집·처리 합니다.</dd>
+                            <dd>② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다. 
+                            	<ul class="list2">
+                                    <li>가. 홈페이지 회원 : 탈퇴시까지(계속 이용 회원의 경우 2년마다 재동의), 2년경과 미 접속 시 자동 탈퇴 </li>
+                                    <li>나. 회원 관리 : 탈퇴시까지(계속 이용 회원의 경우 2년마다 재동의), 2년경과 미 수강 시 자동 탈퇴
+	                                    <ul class="list3">
+                                            <li>  ※ 카드자동이체의 결제를 위한 정보(카드번호, 유효기간)는 취소신청 시 즉시 파기</li>
+                                        </ul>
+                                    </li>
+                                    <li>다. 월주차 회원 : 월주차 이용 종료시까지(계속 이용 회원의 경우 2년마다 재동의) </li>
+                            	</ul>                            
+                            </dd>
+                            <dd>③ 가입자는 동의를 거부할 권리가 있으며, 서비스 제공에 필요한 최소한의 개인정보 수집에 동의하지 않을 경우 서비스 이용이 불가능할 수 있습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt class="tit2">제3조 (개인정보의 제3자 제공 및 보유 목적외 이용, 연계·제공)</dt>
+                            <dd>① 한국체육산업개발은 원칙적으로 정보주체의 개인정보를 수집·이용 목적으로 명시한 범위 내에서 처리하며, 
+                            다음의 경우를 제외하고는 정보주체의 사전 동의 없이는 본래의 목적 범위를 초과하여 이용하거나 제3자에게 제공하지 않습니다.
+                            이 경우 초과하여 이용하는 개인정보나 제3자에 제공되는 개인정보는 최소한으로 합니다.
+                            	<ul class="list2">
+                                    <li>가. 정보주체로부터 사전에 제3자 제공 및 공개에 별도의 동의를 받는 경우</li>
+                                    <li>나. 법률에 특별한 규정이 있는 경우 </li>
+                                    <li>다. 정보주체 또는 법정대리인이 의사표시를 할 수 없는 상태에 있거나 주소불명 등으로 사전 동의를 받을 수 없는 경우로서 
+                                    명백히 정보주체 또는 제3자의 급박한 생명, 신체, 재산의 이익을 위하여 필요하다고 인정되는 경우 </li>
+                                    <li>라. 통계작성 및 학술연구 등의 목적을 위하여 필요한 경우로서 특정 개인을 알아 볼 수 없는 형태로 개인정보를 제공하는 경우</li>
+                                    <li>마. 개인정보를 목적 외의 용도로 이용하거나 이를 제3자에게 제공하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 
+                                    경우로서 보호위원회의 심의·의결을 거친 경우 </li>
+                                    <li>바. 조약, 그 밖의 국제협정의 이행을 위하여 외국정보 또는 국제기구에 제공하기 위하여 필요한 경우 </li>
+                                    <li>사. 범죄의 수사와 공소의 제기 및 유지를 위하여 필요한 경우 </li>
+                                    <li>아. 법원의 재판업무 수행을 위하여 필요한 경우</li>
+                                    <li>자. 형 및 감호, 보호처분의 집행을 위하여 필요한 경우 </li>
+                                    <li>차. 서비스의 제공에 관한 계약의 이행을 위하여 필요한 개인정보로서 경제적/기술적인 사유로 통상의 동의를 받는 것이 현저히 곤란한 경우</li>
+                            	</ul>                             
+                            </dd>
+                            <dd>② 한국체육산업개발은 제1항에 해당되는 경우, 타 기관에 개인정보를 연계·제공할 수 있습니다. 이 경우, 개인정보를 이용하거나 제공받고자 하는 기관에게 
+                            이용 목적, 이용 방법, 이용 기간, 이용 형태 등을 제한하거나, 개인정보의 안전성 확보를 위하여 필요한 구체적인 조치를 마련하도록 문서로 요청하며, 
+                            연계·제공되는 개인정보는 이용 및 제공목적에 맞게 최소한으로 합니다. 또한 연계·제공되는 개인정보의 보유기간을 명확히 지정토록 하고 있습니다.<br>
+                            * 타 기관에 제공하는 개인정보 파일 현황 : 없음
+                            </dd>
+                            <dd>
+                                <table class="data_list1">
+                                    <caption>시설현황 상세</caption>
+                                    <colgroup>
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:*">
+                                        <col style="width:25%"> 
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">개인정보파일</th>
+                                            <th scope="col">정보제공처</th>
+                                            <th scope="col">제공시기</th>
+                                            <th scope="col">제공방법</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>없음</td>
+                                            <td>없음</td>
+                                            <td>없음</td>
+                                            <td>없음</td>
+                                        </tr>                                                         
+                                    </tbody>
+                                </table>
+                            </dd>
+                        </dl> 
+
+                        <dl>
+                            <dt class="tit2">제4조 (개인정보처리의 위탁)</dt>
+                            <dd>① 한국체육산업개발은 원칙적으로 이용자의 동의 없이 해당 개인정보의 처리를 타인에게 위탁하지 않습니다. 다만, 한국체육산업개발이 제3자에게 
+                            개인정보의 처리 업무를 위탁하는 경우에는「개인정보보호법」제26조(업무위탁에 따른 개인정보의 처리 제한)에 따라 다음과 같은 내용이 포함된 문서에 
+                            의하여 위탁하며, 위탁 업무의 내용과 수탁자를 한국체육산업개발 홈페이지에 게시합니다.
+                            	<ul class="list2">
+                                    <li>가. 위탁업무 수행 목적 외 개인정보의 처리 금지에 관한 사항</li>
+                                    <li>나. 개인정보의 관리적·기술적 보호조치에 관한 사항</li>
+                                    <li>다. 개인정보의 안전관리에 관한 사항</li>
+                                    <li>라. 위탁업무의 목적 및 범위, 재 위탁 제한에 관한 사항</li>
+                                    <li>마. 개인정보 안전성 확보 조치에 관한 사항</li>
+                                    <li>바.위탁업무와 관련하여 보유하고 있는 개인정보의 관리현황점검 등 감독에 관한 사항, 수탁자가 준수하여야할 의무를 위반한 경우의 손해배상책임에 관한 사항</li>
+                            	</ul>                             
+                          </dd>
+                          <dd>② 한국체육산업개발은 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다. </dd>
+                            <dd>
+                                <table class="data_list1">
+                                    <caption>시설현황 상세</caption>
+                                    <colgroup>
+                                    <col style="width:15%">
+                                    <col style="width:12%">
+                                        <col style="width:*">
+                                    <col style="width:13%"> 
+                                    <col style="width:25%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">수탁업체</th>
+                                            <th scope="col">위탁업무내용</th>
+                                            <th scope="col">개인정보의 보유항목</th>
+                                            <th scope="col">이용건수</th>
+                                            <th scope="col">이용기간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>(주)인터파크</td>
+                                            <td>공연예매</td>
+                                            <td>아이디, 이름, 휴대폰번호 (홈페이지 가입 시 개인정보 선택 제공 동의자에 한함)</td>
+                                            <td>51,568 건<br> ('20.1.16 기준)</td>
+                                            <td>회원탈퇴시 혹은 위탁계약 종료시까지</td>
+                                        </tr>  
+                                        <tr>
+                                            <td>티에스라인시스템(주)</td>
+                                            <td>시스템 유지보수</td>
+                                            <td>제한된 장소에서 개인정보처리시스템 접속</td>
+                                            <td>-</td>
+                                            <td>유지보수계약 종료시까지</td>
+                                        </tr>                                                         
+                                        <tr>
+                                            <td>KIS정보통신(주)</td>
+                                            <td>카드자동이체</td>
+                                            <td>카드번호, 유효기간 (스포츠센터 카드자동이체 신청자에 한함)</td>
+                                            <td>-</td>
+                                            <td>카드자동이체 업무 종료시까지</td>
+                                        </tr>                                                                                                                
+                                    </tbody>
+                                </table>
+                            </dd>                            
+                            <dd>③ 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체 없이 본 개인정보처리방침을 통하여 공개하도록 하겠습니다. </dd>
+
+                            <dt class="tit2">제5조 (링크/배너)</dt>
+                            <dd>한국체육산업개발이 운영하는 모든 홈페이지의 링크 또는 배너를 클릭하여 한국체육산업개발 내부 또는 외부기관 홈페이지로 옮겨갈 경우 해당 
+                            홈페이지는 운영기관이 게시한 개인정보처리방침이 적용되므로 방문한 해당 홈페이지의 개인정보처리방침을 확인하시기 바랍니다.</dd>
+                            
+                            <dt class="tit2">제6조 (정보주체의 권리·의무 및 그 행사방법)</dt>
+                            <dd>① 이용자는 정보주체로서 다음과 같은 권리를 행사할 수 있습니다.</dd>
+                            
+                            <dd> <strong>· 개인정보 열람 요구</strong> <br>
+                            	한국체육산업개발에서 보유하고 있는 개인정보파일은 「개인정보보호법」 제 35조(개인정보의 열람)에 따라 열람을 요구할 수 있습니다. 
+                                개인정보 열람 요구 시 법 제35조 제5항에 의하여 열람을 제한할 수 있습니다.
+                            	<ul class="list2">
+                                    <li>가. 법률에 따라 열람이 금지되거나 제한되는 경우</li>
+                                    <li>나. 다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그밖의 이익을 부당하게 침해할 우려가 있는 경우</li>
+                                    <li>다. 공공기관이 다음의 어느 하나에 해당하는 업무를 수행할 때 중대한 지장을 초래하는 경우
+                                    	<ul class="list3">
+                                        	<li>1) 조세의 부과·징수 또는 환급에 관한 업무 </li>
+                                            <li> 2)「초·중등교육법」 및 「고등교육법」에 따른 각급 학교, 「평생교육법」에 따른 평생교육시설, 그 밖의 다른 법률에 따라 설치 된 
+                                            고등교육기관에서의 성적 평가 또는 입학자 선발에 관한 업무</li>
+                                            <li> 3) 학력·기능 및 채용에 관한 시험, 자격 심사에 관한 업무</li>
+                                            <li> 4) 보상금·급부금 산정 등에 대하여 진행 중인 평가 또는 판단에 관한 업무</li>
+                                            <li>5) 다른 법률에 따라 진행 중인 감사 및 조사에 관한 업무</li>
+                                        </ul>
+                                    </li>
+                            	</ul>
+                            </dd>
+                            <dd> <strong>· 개인정보 정정·삭제 요구</strong> <br>
+                            	한국체육산업개발에서 보유하고 있는 개인정보파일은 「개인정보보호법」 제36조(개인정보의 정정·삭제)에 따라 정정·삭제를 요구할 수 있습니다. 다만, 다른 법령에서 
+                                그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
+                            </dd>
+                            <dd> <strong>· 개인정보 처리정지 요구</strong> <br>
+                            	한국체육산업개발에서 보유하고 있는 개인정보파일은 「개인정보보호법」 제37조(개인정보의 처리정지등)에 따라 처리정지를 요구할 수 있습니다. 개인정보 처리정지 
+                                요구 시 법 제37조 제2항에 의하여 다음의 경우에 처리정지 요구를 거절할 수 있습니다.
+                            	<ul class="list2">
+                                    <li>가. 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+                                    <li>나. 다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그밖의 이익을 부당하게 침해 할 우려가 있는 경우</li>
+                                    <li>다. 공공기관이 개인정보를 처리하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우</li>
+                                    <li>라. 개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 정보주체가 그 계약의 해지 의사를 
+                                    명확하게 밝히지 아니한 경우</li>
+                            	</ul>
+                            </dd>                            
+                            <dd> <strong>· 개인정보 열람, 정정·삭제, 처리정지 요구는 아래와 같이 청구할 수 있습니다.</strong> </dd>  
+                            <dd>
+                                <table class="data_list1">
+                                    <caption>시설현황 상세</caption>
+                                    <colgroup>
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:*">
+                                        <col style="width:25%"> 
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" scope="col">개인정보 파일명</th>
+                                            <th scope="col" colspan="2">열람/정정/삭제 문의처</th>
+                                            <th rowspan="2" scope="col">열람장소</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" class="bl">부서명</th>
+                                            <th scope="col">전화번호</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>홈페이지회원</td>
+                                            <td>사업활성화TF팀</td>
+                                            <td>02-2180-3496</td>
+                                            <td>사업활성화TF팀</td>
+                                        </tr>
+                                        <tr>
+                                            <td>회원관리</td>
+                                            <td>사업활성화TF팀</td>
+                                            <td>02-2180-3496</td>
+                                            <td>사업활성화TF팀</td>
+                                        </tr>    
+                                        <tr>
+                                            <td>월주차 회원</td>
+                                            <td>사공원사업팀</td>
+                                            <td>02-2180-3697</td>
+                                            <td>공원사업팀</td>
+                                        </tr>                                                                                                   
+                                    </tbody>
+                                </table>
+                            </dd>   
+                            
+                            <dd>② 한국체육산업개발에 대해 제1항에 따른 권리 행사는 개인정보보호법 시행규칙 별지 제8호 서식에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, 
+                            한국체육산업개발은 이에 대해 지체 없이 조치하겠습니다.
+                            	<ul class="list2">
+                                    <li><span class="txt_sky">⟹ </span> <a href="#" class="strong txt_sky"> 개인정보(열람‧정정‧삭제‧처리정지) 요구서 내려받기 </a> </li>
+                            	</ul>
+                            </dd>
+                            <dd>③ 정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 한국체육산업개발은 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.</dd>
+                            <dd>④ 제1항에 따른 권리 행사시 다음과 같이 본인이 정보주체자임을 입증할 수 있는 확인 절차를 거쳐야 합니다.
+                            	<ul class="list2">
+                                    <li>가. 정보주체(본인)인 경우에는 신분을 증명할 수 있는 증명서 (주민등록증, 운전면허증 등 행정기관에 의해 공인된 것 으로 쉽게 변조 및 도용을 할 수 없는 것)제출 </li>
+                                    <li>나. 정보주체의 법정대리인이나 위임을 받은 자는 개인정보보호법 시행규칙 별지 제11호 서식에 따른 위임장과 위임자와 대리인의 주민등록증 등 신분을 확인할 수 있는 
+                                    증명서 제출
+<ul class="list2">
+                                        	<li><span class="txt_sky">⟹ </span> <a href="#" class="strong txt_sky"> 위임장 내려받기 </a> </li>
+                                        </ul>
+                                    </li>
+                                    <li>다. 웹사이트나 온라인은 I-PIN 또는 휴대폰 본인인증을 통한 인증절차로 확인</li>                                                                                     
+                            	</ul>
+                            </dd>
+                            <dd>⑤ 정보주체는 개인정보보호법 등 관계법령을 위반하여 한국체육산업개발이 처리하고 있는 정보주체 본인이나 타인의 개인정보 및 사생활을 
+                            침해하여서는 아니 됩니다.</dd>
+                            
+                            
+                            <dt class="tit2">제7조 (처리하는 개인정보의 항목)</dt>
+                            <dd>① 한국체육산업개발은 다음의 개인정보 항목을 처리하고 있습니다.</dd>
+                            <dd>
+                                <table class="data_list1">
+                                    <caption>시설현황 상세</caption>
+                                    <colgroup>
+                                    <col style="width:7%">
+                                    <col style="width:15%">
+                                        <col style="width:*">
+                                    <col style="width:33%"> 
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">순번</th>
+                                            <th scope="col">개인정보파일명</th>
+                                            <th scope="col">필수정보</th>
+                                            <th scope="col">선택정보</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>홈페이지 회원</td>
+                                            <td>이름, ID, 비밀번호, 이메일, 생년월일, 휴대전화번호</td>
+                                            <td>공연 예매, 이벤트 등 안내 SMS 및 이메일 발송 여부</td>
+                                        </tr>  
+                                        <tr>
+                                            <td>2</td>
+                                            <td>회원관리</td>
+                                            <td>이름, 생년월일, 휴대전화번호, 사진, (14세미만 아동의 경우) 법정대리인 휴대전화번호 및 관계, 수강 결제에 필요한 정보</td>
+                                            <td>성별, 차량번호, 스포츠센터에서 안내 및 이벤트 목적으로 발송하는 SMS 수신 여부, 카드자동이체 신용카드 정보</td>
+                                        </tr>  
+                                        <tr>
+                                            <td>3</td>
+                                            <td>홈페이지 회원</td>
+                                            <td>이름, 휴대전화번호, 차종, 차량번호, 결제에 필요한 정보</td>
+                                            <td>-</td>
+                                        </tr>                                                                                                                                                                                                            
+                                    </tbody>
+                                </table>
+                            </dd>
+                            <dd>② 인터넷 서비스 이용 과정에서 아래 개인정보 항목이 자동으로 생성되어 수집될 수 있습니다. 이용자는 쿠키 설치 시 웹브라우저의 옵션을 
+                            설정함으로써 쿠키의 저장을 전체 또는 선택적으로 거부할 수 있습니다. 다만, 쿠키의 저장을 거부하는 경우 일부 서비스 제공에 제약이 있을 수 있습니다.
+                            	<ul class="list2">
+                                    <li>* IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록 등</li>                                                                              
+                            	</ul>
+                            </dd>
+                            <dd>③ 홈페이지에 로그인한 회원은 동일한 데이터베이스를 사용하는 웹사이트(회사/올림픽공원/온라인예약/스포츠센터/도서관 홈페이지 등)에 SSO(Single Sign On)를 
+                            통하여 로그인 정보가 자동으로 연계됩니다.</dd>
+                            
+                            <dt class="tit2">제8조 (개인정보의 파기)</dt>   
+                            <dd>① 한국체육산업개발은 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체 없이 해당 개인정보를 파기합니다.</dd>
+                            <dd>② 정보주체로부터 동의 받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 
+                            하는 경우에는, 해당 개인정보(또는 개인정보파일)를 별도의 데이터 베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.</dd>
+                            <dd>③ 개인정보 파기의 절차와 기한 및 방법은 다음과 같습니다.
+                            	<ul class="list2">
+                                    <li>가. 파기절차
+                                    	<ul class="list3">
+                                          <li>한국체육산업개발의 내부관리계획 수립 및 시행은 행정안전부의 내부관리 지침을 준수하여 시행합니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>나. 파기기한
+	                                    <ul class="list3">
+                                            <li>이용자의 개인정보는 개인정보의 보유기간이 경과된 경우 보유기간의 종료일로부터 5일 이내에, 개인정보의 처리 목적 달성 
+                                            등 그 개인정보가 불필요하게 되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 5일 이내에 그 개인정보를 파기합니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>다. 파기방법
+	                                    <ul class="list3">
+                                            <li>한국체육산업개발에서 처리하는 개인정보파일은 전자적 파일 형태로 기록되기 때문에 재생할 수 없는 기술적 방법을 사용하여 파기합니다.</li>
+                                        </ul>
+                                    </li>                                                                                                   
+                            	</ul>
+                            </dd>                                
+                            
+                            <dt class="tit2">제9조 (개인정보의 안전성 확보 조치)</dt>                           
+                            <dd>한국체육산업개발은 「개인정보보호법」 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적, 관리적, 물리적 조치를 하고 있습니다.
+                            	<ul class="list2">
+                                    <li>가. 내부관리계획의 수립 및 시행
+                                    	<ul class="list3">
+                                          <li>한국체육산업개발의 내부관리계획 수립 및 시행은 행정안전부의 내부관리 지침을 준수하여 시행합니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>나. 개인정보 취급 담당자의 최소화 및 교육
+	                                    <ul class="list3">
+                                            <li>개인정보를 취급하는 담당자를 지정하고 담당자에 한정시켜 최소화하여 개인정보를 관리하는 대책을 시행하고 있습니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>다. 개인정보에 대한 접근 제한
+	                                    <ul class="list3">
+                                            <li>개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여, 변경, 말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 
+                                            있으며 침입차단시스템을 이용하여 외부로부터의 무단접근을 통제하고 있습니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>라. 접속기록의 보관 및 위변조 방지
+	                                    <ul class="list3">
+                                            <li>개인정보처리시스템에 접속한 기록(웹 로그, 요약정보 등)을 최소 1년 이상 보관, 관리하고 있으며, 접속 기록이 위변조 및 도난, 
+                                            분실되지 않도록 보안기능을 사용하고 있습니다. </li>
+                                        </ul>
+                                    </li>
+                                    <li>마. 개인정보의 암호화
+	                                    <ul class="list3">
+                                            <li>이용자의 개인정보는 암호화 되어 저장 및 관리되고 있습니다. 또한 중요한 데이터는 저장 및 전송 시 암호화하여 사용하거나 파일잠금 기능을 
+                                            사용하는 등의 별도 보안기능을 적용하고 있습니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>바. 해킹 등에 대비한 기술적 대책
+	                                    <ul class="list3">
+                                            <li>한국체육산업개발은 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 
+                                            외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다. 또한 네트워크 트래픽의 통제(Monitoring)는 물론 불법적으로 
+                                            정보를 변경하는 등의 시도를 탐지하고 있습니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>사. 비인가자에 대한 출입 통제
+	                                    <ul class="list3">
+                                            <li>개인정보를 보관하고 있는 개인정보시스템의 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.</li>
+                                        </ul>
+                                    </li> 
+                                    <li>아. 문서보안을 위한 잠금장치 사용
+	                                    <ul class="list3">
+                                            <li>개인정보가 포함된 서류, 보조저장매체 등을 잠금장치가 있는 안전한 장소에 보관하고 있습니다.</li>
+                                        </ul>
+                                    </li>                                                                                                                
+                            	</ul>
+                            </dd>       
+                            
+                            <dt class="tit2">제10조 (개인정보보호 책임자)</dt>
+                            <dd>한국체육산업개발은 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인정보보호 책임자 및 실무담당자를 지정하고 있습니다. 
+                             (개인정보보호법 제31조 제1항에 따른 개인정보보호 책임자)</dd>
+                            <dd>
+                                <table class="data_list1">
+                                    <caption>시설현황 상세</caption>
+                                    <colgroup>
+                                    <col style="width:17%">
+                                    <col style="width:33%">
+                                    <col style="width:17%">
+                                    <col style="width:*">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                          <th scope="col" colspan="2">개인정보보호 책임자</th>
+                                          <th scope="col" colspan="2">개인정보보호 담당자</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>담당부서</td>
+                                            <td>스포츠운영실</td>
+                                            <td>담당부서</td>
+                                            <td>사업활성화TF팀</td>
+                                        </tr>  
+                                        <tr>
+                                            <td>직책/성명</td>
+                                            <td>실장 권창우</td>
+                                            <td>직책/성명</td>
+                                            <td>대리 이영설</td>
+                                        </tr>  
+                                        <tr>
+                                            <td>전화</td>
+                                            <td>02-2180-3680</td>
+                                            <td>전화</td>
+                                            <td>02-2180-3496</td>
+                                        </tr> 
+                                        <tr>
+                                            <td>이메일</td>
+                                            <td>kcwl@ksponco.or.kr</td>
+                                            <td>이메일</td>
+                                            <td>kcwl@ksponco.or.kr</td>
+                                        </tr>                                                                                                     
+                                    </tbody>
+                                </table>
+                            </dd>    
+                            
+                            
+                            <dt class="tit2">제11조(개인정보 열람청구)</dt>
+                            <dd>① 정보주체는 개인정보보호법 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 한국체육산업개발은 정보주체의 개인정보 열람청구가 
+                            신속하게 처리되도록 노력하겠습니다. 
+	                            <ul class="list1">
+                                    <li>부서명 : 사업활성화TF팀</li>
+                                    <li>연락처 : 전화번호 02-2180-3496 /  이메일 hisul@ksponco.or.kr / 팩스번호 02-2180-3509</li>
+                            	</ul>   
+                            </dd>
+                            <dd>② 정보주체께서는 제1항의 열람청구 접수·처리부서 이외에, 행정안전부의 '개인정보보호 종합지원 포털' 웹사이트(<a href="https://www.privacy.go.kr" target="_blank"> www.privacy.go.kr</a>)를
+                            통하여서도 개인정보 열람청구를 하실 수 있습니다. 
+                            	<ul class="list1">
+                                    <li>▶ 행정안전부 개인정보보호 종합지원 포털 → 개인정보 민원 → 개인정보 열람 등 요구 (공공아이핀을 통한 실명인증 필요)</li>
+                            	</ul>     
+                            </dd>
+                            
+                            <dt class="tit2">제12조 (권익침해 구제방법)</dt>
+                            <dd>정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다. 아래의 기관은 개인정보보호 종합지원시스템과는 
+                            별개의 기관으로서, 개인정보보호 종합지원시스템의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 
+                            문의하여 주시기 바랍니다. </dd>
+                            <dd>▶ 개인정보 침해신고센터
+                            	<ul class="list1">
+                                    <li>- 소관업무 : 개인정보 침해사실 신고, 상담 신청</li>
+                                    <li>- 홈페이지 : <a href="https://privacy.kisa.or.kr/main.do" target="_blank"> privacy.kisa.or.kr </a> </li>
+                                    <li>- 전화 : (국번없이) 118 </li>
+                                    <li>- 주소 : (58324) 전남 나주시 진흥길 9(빛가람동 301-2) 3층 개인정보 침해신고센터</li>
+                            	</ul>                             
+                            </dd>
+                            <dd>▶ 개인정보 분쟁조정위원회
+                            	<ul class="list1">
+                                    <li>- 소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정</li>
+                                    <li>- 홈페이지 : <a href="https://www.kopico.go.kr/main/main.do" target="_blank"> www.kopico.go.kr </a> </li>
+                                    <li>- 전화 : (02) 1833-6972 </li>
+                                  <li>- 주소 : (03171) 서울시 종로구 세종대로 209 정부서울청사 4층/li>
+                            	</ul>                             
+                            </dd>
+                          <dd>▶ 대검찰청 사이버범죄수사단 : 02-3480-2000 (<a href="https://www.spo.go.kr/site/spo/main.do" target="_blank">www.spo.go.kr</a>) </dd> 
+                            <dd>▶ 경찰청 사이버안전국 : (국번없이)182 (<a href="https://cyberbureau.police.go.kr/crime/sub1.jsp?mid=010101" target="_blank"> cyberbureau.police.go.kr</a>) </dd> 
+                            <dd>▶ 행정심판위원회 전화번호 안내 
+                           		<ul class="list1">
+                                    <li>「개인정보보호법」제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제), 제37조(개인정보의 처리정지 등)의 규정에 의한 요구에 대하여 공공기관의 
+                                    장이 행한 처분 또는 부작위로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.</li>
+                                  <li> ※ 행정심판에 대해 자세한 사항은 법제처 (<a href="https://www.moleg.go.kr/index.es?sid=a1" target="_blank"> http://www.moleg.go.kr</a>) 홈페이지를 
+                                  참고하시기 바랍니다. </li>
+                            	</ul>          
+                            <br>
+                           
+                          </dd> 
+                            
+                            <dt class="tit2">제13조 (개인정보처리방침의 시행 및 변경) </dt>
+                          <dd>① 이 개인정보처리방침은 2020. 1. 23부터 적용됩니다. </dd>
+                            <dd>② 이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.</dd>
+                            <dd>③ 이전의 개인정보처리방침은 아래에서 확인하실 수 있습니다.
+             <ul class="list1">
+                                    <li>- 2012. 7. 16 ~ 2012. 11. 29 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2012. 11. 30 ~ 2013. 4. 30 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2013. 5. 1 ~ 2013. 8. 11 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2013. 8. 12 ~ 2014. 1. 21 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2014. 1. 22 ~ 2014. 9. 14 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2014. 9. 15 ~ 2015. 1. 8 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2015. 1. 9 ~ 2015. 4. 5 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2015. 4. 6 ~ 2015. 7. 19 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2015. 7. 20 ~ 2016. 3. 28 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2016. 3. 29 ~ 2016. 9. 19 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2016. 9. 20 ~ 2017. 3. 14 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2017. 3. 15 ~ 2018. 3. 12 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2018. 3. 13 ~ 2018. 6. 18 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2018. 6. 19 ~ 2018. 10. 9 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2018. 10. 10 ~ 2019. 2. 26 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2019. 2. 27 ~ 2019. 9. 16 적용(<a href="#">클릭</a>)</li>
+                                    <li>- 2019. 9. 17 ~ 2020. 1. 22 적용(<a href="#">클릭</a>)</li>
+                            	</ul>
+                            </dd>
+                            
+                            <dt class="tit2">제14조 (기타) </dt>
+                            <dd>한국체육산업개발은 이의신청을 받은 날로부터 7일 이내에 이의신청 결정 통지하되, 
+                            이의신청의 각하 또는 기각하는 결정을 한 때에는 청구인에게 행정심판 또는 행정소송을 제기할 수 있다는 
+                            취지를 결과통지와 함께 통지합니다.</dd> <br>
+                            
+                            <dd>※ 본 사이트 홈페이지에 포함하고 있는 링크를 클릭하여 타 사이트의 페이지로 옮겨갈 경우 해당 사이트의 개인정보처리방침은 
+                            본 사이트와 무관하므로 새로 방문한 사이트의 정책을 검토해 보시기 바랍니다. </dd>
+                      </dl>                           
+                        
+                    </div>
+                    <div class="check_area">
+                        <span class="pr_chk">
+                          	 <input type="checkbox" id="agree02" name="agree02">
+                        	 <label for="agree02">위 개인정보취급방침에 동의합니다</label>
+                        </span>            
+                    </div>
+              
+                </div>     
+                <!--//개인정보처리방침 -->   
+                                
+                <!-- btn -->
+                <div class="btn_area">
+                    <a href="GUI-00-42.html" class="btn_base on">다음단계</a>
+                </div>
+			   <!-- //btn -->                  
+   
+		  </form>
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="sub/GUI-02-10.html" target="_blank" title="새창">대관이용안내</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="#" class="logo"></a>
+				<div class="info">
+					<address>
+						서울시 송파구 올림픽로 424 올림픽역도경기장내 (05540)
+					</address>
+					<p>
+					    <ul class="company">	
+							<li>사업자등록번호 : 215-81-12034</li>
+							<li>대표자 : 김사엽 </li>
+							<li>고객안내전화 : 02-2180-3564 </li>
+							<li>팩스 : 0000-0000 </li>
+						</ul>	
+					</p>
+					<p class="copyright">COPYRIGHT 2020 © KSPO&amp;CO. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

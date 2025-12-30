@@ -1,0 +1,1870 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>올림픽테니스장 - 온라인예약시스템</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="description" content="올림픽스포츠센터 수강신청, 올림픽공원 테니스장, 축구장, 수영장, 미사경정공원 예약 등 " />
+<meta name="keyword" content="올림픽공원 스포츠센터 수강신청, 미사경정공원 대관, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="올림픽공원 스포츠센터 온라인예약시스템" />
+<meta name="naver-site-verification" content="b791ef9f800aaa9bb62231dfacf3559b31822fae" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+<script type='text/javascript'>
+	ssl_mapping();
+	function ssl_mapping() {
+		var currentAddress = location.href;
+		if (currentAddress.indexOf('http://') == 0
+				&& currentAddress.indexOf('localhost') < 0
+				&& currentAddress.indexOf('121.167.227.222') < 0) {
+			currentAddress = currentAddress.replace('http://', 'https://');
+			location.href = currentAddress;
+		}
+	}
+
+	$(document).ready(function() {
+		setPageInit();
+		setLogoutUrl("/online/SSOLegacy.do?pname=spLogout");
+		
+		// TODO : 모든 서브메인의 간편 예약신청 구현 후 제거해야함
+		// 서브메인의 간편예약 구현 시 not 영역에 container 클래스 추가
+		// ex ) not(.skate_main, .soccer_main)
+		/* $("#container:not(.skate_main, .soccer_main, .swim_main, .train_main, .parking_main, .edu_main)").find(".online_area a.btn_check").click(function() {
+			location.href = "./resrvtn_aplictn.do";
+		}); */
+	});
+</script>
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 온라인 예약 시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">올림픽테니스장</a>
+			</div>
+
+			<ul class="top_menu">
+				
+					
+				<li><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+				<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+				<li><a href="//www.ksponco.or.kr" target="_blank" title="새창">KSPO&amp;CO 바로가기</a></li>
+			</ul>
+		</div>
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+				
+					
+						<li class="mo"><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+					
+					
+				
+					<li class="pc"><a href="../" class="home">메인으로</a></li>
+					<li><a href="./basket_list.do" class="cart">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="mypage">신청내역</a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+				
+					
+						<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+
+				<!-- [D] 2019-12-20 로그인정보 추가 -->
+				
+					
+						<!-- 로그인 후 -->
+						<div class="login_after">
+							<div class="login_inner">
+								<p class="txt">유승아님 안녕하세요.</p>
+								<a href="#" class="btn_base mid logout">로그아웃</a>
+							</div>
+						</div>
+					
+					
+				
+				<!-- //[D] 2019-12-20 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+		
+	<!-- [D] 2019-12-12 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		<!-- [D] 2019-12-20 로그인정보 추가 -->
+		
+			
+				<!-- 로그인 후 -->
+				<p class="login_after">
+					<span class="member">유승아</span>
+					<a href="#none" class="btn_logout logout">로그아웃</a>
+				</p>
+			
+			
+		
+		<!-- //[D] 2019-12-20 로그인정보 추가 -->
+		<ul class="all_menu">
+			<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+			<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+			<li><a href="./usage_guide.do">시설이용안내</a></li>
+			<li><a href="./directns.do">오시는길</a></li>
+		</ul>
+		<ul class="all_menu">
+			<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+			
+				
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+				
+				
+			
+			<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+			<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+			<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+		</ul>
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+
+	
+	<script type="text/javascript">
+	<!--
+	$(document).ready(fn_basket_length);
+	function fn_basket_length(){
+		$.ajax({
+			url: "./tennis_mbasket_list.do",
+			type:"POST",
+			dataType: "json",
+			success:function(data){
+				if(data.ss_check > 0){
+					var basket_length = data.tennis_basket_list.length;
+
+					if(basket_length > 0){
+						var inner_html = "<em class=\"num\">" + basket_length + "</em>";
+						$("a.cart").append(inner_html);
+					}
+				}
+			}
+		});
+	}
+	//-->
+	</script>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+			
+		
+		
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area tennis_sub">
+			<div class="inner">
+				<p class="txt">
+					삶의 활력소와 건강까지 챙기세요
+					<strong class="stress">올림픽테니스장</strong>
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+		
+	
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="./resrvtn_aplictn.html">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.html">신청방법안내</a></li>
+					<li><a href="./usage_guide.html">시설이용안내</a></li>
+					<li><a href="./directns.html">오시는길</a></li>
+				</ul>
+
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="./resrvtn_aplictn.html">일일입장 예약신청</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./aplictn_guide.html">신청방법안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./usage_guide.html">시설이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./directns.html">오시는길</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			
+
+
+
+
+
+<script type="text/javaScript" defer="defer">
+if("false" == "true"){
+	alert('로그인 이후 이용해 주세요.');
+	location.href="./login.do";
+}
+window.reserveDate = ''
+window.startT = ''
+window.endT = ''
+
+$(document).ready(function() {
+    $('#tab_by_date').hide()
+    $('#tab_by_court').hide()
+    $('#tab_for_all').hide()
+	
+	$('input[type=radio][name=appType]').change(function() {
+	    if (this.value === 'by_date') {
+	    	window.screen_mode = 'tab_by_date'
+	    	// 화면선택
+	        $('#tab_by_date').show()
+	        $('#tab_by_court').hide()
+	        $('#tab_for_all').hide()
+       		tennnis_gubun = "date";
+
+	        // 데이터 초기화
+	    	fn_tennis_calendar(true); // 달력 생성
+	    	fn_hide_court(); // 코트 초기화
+	    	
+	    	if (window.reserveDate && window.startT && window.endT) {
+	    	 	fn_tennis_time_list(window.reserveDate, window.startT, window.endT)
+	    	 	
+	    	 	window.reserveDate = ''
+	   	 		window.startT = ''
+	   	 		window.endT = ''
+	    	}
+	    	
+	    } else if (this.value === 'by_court') {
+	    	window.screen_mode = 'tab_by_court'
+	    	// 화면선택
+	        $('#tab_by_date').hide()
+	        $('#tab_by_court').show()
+	        $('#tab_for_all').hide()
+       		tennnis_gubun = "court";
+
+	        // 데이터 초기화
+			fn_tennis_redner_fresh_court()
+	        // 달력 초기화
+			fn_hide_calendar()
+	    	
+	    } else if (this.value === 'for_all') {
+	    	window.screen_mode = 'tab_for_all'
+	    	// 화면선택
+	        $('#tab_by_date').hide()
+	        $('#tab_by_court').hide()
+	        $('#tab_for_all').show()
+			tennnis_gubun = "all";
+
+	    	fn_tennis_calendar(); // 달력 생성
+	    	fn_hide_all_status();
+
+	    }
+    	fn_tennis_basket_list(); // 결제바구니
+
+	});
+	
+    // 디폴트로 날짜별 선택
+    $("input[name=appType][value=by_date]").trigger('click')
+    
+})
+
+var tennnis_gubun = "date";
+var tennis_court_no = 0;
+var tennis_year = null;
+var tennis_month = null;
+var tennis_last_day = 0;
+var tennis_check_date = null;
+var cnfrm_captcha = false;
+
+$(function() {
+	$('#tennis_calendar_loading').css('position', 'absolute').css('top', '116px').css('left', '245px').css("z-index", "10");
+	$('#tennis_time_loading').css('position', 'absolute').css('top', '100px').css('left', '245px').css("z-index", "10");
+	$('#tennis_court2_loading').css('position', 'absolute').css('top', '100px').css('left', '245px').css("z-index", "10");
+	$('#tennis_basket_loading').css('position', 'absolute').css('top', '208px').css('left', '100px').css("z-index", "10");
+});
+
+function fn_hide_all_status(){
+	$('#all_status_folding').css("pointer-events","none")
+	$('#all_status_folding').css("cursor", "default")
+	$('#all_status_folding').addClass("close")
+	$('#all_status_div').css("display","none")
+}
+
+function fn_hide_court(){
+	$('#court_folding').css("pointer-events","none")
+	$('#court_folding').css("cursor", "default")
+	$('#court_folding').addClass("close")
+	$('#court_img_div').css("display","none")
+}
+
+function fn_hide_calendar(){
+	$('#cal_folding').css("pointer-events","none")
+	$('#cal_folding').css("cursor", "default")
+	$('#cal_folding').addClass("close")
+	$('#cal_area').css("display","none")
+	
+	$('#' + window.screen_mode + ' #cal').html('')
+	$('#layer_captcha_wrap').html('')
+}
+
+function fn_tennis_calendar(isSync){
+	var date = new Date("2020.10.13".replace(/\./g, "-"));
+	
+	var year = '' + date.getFullYear()
+	var month = '' + (date.getMonth() +1)
+	var day = '' + (date.getDate())
+	
+	if (month.length < 2) {
+		month = '0' + month
+	}
+	if (day.length < 2) {
+		day = '0' + day
+	}
+	
+	var param = "search_gubun=" + tennnis_gubun + "&search_date=" + year + month + day + "&court_no=" + tennis_court_no;
+	
+	$.ajax({
+		url: "./tennis_mcalendar_list.do",
+		data: param,
+		async:!isSync,
+		success:function(string){
+			data = $.parseJSON(string);
+			if(data.ss_check > 0){
+				if(data.calendar_list.length > 0){
+				   	// 커서
+				   	var dateMove = new Date("2020.10.13".replace(/\./g,"-"));
+
+				   	var startingWeekDay = dateMove.getDay() // 일요일이 0. 보통 월요일부터 시작이므로 1이어야 함.
+
+				   	dateMove.setDate(dateMove.getDate() - startingWeekDay); // 일요일로 세팅
+				   	
+				   	var days = ['SUN','MON','TUE','WED','THU','FRI','SAT']
+				   	
+				    var inner_html = '<caption>날짜 리스트</caption><colgroup><col style="width:15%;"><col style="width:14%;">' +
+									'<col style="width:14%;"><col style="width:14%;"><col style="width:14%;"><col style="width:14%;"><col style="width:15%;"></colgroup>' +
+									'<thead><tr><th scope="col">일</th><th scope="col">월</th><th scope="col">화</th><th scope="col">수</th><th scope="col">목</th><th scope="col">금</th><th scope="col">토</th></tr></thead><tbody>'
+				    
+				    var first_tr_html = ''
+				    var second_tr_html = ''
+					var calcursor = 0
+					
+					while (data.calendar_list.length > calcursor) {
+						var txtRed = true
+						first_tr_html = '<tr class="mo_th">'
+						second_tr_html = '<tr>'
+					    days.forEach (function(day) {
+					    	var isRed = ""
+						    var isRed1 = ""
+					    	if (txtRed) {
+					    		isRed =  ' class="txt_red"'
+					    		isRed1 =  ' txt_red'
+					    		txtRed = false
+					    	}
+					    	
+					    	first_tr_html += '<th scope="col" ' + isRed + '>' + dateMove.getDate() + '</th>'
+					    	
+					    	if ( calcursor < data.calendar_list.length && parseInt(data.calendar_list[calcursor].day) == dateMove.getDate()) {
+						    	// 예약가능 날짜
+								var others_cnt = parseInt(data.calendar_list[calcursor].othersCnt);
+					    		var tot_cnt = parseInt(data.calendar_list[calcursor].totCnt) - others_cnt;
+								var end_cnt = parseInt(data.calendar_list[calcursor].endCnt);
+								var prog_cnt = parseInt(data.calendar_list[calcursor].progCnt);
+								var resve_cnt =  (end_cnt + prog_cnt);
+								var avail_cnt = tot_cnt - resve_cnt;
+								if (avail_cnt > 0) { // 가능 건수가 없을 때 미표시
+								
+									// 날짜별일때 fn_tennis_time_list
+									var jsCall = 'javascript:fn_tennis_time_list('+ "'" + data.calendar_list[calcursor].dDay + "'" +')'
+									
+									if (window.screen_mode === 'tab_by_court') {
+										// 날짜별일때 fn_tennis_time_list
+										jsCall = 'javascript:fn_tennis_time_list('+ "'" + data.calendar_list[calcursor].dDay + "'" +')'
+									} else if (window.screen_mode === 'tab_for_all') {
+										// 전체현황시 코트/시간 선택에 디스플레이
+										jsCall = 'javascript:fn_tennis_court_time_load('+ "'" + data.calendar_list[calcursor].dDay + "'" +')'
+									}
+									
+							    	second_tr_html += '<td><a href="' + jsCall + '"><span class="date ' + isRed1 + '">' + dateMove.getDate() 
+							    	+ '</span><span class="label">가능 ' + avail_cnt + '건</span><span class="imposi-i">진행 ' + prog_cnt + '건</span><span class="imposi-e">마감 ' + end_cnt + '건</span></a></td>'
+								}else{
+									// 예약 불가능 날짜
+							    	second_tr_html += '<td><span class="date ' + isRed1 + '">' + dateMove.getDate() + '</span><span></span><span></span></td>'
+								}
+						    	
+						    	calcursor++
+					    	} else {
+						    	// 예약 불가능 날짜
+						    	second_tr_html += '<td><span class="date ' + isRed1 + '">' + dateMove.getDate() + '</span><span></span><span></span></td>'
+					    	}
+					    	dateMove.setDate(dateMove.getDate() + 1) // 다음날짜
+					    })
+					    first_tr_html += '</tr>'
+					    second_tr_html += '</tr>'
+					    inner_html += first_tr_html + second_tr_html
+					}
+					
+				    $('#' + window.screen_mode).find('#cal').html(inner_html + "</tbody>");
+				    $('#' + window.screen_mode).find('#time_con').html('')
+				    $('#' + window.screen_mode).find('#layer_captcha_wrap').html('')
+				}
+				//TODO: 데이타 없을시 처리 
+			} else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+			
+		}, 
+		error:function(){
+			alert('올림픽 테니스장 예약현황(달력) 조회 에러: 비동기 데이터요청 불가');
+			$('#tennis_calendar_loading').css('display', 'none');
+			return;
+		}
+	});
+}
+
+//테니스장 선택 이미지 설정 1
+function fn_tennis_court_img1_setting(court_no){
+	if(tennis_court_no == 1 || (tennis_court_no >= 5 && tennis_court_no <= 8)) {
+		$('#' + window.screen_mode + ' #tennis_court_img_1_'+tennis_court_no).attr("src", "../images/content/btn_tennis_court_off2.gif");
+	}else{
+		$('#' + window.screen_mode + ' #tennis_court_img_1_'+tennis_court_no).attr("src", "../images/content/btn_tennis_court_off1.gif");
+	}
+	if(court_no == 1 || (court_no >= 5 && court_no <= 8)) {
+		$('#' + window.screen_mode + ' #tennis_court_img_1_'+court_no).attr("src", "../images/content/btn_tennis_court_on2.gif");
+	}else{
+		$('#' + window.screen_mode + ' #tennis_court_img_1_'+court_no).attr("src", "../images/content/btn_tennis_court_on1.gif");
+	}
+	tennis_court_no = court_no;
+	if(window.screen_mode =='tab_by_court'){
+		$('#span_tennis_calendar_text').html(" - " + court_no +" 코트");
+		
+		$('#cal_folding').css("pointer-events","")
+		$('#cal_folding').css("cursor", "")
+		$('#cal_folding').removeClass("close")
+		$('#cal_area').css("display","")
+		
+		fn_tennis_calendar();
+		fn_tennis_time_reset();
+	}
+}
+
+//테니스장 검색 조건 설정
+function fn_tennis_search_gubun(obj){
+	if(obj.value =='court'){
+		$('#dl_court_2_img').stop().slideUp(300);
+		$('#dl_court_1_img').stop().slideDown(300);
+		tennnis_gubun = "court";
+		fn_tennis_calendar();
+		fn_tennis_text_reset();
+		$('#span_tennis_jangso_text').html(' - 코트');
+		if(tennis_court_no > 0){
+			$('#span_tennis_calendar_text').html(" - " + tennis_court_no +" 코트");
+		}
+	}else if(obj.value =='date'){
+		$('#dl_court_1_img').stop().slideUp(300);
+		$('#dl_court_2_img').stop().slideDown(300);
+		tennnis_gubun = "date";
+		fn_tennis_calendar();
+		fn_tennis_text_reset();
+		$('#span_tennis_jangso_text').html(' - 날짜');
+	}
+	tennis_check_date = null;
+	fn_tennis_reset();
+	document.getElementById(obj.id).checked = true;
+}
+
+// 달력에서 날짜 선택시 호출되며 해당 날짜에 시간 정보를 가져와 출력. 
+// 날짜별탭, 코트별탭에서 공통으로 사용
+function fn_tennis_time_list(date, start_t, end_t){
+	date = date.replace(/-/g, '')
+	tennis_check_date = date;
+	var param = "search_date=" + date + "&search_gubun=" + tennnis_gubun;
+	if(window.screen_mode == 'tab_by_court'){
+		param += "&court_no=" + tennis_court_no;
+	}
+	$('#tennis_time_loading').css("display", 'block');
+	$.ajax({
+		url: "./tennis_mtime_list.do", 
+		data: param,
+		async : false,
+		success:function(string){
+			data = $.parseJSON(string);
+			if(data.ss_check > 0){
+
+				if(data.time_list.length > 0){
+					var txt = ''
+					var timeToSelect = ''
+					
+					for(var i=0; i < data.time_list.length; i++) {
+						var end_cnt = parseInt(data.time_list[i].endCnt);
+						var court_no = data.time_list[i].courtNo;
+						var prog_cnt = parseInt(data.time_list[i].progCnt);
+						var my_prog_cnt = parseInt(data.time_list[i].myProgCnt);
+						var others_cnt = parseInt(data.time_list[i].othersCnt);
+						var tot_cnt = parseInt(data.time_list[i].totCnt);
+						var not_tot_cnt = end_cnt + prog_cnt + my_prog_cnt + others_cnt;
+						var disabled_prop = "";
+						var disabled_txt = "신청가능";
+						var isDisabled = ""
+						
+						if (data.time_list[i].useYn === 'N') {
+							//isDisabled = " disabled "
+							//disabled_prop = ' class="end"';
+							//disabled_txt = "신청마감";
+							continue;
+						} else if ((court_no && others_cnt == 1) || (!court_no && (others_cnt >= tot_cnt))) {
+							continue;
+						}  else if((court_no && not_tot_cnt  == 1)
+								|| (not_tot_cnt >= tot_cnt)) {
+							isDisabled = " disabled "
+							disabled_prop = ' class="end"';
+							disabled_txt = "신청마감";
+							
+							 if (court_no && my_prog_cnt == 1) { // 코트별 날짜조회시 사용자 결제바구니에 있을경우. 코트별 탭에서 호출하였을때 
+								disabled_txt = "본인 진행중";
+							} else if (court_no && prog_cnt == 1) { // 코트별 날짜조회시 다른 사용자 결제바구니에 있을경우. 코트별 탭에서 호출하였을때 
+								disabled_txt = "진행중";
+							}
+							
+						}
+						
+						if(data.time_list[i].lightYn == 'Y'){
+							light_amt = parseInt(data.time_list[i].lUPrice);
+							if(data.time_list[i].lVatYn == 'Y'){
+								light_vat = light_amt * 10 * 0.01;
+							}
+						}
+						
+						if (start_t && end_t && start_t == data.time_list[i].startT && end_t == data.time_list[i].endT) { // 콘텐츠 출력후 시간 라디오버튼 선택하게 해줌
+							if (isDisabled) {
+								setTimeout(function(){ alert('해당 시간(' +start_t  + ' ~ ' + end_t + ')은 마감되었습니다.'); }, 3000);
+							}
+							timeToSelect = i
+						}
+
+						txt += '<li ' + disabled_prop + '><span class="c_chk"><input type="checkbox" id="' + tennnis_gubun + 'timeType01_' + i + '" name="dateTimeType" value="' + i + '" ' + isDisabled + '>'
+						txt += '<label for="' + tennnis_gubun + 'timeType01_'  + i + '">' + Number(date.substring(4, 6)) + '월 ' + Number(date.substring(6, 8)) + '일 (' + data.time_list[i].startT + ' ~ ' + data.time_list[i].endT + ') ' + '</label></span><span class="label">' + disabled_txt + '</span>'
+						txt += '<input type="hidden" id="search_gubun_'+ i + '" name="search_gubun" value="date">'
+						txt += '<input type="hidden" id="search_date_'+ i + '" name="search_date" value="' + tennis_check_date + '">'
+						txt += '<input type="hidden" id="start_t_'+ i + '" name="start_t" value="' + data.time_list[i].startT + '">'
+						txt += '<input type="hidden" id="end_t_'+ i + '" name="end_t" value="' + data.time_list[i].endT + '"></li>'
+
+					}
+	                
+					$('#' + window.screen_mode).find('#time_con').html(txt)
+					
+					if (window.screen_mode === 'tab_by_court' && txt) {
+	 					fn_tennis_captcha()
+					}
+					
+					if (window.screen_mode === 'tab_by_date') {
+						{
+							$('#' + window.screen_mode).find('#time_con input[name=dateTimeType]').change(function(e) {
+								fn_tennis_court_img2_setting()
+							})
+
+						}
+					}
+					
+					if (start_t && end_t && timeToSelect != null) { // 선택
+						$('#' + tennnis_gubun + 'timeType01_' + timeToSelect ).trigger('click')
+					}
+					
+				}
+			}else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+			$('#tennis_time_loading').css("display", 'none');
+		}, 
+		error:function(){
+			alert('올림픽 테니스장 시간 목록 조회 에러: 비동기 데이터요청 불가');
+			$('#tennis_time_loading').css("display", 'none');
+			return;
+		}
+	});
+}
+
+//테니스장 선택 이미지 설정 2
+function fn_tennis_court_img2_setting(date, start_t, end_t){
+	var start_t_array = Array();
+	var end_t_array = Array();
+	
+	var selectedCB = $("input[name='dateTimeType']");
+	
+	
+	for(i=0; i<selectedCB.length; i++) {
+	    if (selectedCB[i].checked == true){
+	    	
+			var start_t_tt = $('#start_t_' + selectedCB[i].value).val();
+			var end_t_tt = $('#end_t_' + selectedCB[i].value).val();
+		
+			start_t_array.push(start_t_tt);
+			end_t_array.push(end_t_tt);
+	    }
+	}
+
+	var selectedRB = $("input[name='dateTimeType']:checked").val();
+
+	if (!selectedRB) {
+		alert('시간 선택, 코트선택 및 약관동의 후 예약신청 가능합니다.')
+		return
+	}
+	
+	
+	var tennnis_gubun = $('#search_gubun_' + selectedRB).val();
+	
+	date = $('#search_date_' + selectedRB).val();
+
+	var param = "search_gubun=" + tennnis_gubun + "&search_date=" + date;
+	param += "&start_t=" + start_t_array + "&end_t=" + end_t_array;
+	
+	
+	/*	
+	// 현재 선택되어 있는 라디오버튼 가져옴
+	var selectedRB = $('#' + window.screen_mode + ' input[name=dateTimeType]:checked').val();
+	
+	if (!selectedRB) {
+		alert('시간을 선택해주세요')
+		return
+	}
+
+ 	if (!confirm('해당 시간에 예약가능한 코트를 가져오겠습니까?')) {
+		return
+	}
+
+	var tennnis_gubun = $('#search_gubun_' + selectedRB).val()
+	date = $('#search_date_' + selectedRB).val()
+	start_t = $('#start_t_' + selectedRB).val()
+	end_t = $('#end_t_' + selectedRB).val()
+	
+	var param = "search_gubun=" + tennnis_gubun + "&search_date=" + date + "&start_t=" + start_t + "&end_t=" + end_t;
+	 */	
+	$('#tennis_court2_loading').css('display', 'block');
+	
+	$.ajax({
+		url: "./tennis_court_state.do",
+		type:"POST",
+		dataType: "text",
+		data: param,
+		success:function(string){
+			data = $.parseJSON(string);
+			
+			if(data.ss_check > 0){
+				if(data.tennis_court_list.length > 0){
+					var html = fn_render_tennis_court()
+					for(var i=0; i < data.tennis_court_list.length; i++){
+						if(data.tennis_court_list[i].useYn == 'N'){
+							if(data.tennis_court_list[i].cItemCode == 'OUTCOURT'){
+								$(html).find('#tennis_court_img_1_'+data.tennis_court_list[i].courtNo).attr('src', '../images/content/btn_tennis_noreserve.gif');
+							}else{
+								$(html).find('#tennis_court_img_1_'+data.tennis_court_list[i].courtNo).attr('src', '../images/content/btn_tennis_noreserve2.gif');
+							}
+							$(html).find('#tennis_court_img_a_1_'+data.tennis_court_list[i].courtNo).attr('href', 'javascript:alert("사용이 불가능한 코트입니다.")');
+						}else{
+							var end_cnt = parseInt(data.tennis_court_list[i].endCnt);
+							var prog_cnt = parseInt(data.tennis_court_list[i].progCnt);
+							var my_prog_cnt = parseInt(data.tennis_court_list[i].myProgCnt);
+							var others_cnt = parseInt(data.tennis_court_list[i].othersCnt);
+							var tot_cnt = end_cnt + prog_cnt + my_prog_cnt + others_cnt;
+							if(tot_cnt > 0){
+								if(data.tennis_court_list[i].cItemCode == 'OUTCOURT'){
+									$(html).find('#tennis_court_img_1_'+data.tennis_court_list[i].courtNo).attr('src', '../images/content/btn_tennis_noreserve.gif');
+								}else{
+									$(html).find('#tennis_court_img_1_'+data.tennis_court_list[i].courtNo).attr('src', '../images/content/btn_tennis_noreserve2.gif');
+								}
+								$(html).find('#tennis_court_img_a_1_'+data.tennis_court_list[i].courtNo).attr('href', 'javascript:alert("예약이 완료된 코트입니다.")');
+							}else{
+								if(data.tennis_court_list[i].cItemCode == 'OUTCOURT'){
+									$(html).find('#tennis_court_img_1_'+data.tennis_court_list[i].courtNo).attr('src', '../images/content/btn_tennis_court_off1.gif');
+								}else{
+									$(html).find('#tennis_court_img_1_'+data.tennis_court_list[i].courtNo).attr('src', '../images/content/btn_tennis_court_off2.gif');
+								}
+//								$(html).find('#tennis_court_img_a_1_'+data.tennis_court_list[i].courtNo).attr('href', "javascript:fn_tennis_basket(null, '"+date+"', '"+data.tennis_court_list[i].courtNo+"', '"+data.tennis_court_list[i].startT+"', '"+data.tennis_court_list[i].endT+"')");
+							}
+						}
+					}
+					$('#court_img_div').html(html)
+					$('#court_img_div').append('<div id="layer_captcha_wrap" style="text-align:center"></div>')
+					$('#court_img_div').append('<a id="date_confirm" href="javascript:fn_tennis_move_selected_court_to_basket(' + "'" + date + "'" + ', ' + "'" + start_t_array + "'" + ', ' + "'" + end_t_array + "'" +')" class="time_conf">확인</a>')
+					
+	    			fn_tennis_captcha();
+					$('#span_tennis_court_2_text').html(" - " + dateUtil.isFormatDate(date, "-") + "("+ dateUtil.isWeek(date) + ")" + " - " + start_t_array + " ~ " + end_t_array);
+				}
+			}else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+			$('#tennis_court2_loading').css('display', 'none');
+		}, 
+		error:function(){
+			alert('올림픽 테니스장 코트 상태2 조회: 비동기 데이터요청 불가');
+			$('#tennis_court2_loading').css('display', 'none');
+			return;
+		}
+	});
+}
+
+function fn_tennis_move_selected_court_to_basket(date, startTArray, endTArray) {
+	// 선택된 코트
+	if (!tennis_court_no) {
+		alert('코트를 선택해 주세요')
+		return 		
+	}
+	
+	fn_tennis_basket(null, date, tennis_court_no, startTArray, endTArray)
+}
+
+
+function fn_tennis_move_selected_to_basket(obj) {
+	// 선택된 시간 선택
+	var start_t_array = Array();
+	var end_t_array = Array();
+	
+	var selectedCB = $("input[name='dateTimeType']");
+	
+	
+	for(i=0; i<selectedCB.length; i++) {
+	    if (selectedCB[i].checked == true){
+	    	
+			var start_t_tt = $('#start_t_' + selectedCB[i].value).val();
+			var end_t_tt = $('#end_t_' + selectedCB[i].value).val();
+			
+			start_t_array.push(start_t_tt);
+			end_t_array.push(end_t_tt);
+	    }
+	}
+
+	var selectedRB = $("input[name='dateTimeType']:checked").val();
+
+	if (!selectedRB) {
+		alert('시간 선택, 코트선택 및 약관동의 후 예약신청 가능합니다.')
+		return
+	}
+	
+	
+	var tennnis_gubun = $('#search_gubun_' + selectedRB).val();
+	
+	date = $('#search_date_' + selectedRB).val();
+	
+	fn_tennis_basket(null, date, tennis_court_no, start_t_array, end_t_array)
+}
+
+function fn_tennis_basket(obj, date, court_no, start_t_array, end_t_array){
+	var captcha = $('#' + window.screen_mode + ' #captcha').val();
+	
+	if (captcha != undefined && !captcha) {
+		alert('자동입력 방지 문자를 입력해주세요.');
+		$('#' + window.screen_mode + ' #captcha').focus();
+		return;
+	}
+
+	if(!confirm("선택한 테니스장을 결제대기로 이동하시겠습니까?")) {
+		return;
+	}
+
+	var param = {"search_date": tennis_check_date, "captcha": captcha, "reservations": [{"court_no": String(court_no), "start_t_array": start_t_array, "end_t_array": end_t_array}]}
+	
+	if(obj != null){
+		var reservations = [];
+		var start_t_all = Array();
+		var end_t_all = Array();
+		var court_all = Array();
+		var courtNo = null;
+		
+		$.each(obj, function(courtNoKey, courtElem) {
+			courtNo = courtNoKey.substring(2)
+			$.each(courtElem, function(key, timeElem) {
+				var timeArray = key.split(",");
+				var startT = timeArray[0].substring(2);
+				var endT = timeArray[1].substring(2);
+				if (timeElem) { // true or false  /here
+					
+					start_t_all.push(startT);
+					end_t_all.push(endT);
+					court_all.push(courtNo);
+					
+				}
+			})
+		})
+		reservations.push({"court_no":court_all, "start_t_array": start_t_all, "end_t_array": end_t_all});
+		param.reservations = reservations;
+		
+	}
+	
+	$.ajax({
+		url: "./tennis_basket_ins.do",
+		type:"POST",
+		dataType: "JSON",
+		data: JSON.stringify(param),
+		success:function(data){
+			if(data.ss_check > 0 && data.validity_no == 0){
+				fn_tennis_basket_list();
+
+				if(window.screen_mode == 'tab_by_date'){
+					fn_tennis_calendar();
+					fn_hide_court();
+					
+				} else if(window.screen_mode == 'tab_by_court'){
+					
+					fn_tennis_redner_fresh_court()
+					fn_hide_calendar();
+					
+				} else if(window.screen_mode == 'tab_for_all'){
+					fn_tennis_calendar();
+					fn_hide_all_status()
+				}
+			}else if(data.ss_check > 0 && data.validity_no > 0){
+
+				if(data.validity_no == 1){
+					alert("이미 결제대기에 존재하고 있습니다.");
+					location.reload();
+					return;
+				}else if(data.validity_no == 2 || data.validity_no == 3 || data.validity_no == 4){
+					alert("코트 예약 가능 시간(3시간)을 초과하였습니다.\n1일 최대 2개 코트(총 6시간) 예약가능 ");
+					location.reload();
+					return;
+				}else if(data.validity_no == 5){
+					alert("다른 사용자가 예약을 진행중입니다.");
+					fn_tennis_calendar();
+					if(tennnis_gubun == 'date'){
+						location.reload();
+					}
+					return;
+				}else if(data.validity_no == 6){
+					alert("이미 예약이 완료되었습니다.");
+					fn_tennis_calendar();
+					if(tennnis_gubun == 'date'){
+						location.reload();
+					}
+					return;
+				}else if(data.validity_no == 7){
+					alert("예약가능 기간이 아닙니다.(예약가능 기간 : 2020.10.13 부터 2020.10.19 까지)");
+					if(obj != null){
+						location.reload();
+					}
+					return;
+				}else if(data.validity_no == 8){
+					alert("마감 및 정산으로 인해 매일 23시 50분~00시 10분까지\n온라인예약이 불가능합니다.\n\n00시 10분 이후에 이용 부탁드립니다.");
+					if(obj != null){
+						location.reload();
+					}
+					return;
+				}else if(data.validity_no == 9){
+					alert("다른 사용자가 예약을 진행중입니다.");
+					fn_tennis_calendar();
+					if(tennnis_gubun == 'date'){
+						location.reload();
+					}
+					return;
+				}
+			}else if(data.ss_check == 0){
+				alert("결제대기로 이동하기에 실패했습니다. 다시 시도해 주세요.");
+			}else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}else if (data.ss_check == -2){
+				alert("자동입력 방지 문자를 다시 입력해주세요.");
+				$('#' + window.screen_mode + ' #captcha').focus();
+			}else {
+				alert("다시 시도해주세요");
+			}
+			cnfrm_captcha = data.cnfrm_captcha;
+		},
+		error:function(){
+			alert('올림픽 테니스장 결제대기 이동 에러: 비동기 데이터요청 불가');
+			return;
+		}
+	});
+}
+
+function fn_tennis_basket_list(){
+	$('#tennis_basket_loading').css('display', 'block');
+	window.basketList = null
+	$.ajax({
+		url: "./tennis_mbasket_list.do",
+		type:"POST",
+		dataType: "text",
+		data: null,
+		success:function(string){
+			data = $.parseJSON(string);
+			
+			if(data.ss_check > 0){
+				
+				var tot_amt = 0;
+				var html = "";
+				if(data.tennis_basket_list.length > 0){
+                    var weekReverseTble = {'MON':'월', 'TUE': '화', 'WED':'수', 'THU':'목', 'FRI':'금', 'SAT':'토', 'SUN':'일'}
+					window.basketList = data.tennis_basket_list
+					html += '<ul class="list_info">'
+					$.each(data.tennis_basket_list, function(i, obj) {
+						html += '<li><a href="javascript:fn_tennis_basket_del(' + "'" + data.tennis_basket_list[i].seqNo + "', '" + data.tennis_basket_list[i].courtNo + "')" + '" class="delete">삭제</a>'
+						html += data.tennis_basket_list[i].reserveDate
+						
+						var weekDayNm = weekReverseTble[data.tennis_basket_list[i].weekNm]
+						if (!weekDayNm) {
+							weekDayNm = data.tennis_basket_list[i].weekNm
+						}
+						
+						html += " (" + weekDayNm + ") / "+data.tennis_basket_list[i].courtNo + "번 / "
+						html += data.tennis_basket_list[i].startT+" ~ "+data.tennis_basket_list[i].endT + ' / '
+						
+						html += data.tennis_basket_list[i].itemName;
+						
+						if(data.tennis_basket_list[i].lightYn == 'Y'){
+							html +=	"(조명사용)";
+						}
+						
+						html += " 대여료 " + numberUtil.isComma(data.tennis_basket_list[i].rcvAmt)+"원";
+						
+						html += "</li>"
+						html += "<input type='hidden' id='tennis_basket_list"+(i+1)+"' name='tennis_basket_list' value='"+data.tennis_basket_list[i].seqNo+"' />"; 
+
+						tot_amt += parseInt(data.tennis_basket_list[i].rcvAmt);
+					});
+				}
+				
+				if(tot_amt>1000)
+					tot_amt=numberUtil.isComma(tot_amt);
+				
+				html +=  '</ul><div class="txt_total">합계: <strong>' + numberUtil.isComma(tot_amt) + '원</strong></div>'
+
+				$('#aplictn_info').html(html);
+
+				if (data.tennis_basket_list === undefined || data.tennis_basket_list.length === 0) { // 결제바구니가 비어있음
+					$('#direct_payment').removeClass("on")
+					//폴딩 비활성화
+					$('#payment_folding').css("pointer-events","none")
+					$('#payment_folding').css("cursor", "default")
+					$('#payment_folding').addClass("close")
+					$('#aplictn_info').css("display","none")
+
+					$('#basket_button').off('click')
+					$('#direct_payment').off('click')
+
+					cnfrm_captcha = false;/*캡차*/
+				} else { // 결제바구니 내용있음
+					$('#direct_payment').addClass("on")
+
+					$('#payment_folding').css("pointer-events","")
+					$('#payment_folding').css("cursor", "")
+					$('#payment_folding').removeClass("close")
+					$('#aplictn_info').css("display","")
+					$('#basket_button').unbind('click').click(function() {
+						if (confirm('미결제시, 결제바구니 항목은 1시간 후 결제바구니에서 자동삭제 됩니다. 결제 바구니로 이동하시겠습니까?')) {
+							location.href='./basket_list.do'
+						}
+					})
+
+					$('#direct_payment').unbind('click').click(function() {
+						var html = "";
+						for(var idx in window.basketList) {
+							html += "<input type=\"hidden\" name=\"seqNo\" value=\"" + basketList[idx].seqNo + "\" \/>";
+						}
+						
+						$("#listForm").html(html).submit();
+					})
+				}
+
+			}else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+			$('#tennis_basket_loading').css('display', 'none');
+		}, 
+		error:function(){
+			alert('올림픽 테니스장 결제대기 이동 에러: 비동기 데이터요청 불가');
+			$('#tennis_basket_loading').css('display', 'none');
+			return;
+		}
+	});
+}
+
+function fn_tennis_basket_del(seq_no, court_no){
+	if(!confirm("삭제하시겠습니까?")){
+		return;
+	}
+	var temp_date = tennis_check_date;
+	var check_value = null;
+	if($(':radio[name="radio_tennis_time"]:checked').length > 0){
+		check_value = $(':radio[name="radio_tennis_time"]:checked').val();
+	}
+	var param = "seq_no=" + seq_no + "&court_no=" + court_no;
+	$.ajax({
+		url: "./tennis_mbasket_del.do",
+		type:"POST",
+		dataType: "text",
+		data: param,
+		success:function(string){
+			data = $.parseJSON(string);
+			
+			if(data.ss_check > 0){
+				fn_tennis_basket_list();
+				fn_tennis_calendar();
+				if(temp_date != null && temp_date != ''){
+					if(check_value != null && check_value != ''){
+						var start_t = check_value.substring(0, 5);
+						var end_t = check_value.substring(6, 12);
+						fn_tennis_time_list(temp_date, start_t, end_t);
+						fn_tennis_court_img2_setting(temp_date, start_t, end_t);
+					}else{
+						fn_tennis_time_list(temp_date);
+					}
+				}
+			}else if(data.ss_check == 0){
+				alert("결제대기 내역 삭제에 실패했습니다. 다시 시도해 주세요.");
+				fn_tennis_basket_list();
+			}else if(data.ss_check == -1){
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+		}, 
+		error:function(){
+			alert('올림픽 테니스장 결제대기 내역 삭제 에러: 비동기 데이터요청 불가');
+			return;
+		}
+	});
+}
+
+function fn_tennis_reset(){
+	$('#tennis_frm').each( function (){ this .reset(); });
+	fn_tennis_time_reset();
+	fn_tennis_redner_fresh_court();
+}
+
+function fn_tennis_text_reset(){
+	$('#span_tennis_jangso_text').html('');
+	$('#span_tennis_calendar_text').html('');
+	$('#span_tennis_time_text').html('');
+	$('#span_tennis_court_2_text').html('');
+}
+
+function fn_tennis_time_reset(){
+	var text="<ul class=\"chk_time\"><li><span class=\"text_blue3 pd_l10\">달력에서 해당 날짜를 선택해 주세요.</span></li></ul>";
+	$('#div_tennis_time_list').html(text);
+}
+
+function fn_render_tennis_court() {
+	$('#court_folding').css("pointer-events","")
+	$('#court_folding').css("cursor", "")
+	$('#court_folding').removeClass("close")
+	$('#court_img_div').css("display","")
+
+	var html = '<p class="m_info_court" >*화면을 좌우로 이동해서 코트를 선택해주세요.</p>' +
+    '<div class="tennis_court" style="position:relative; ">' +
+    '    <ul class="court_list">' +
+    '        <li class="t_list0">' +
+    '            <a id="tennis_court_img_a_1_1" href="javascript:fn_tennis_court_img1_setting(1)">' +
+	'	            <span class="court_txt text_position">1</span>' +
+	'		        <img id="tennis_court_img_1_1" src="../images/content/btn_tennis_court_off2.gif" alt="테니스코드1">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list1">' +
+    '            <a id="tennis_court_img_a_1_2" href="javascript:fn_tennis_court_img1_setting(2)">' +
+	'	            <span class="court_txt txt_left">2</span>' +
+	'	            <img id="tennis_court_img_1_2" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드2">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list2">' +
+    '            <a id="tennis_court_img_a_1_3" href="javascript:fn_tennis_court_img1_setting(3)">' +
+	'				 <span class="court_txt txt_left">3</span>' +
+    '                 <img id="tennis_court_img_1_3" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드3">' +
+	'			</a>' +
+    '        </li>' +
+    '        <li class="t_list3">' +
+    '            <a id="tennis_court_img_a_1_4" href="javascript:fn_tennis_court_img1_setting(4)">' +
+	'				  <span class="court_txt txt_left">4</span>' +
+    '                  <img id="tennis_court_img_1_4" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드4">' +
+	'			</a>' +
+    '        </li>' +
+    '        <li class="t_list4">' +
+    '            <a id="tennis_court_img_a_1_5" href="javascript:fn_tennis_court_img1_setting(5)">' +
+	'	                <span class="court_txt text_position">5</span>' +
+	'	                <img id="tennis_court_img_1_5" src="../images/content/btn_tennis_court_off2.gif" alt="테니스코드5">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list5">' +
+    '            <a id="tennis_court_img_a_1_6" href="javascript:fn_tennis_court_img1_setting(6)">' +
+	'					<span class="court_txt text_position">6</span>' +
+	'					<img id="tennis_court_img_1_6" src="../images/content/btn_tennis_court_off2.gif" alt="테니스코드6">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list6">' +
+    '            <a id="tennis_court_img_a_1_7" href="javascript:fn_tennis_court_img1_setting(7)">' +
+	'					<span class="court_txt text_position">7</span>' +
+	'					<img id="tennis_court_img_1_7" src="../images/content/btn_tennis_court_off2.gif" alt="테니스코드7">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list7">' +
+    '            <a id="tennis_court_img_a_1_8" href="javascript:fn_tennis_court_img1_setting(8)">' +
+	'					<span class="court_txt text_position">8</span>' +
+	'					<img id="tennis_court_img_1_8" src="../images/content/btn_tennis_court_off2.gif" alt="테니스코드8">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list8">' +
+    '            <a id="tennis_court_img_a_1_9" href="javascript:fn_tennis_court_img1_setting(9)">' +
+	'					<span class="court_txt txt_left">9</span>' +
+    '                    <img id="tennis_court_img_1_9" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드9">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list9">' +
+    '            <a id="tennis_court_img_a_1_10" href="javascript:fn_tennis_court_img1_setting(10)">' +
+	'					<span class="court_txt">10</span>' +
+    '                    <img id="tennis_court_img_1_10" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드10">' +
+	'										' +
+    '            </a>' +
+    '        </li>' +
+    '        <li class="t_list10">' +
+    '            <a id="tennis_court_img_a_1_11" href="javascript:fn_tennis_court_img1_setting(11)">' +
+	'					<span class="court_txt">11</span>' +
+    '                    <img id="tennis_court_img_1_11" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드11">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list11">' +
+    '            <a id="tennis_court_img_a_1_12" href="javascript:fn_tennis_court_img1_setting(12)">' +
+	'					<span class="court_txt">12</span>' +
+    '                    <img id="tennis_court_img_1_12" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드12">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list12">' +
+    '            <a id="tennis_court_img_a_1_13" href="javascript:fn_tennis_court_img1_setting(13)">' +
+	'					<span class="court_txt">13</span>' +
+    '                    <img id="tennis_court_img_1_13" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드13">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list13">' +
+    '            <a id="tennis_court_img_a_1_14" href="javascript:fn_tennis_court_img1_setting(14)">' +
+	'					<span class="court_txt">14</span>' +
+    '                    <img id="tennis_court_img_1_14" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드14">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list14">' +
+    '            <a id="tennis_court_img_a_1_15" href="javascript:fn_tennis_court_img1_setting(15)">' +
+	'					<span class="court_txt">15</span>' +
+    '                    <img id="tennis_court_img_1_15" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드15">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list15">' +
+    '            <a id="tennis_court_img_a_1_16" href="javascript:fn_tennis_court_img1_setting(16)">' +
+	'					<span class="court_txt">16</span>' +
+    '                    <img id="tennis_court_img_1_16" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드16">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list16">' +
+    '            <a id="tennis_court_img_a_1_17" href="javascript:fn_tennis_court_img1_setting(17)">' +
+	'					<span class="court_txt">17</span>' +
+    '                    <img id="tennis_court_img_1_17" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드17">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list17">' +
+    '            <a id="tennis_court_img_a_1_18" href="javascript:fn_tennis_court_img1_setting(18)">' +
+	'					<span class="court_txt">18</span>' +
+    '                    <img id="tennis_court_img_1_18" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드18">' +
+	'	        </a>' +
+    '        </li>' +
+    '        <li class="t_list18">' +
+    '            <a id="tennis_court_img_a_1_19" href="javascript:fn_tennis_court_img1_setting(19)">' +
+    '                <span class="court_txt">19</span>' +
+    '                <img id="tennis_court_img_1_19" src="../images/content/btn_tennis_court_off1.gif" alt="테니스코드19">' +
+	'	        </a>' +
+    '        </li>' +
+    '    </ul>' +
+    '</div>'
+    
+    return $('<div/>').html(html).contents()
+}
+
+function fn_tennis_redner_fresh_court(){
+	$('#tennis_court2_loading').css('display', 'block');
+	$.ajax({
+		url: "./tennis_court_reset.do",
+		type:"POST",
+		dataType: "text",
+		data: null,
+		success:function(string){
+			data = $.parseJSON(string);
+			
+			if(data.ss_check > 0){
+				if(data.tennis_court_list.length > 0){
+					var html = fn_render_tennis_court()
+					for(var i=0; i < data.tennis_court_list.length; i++){
+						if(data.tennis_court_list[i].useYn == 'N'){
+							if(data.tennis_court_list[i].itemCode == 'OUTCOURT'){
+								
+								$(html).find('#tennis_court_img_2_'+data.tennis_court_list[i].courtNo).attr('src', '/images/main/btn_tennis_unservicea.gif');
+							}else{
+								$(html).find('#tennis_court_img_2_'+data.tennis_court_list[i].courtNo).attr('src', '/images/main/btn_tennis_unservicea2.gif');
+							}
+							$(html).find('#tennis_court_img_a_2_'+data.tennis_court_list[i].courtNo).attr('href', 'javascript:alert("사용이 불가능한 코트입니다.")');
+						}else{
+							if(data.tennis_court_list[i].itemCode == 'OUTCOURT'){
+								$(html).find('#tennis_court_img_2_'+data.tennis_court_list[i].courtNo).attr('src', '/images/main/btn_tennis_court_off.gif');
+							}else{
+								$(html).find('#tennis_court_img_2_'+data.tennis_court_list[i].courtNo).attr('src', '/images/main/btn_tennis_court_off2.gif');
+							}
+							$(html).find('#tennis_court_img_a_2_'+data.tennis_court_list[i].courtNo).attr('href', 'javascript:alert("시간을 선택해 주세요.")');
+						}
+					}
+					$('#' + window.screen_mode).find('#court_img_div').html(html)
+				}
+			} else if(data.ss_check == 0) {
+				alert("테니스 코트 조회에 실패했습니다. 다시 시도해 주세요.");
+				fn_tennis_basket_list();
+			} else if(data.ss_check == -1) {
+				alert('로그인 이후 이용해 주세요.');
+				location.href="./login.do";
+			}
+			$('#tennis_court2_loading').css('display', 'none');
+		}, 
+		error:function(){
+			alert('올림픽 테니스장 코트2 목록 에러: 비동기 데이터요청 불가');
+			$('#tennis_court2_loading').css('display', 'block');
+			return;
+		}
+	});
+}
+
+function fn_tennis_court_time_load(searchDate) {
+	tennis_check_date = searchDate
+	var param = 'search_date=' + searchDate
+	
+	$.ajax({
+		url: "./tennis_all_status.do",
+		data: param,
+		success: function(string){
+			var jData = JSON.parse(string)
+			var leftTable = '<div id="left-data"><table><tr><td>분류</td></tr><tr><td>코트번호</td></tr>'
+			
+			var itemType = {'CENTER':{name:'센터', columns:[], order:0}
+				, 'INCOURT':{name:'실내코트', columns:[], order:1}
+				, 'OUTCOURT':{name:'실외코트', columns:[], order:2}
+				}
+			
+			var timeList = {} // represent rows
+			
+			window.courtList = {} // 예약 코트수 체크를 위한 전역변수 초기화
+			
+			// 서버 데이터 파싱
+			$.each(jData.day_list, function(idx, el) {
+
+				if (el.cItemCode == null) {
+					el.cItemCode = 'CENTER'
+				}
+				
+				if(itemType[el.cItemCode].columns.indexOf(el.courtNo) === -1) {
+					itemType[el.cItemCode].columns.push(el.courtNo);
+			    }
+				
+				if (timeList[el.startT] == null) {
+					timeList[el.startT] = []
+				}
+				timeList[el.startT].push(el)
+	        })
+	        
+	        var aTimeList =Object.keys(timeList).map(function(e) {
+	        	  return timeList[e]
+	        })
+
+	        // 시작시간 순으로 행 정렬
+	        aTimeList.sort(function(a, b) {
+	            return a.startT > b.startT;
+			})
+	        
+	        // 코트종류 내 코트번호로 정렬
+	        $.each(itemType, function(key, elem) {
+	        	elem.columns.sort()
+	        })
+	        
+	        var rightTableBody = ""
+
+	        // html table 생성 시작
+	        $.each(aTimeList, function(idx1, elArray) {
+				// left-data
+				leftTable += '<tr><td>' + elArray[0]['startT'] + ' - ' + elArray[0]['endT'] + '</td></tr>'
+	        	
+				// right-data
+				rightTableBody += '<tr>'
+				var tempTbl = {} 
+				// itemType 으로 정렬하되 존재하지 않는 요소는 삽입
+				elArray.sort(function(a, b) {
+					if(a['cItemCode'] != b['cItemCode']) {
+						
+						var aCode = itemType[a['cItemCode']].order
+						var bCode = itemType[b['cItemCode']].order
+						
+						return aCode - bCode
+					}
+					
+					return a['courtNo'] > b['courtNo']
+				})
+				
+				if (idx1 === 0) { //상단 코트번호 생성
+					$.each(elArray, function(colIdx, el) {
+						rightTableBody += '<td >' + el.courtNo + ' </td>'
+					})
+					rightTableBody +=  '</tr><tr>'
+				}
+				
+				$.each(elArray, function(colIdx, el) {
+					var tdContent = 'O'
+					var reserved = ""
+					
+					if (el.useYn === 'N' || el.endCnt + el.progCnt + el.myProgCnt + el.othersCnt > 0) {
+						
+						if ( el.myProgCnt > 0) {
+							if (!window.courtList['cn' + el.courtNo]) {
+								window.courtList['cn' + el.courtNo] = {}
+							}
+							window.courtList['cn' + el.courtNo]['st' + el.startT + ',' + 'ed' + el.endT] = false
+						}
+						tdContent = 'X'
+						reserved = " data-reserved='true'"
+					}
+					
+					rightTableBody += '<td ' + reserved + ' data-court-no="'  + el.courtNo + '" data-start-t="'  + el.startT + '" data-end-t="'  + el.endT + '">' + tdContent + ' </td>'
+				})
+		        
+		        rightTableBody += '</tr>'
+	        })
+	        
+        	leftTable += '</table></div>'
+        	
+       		var rightTableBodyDom = $('<div/>').html(rightTableBody).contents()
+            
+			$(rightTableBodyDom).find("td").click(function() {
+				var attr = $(this).data('reserved');
+				
+				var courtNo = $(this).data('court-no');
+				var startT = $(this).data('start-t');
+				var endT = $(this).data('end-t');
+				
+				if (attr) { // 해당 시간에 이미 예약됨
+				    alert('신청불가')
+				    return
+				}
+				
+				//console.log('courtNo - ' + courtNo + ' date - ' + tennis_check_date + ' startT - ' + startT + ' endT - ' + endT)
+				if ($(this).hasClass("on")) {
+					//remove
+					delete window.courtList['cn' + courtNo]['st' + startT + ',' + 'ed' + endT]
+					
+					if (Object.keys(window.courtList['cn' + courtNo]).length == 0) {
+						delete window.courtList['cn' + courtNo]
+					}
+					$(this).removeClass("on")
+				} else {
+					
+					//전역 자료구조에 반영
+					/* if (!window.courtList.hasOwnProperty('cn' + courtNo) 
+							&& Object.keys(window.courtList).length >= 2) {
+						alert('일일 최대 2개 코트만 예약가능')
+						return
+					}
+					
+					if (window.courtList['cn' + courtNo] && Object.keys(window.courtList['cn' + courtNo]).length >= 3) {
+						alert('코트당 최대 3시간만 예약가능')
+						return
+					} */
+					
+					$(this).addClass("on")
+					
+					if (!window.courtList['cn' + courtNo]) {
+						window.courtList['cn' + courtNo] = {}
+					}
+					
+					window.courtList['cn' + courtNo]['st' + startT + ',' + 'ed' + endT] = true
+				}
+			})
+            
+        	// 오른쪽 테이블 html 생성
+        	var rightTable = '<div id="right-data"><table><tr>'
+    		
+   			$.each(itemType, function(idx, elem) {
+   				rightTable += '<td colspan="' + elem.columns.length + '" class="td_time">' + elem.name + '</td>';
+   			})
+   			
+   			rightTable +=  '</tr></table></div>'
+   			
+           	var rightTableDom = $('<div/>').html(rightTable).contents()
+           	$(rightTableDom).find('table').append(rightTableBodyDom)
+           	
+           	$('#all_status_wrap').html(leftTable)
+           	$('#all_status_wrap').append(rightTableDom)
+           	fn_tennis_captcha()
+           	
+           	//폴딩
+			$('#all_status_folding').css("pointer-events","")
+			$('#all_status_folding').css("cursor", "")
+			$('#all_status_folding').removeClass("close")
+			$('#all_status_div').css("display","")
+
+		},
+		error: function(){
+			alert('올림픽 테니스장 코트 목록 에러: 비동기 데이터요청 불가');
+			$('#tennis_court2_loading').css('display', 'block');
+			return;
+		}
+	})
+}
+
+//결제
+function fn_tennis_settlement(){
+	if($("input[name='tennis_basket_list']").length < 1){
+		alert("결제할 내역이 없습니다.");
+		return;
+	}
+	var full_width = (screen.availWidth / 2) - (675 / 2);
+	var full_height = (screen.availHeight /2)  - (640 / 2);
+	var popup = window.open(this.href="/popup/pg_tennis_popup.do", 'pg_popup', 'top='+full_height+'px,left='+full_width+'px,width=675px,height=640px,resizable=1,status=0,scrollbars=0,menubar=0');
+	popup.focus();
+}
+
+function fn_tennis_pop_check_ok(gubun){
+	if(gubun == 'true'){
+		if($("input[name='tennis_basket_list']").length < 1){
+			alert("결제할 내역이 없습니다.");
+			return;
+		}
+		
+		var tennis_basket_list = new Array();
+		
+		$("input[name='tennis_basket_list']").each(function(i){
+			tennis_basket_list.push(this.value);
+		});
+		var ep_quota = '00'; 
+		fn_main_common_kicc_setting('01', 'TENNIS', tennis_basket_list, '올림픽공원 테니스장 대관', '11', '', ep_quota);
+	}else{
+		return;
+	}
+}
+
+function fn_tennis_captcha(){
+	if (cnfrm_captcha) return;
+	
+	var url =  "../captcha.do?" + new Date().getTime();
+	
+	$.ajax({
+		url: url,
+		type: "post",
+		async : true,
+		success:function(data){
+			$('#' + window.screen_mode + ' #captchaImg').attr("src", url);
+		}, 
+		error:function(){
+			alert('Captcha 이미지 조회: 비동기 데이터요청 불가');
+			return;
+		}
+	});
+	
+	var html = '<p class="captch_guid">아래 문자를 보이는대로 입력해주세요.</p><div class="captchaImg_wrap">' +
+    '<img id="captchaImg" name="captchaImg" alt="Captcha 이미지">' + 
+    '<input type="button" value="새로고침" onclick="fn_tennis_captcha();"></div>' + 
+    '<input type="text" id="captcha" autocomplete="off" name="captcha" value="" maxlength="5">'
+				
+	$("#" + window.screen_mode + " #layer_captcha_wrap").html(html);
+}
+
+$(window).resize(function() {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        freeMode: true,
+        slideToClickedSlide: true,
+    });
+});
+
+$(window).on('load', function() {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        freeMode: true,
+        slideToClickedSlide: true,
+    });
+});
+
+$('.swipe_menu').click(function() {
+    $(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+})
+
+$(document).ready(function() {
+    $('#right-data').scroll(function() {
+        $('#left-data').scrollTop($('#right-data').scrollTop());
+    });
+    $('#left-data').scroll(function() {
+        $('#right-data').scrollTop($('#left-data').scrollTop());
+    });
+});
+</script>
+            <!-- content -->
+            <div id="content">
+                <!-- location -->
+                <div class="location_area">
+                    <span class="menu">홈</span>
+                    <span class="menu">올림픽테니스장</span>
+                    <strong class="menu">일일입장 예약신청</strong>
+                </div>
+                <!-- //location -->
+
+                <!-- title -->
+                <div class="tit_area">
+                    <h1 class="tit_type01">일일입장 예약신청</h1>
+                </div>
+                <!-- //title -->
+
+                <ol class="training_step step01">
+                    <!-- [D] 단계마다 step01, step02, step03 클래스 변경바람 -->
+                    <li class="number01 on"><span class="txt">예약선택</span></li>
+                    <li class="number02"><span class="txt">약관동의</span></li>
+                    <li class="number03"><span class="txt">신청완료</span></li>
+                </ol>
+
+                <div class="training_con teni_res">
+                    <h2 class="hidden">예약선택</h2>
+
+                    <!-- 신청방법선택 -->
+                    <div class="training_box">
+                        <div class="tit_area">
+                            <h3 class="tit_type">예약방법선택</h3>
+                            <a href="#none" class="arrow">닫기</a>
+                        </div>
+                        <div class="con_area">
+                            <div class="form_group">
+
+                            <span class="c_rdo">
+								<input type="radio" id="appType01" name="appType" value="by_date">
+								<label for="appType01">날짜별</label>
+							</span>
+                            <span class="c_rdo">
+								<input type="radio" id="appType02" name="appType" value="by_court">
+								<label for="appType02">코트별</label>
+							</span>
+                            <span class="c_rdo">
+								<input type="radio" id="appType03" name="appType" value="for_all">
+								<label for="appType03">전체예약현황</label>
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //신청방법선택 -->
+
+					<div id="tab_by_date" style="margin: 30px 0;">
+	                    <!-- 날짜/시간선택 -->
+	                    <div class="training_box">
+	                        <div class="tit_area">
+	                            <h3 class="tit_type">날짜/시간선택</h3>
+	                            <a href="#none" class="arrow">닫기</a>
+	                        </div>
+	                        <div class="con_area">
+	                            <!--달력 컨텐츠-->
+								<div class="date_con">
+		                            <div class="teni-week">
+										2020.10.13 ~ 2020.10.19 
+									</div>
+									<div class="calendar_area">
+										<table id="cal" class="tbl_calendar">
+											<caption>날짜 리스트</caption><colgroup></colgroup>
+											<thead><tr></tr></thead><tbody><tr class="mo_th"><th scope="col" class="txt_red"></th><tr></tr></tbody>
+										</table>
+	                                </div>
+		                            <!-- 시간별 컨텐츠 -->
+		                      		<ul id='time_con' class="list_time">
+		                            </ul>
+	                            </div>
+	                            <!-- 캘린더 -->
+	                        </div>
+	                    </div>
+	                    
+	                    <!-- 코트선택 -->
+	                    <div class="training_box">
+	                        <div class="tit_area">
+	                            <h3 class="tit_type">코트선택</h3>
+	                            <a href="#none" class="arrow" id="court_folding">닫기</a>
+	                        </div>
+	                        <div id="court_img_div" class="con_area" style="overflow-x: scroll; "></div>
+
+	                    </div>
+	                    <!-- 코트선택 -->
+                    </div>
+                    
+					<div id="tab_by_court" style="margin: 30px 0;">
+	                    <!-- 코트선택 -->
+	                    <div class="training_box">
+	                        <div class="tit_area">
+	                            <h3 class="tit_type">코트선택</h3>
+	                            <a href="#none" class="arrow" id="court_folding">닫기</a>
+	                        </div>
+	                        <div id="court_img_div" class="con_area" style="overflow-x: scroll; "></div>
+	                    </div>
+	                    <!-- 코트선택 -->
+	                    
+	                    <!-- 날짜/시간선택 -->
+	                    <div class="training_box">
+	                        <div class="tit_area">
+	                            <h3 class="tit_type">날짜/시간선택</h3>
+	                            <a href="#none" class="arrow" id="cal_folding">닫기</a>
+	                        </div>
+	                        <div id="cal_area" class="con_area">
+	                            <!--달력 컨텐츠-->
+								<div class="date_con">
+		                            <div class="teni-week">
+										2020.10.13 ~ 2020.10.19 
+									</div>
+									<div class="calendar_area">
+										<table id="cal" class="tbl_calendar">
+											<caption>날짜 리스트</caption><colgroup></colgroup>
+											<thead><tr></tr></thead><tbody><tr class="mo_th"><th scope="col" class="txt_red"></th><tr></tr></tbody>
+										</table>
+	                                </div>
+		                            <!-- 시간별 컨텐츠 -->
+		                      		<ul id='time_con' class="list_time">
+		                            </ul>
+	                            </div>
+	                            <!-- 캘린더 -->
+								<div id="layer_captcha_wrap" style="text-align:center"></div>
+	                            <a id="date_confirm" href="javascript:fn_tennis_move_selected_to_basket('court')" class="time_conf">확인</a>
+	                        </div>
+	                    </div>
+                    </div>
+                    
+                    <!-- 날짜/시간선택 (전체현황별)-->
+                    <div id="tab_for_all" style="margin: 30px 0;">
+	                    <!-- 날짜/시간선택 -->
+	                    <div class="training_box">
+	                        <div class="tit_area">
+	                            <h3 class="tit_type">날짜/시간선택</h3>
+	                            <a href="#none" class="arrow">닫기</a>
+	                        </div>
+	                        <div class="con_area">
+	                            <div class="date_con">
+	                            <div class="teni-week">
+										2020.10.13 ~ 2020.10.19 
+	                            </div>  
+	                                <div class="calendar_area">
+	                                    <table id="cal" class="tbl_calendar">
+	                                    	<caption>날짜 리스트</caption><colgroup></colgroup><thead><tr></tr></thead>
+	                                        <tbody><tr class="mo_th"></tr><tr> </tr><tr class="mo_th"></tr><tr></tr></tbody>
+	                                    </table>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <!-- 날짜/시간선택 -->
+	                    <!-- 코트/시간선택 -->
+	                    <div class="training_box">
+	                        <div class="tit_area">
+	                            <h3 class="tit_type">코트/시간선택</h3>
+	                            <a href="#none" class="arrow" id="all_status_folding">닫기</a>
+	                        </div>
+	                        <div id="all_status_div" class="con_area">
+	                            <div class="window">
+	                                <div class="date_sel">
+	                                    <p id='all_status_selected_date'>-</p>
+	                                </div>
+	                                <div class="res_box">
+	                                    <ul>
+	                                        <li><span class="txt_orange">ㆍ원하시는 코트번호와 시간을 확인하신 후 O로 표시되어있는 예약가능한 부분을 클릭하시면 선택이 됩니다.</span></li>
+	                                        <li><span class="txt_orange">ㆍ코트당 최대 3시간, 최대 2코트(1인 최대 6시간)</span>까지 다중선택 가능합니다.</li>
+	                                        <li>ㆍ모바일 버전에서는 코트번호 부분을 좌우로 이동하여 확인하실 수 있습니다.</li>
+	                                        <li>ㆍO : 예약가능 X : 예약완료 (이용당일 예약은 현장접수만 가능합니다.)</li>
+	                                    </ul>
+	                                </div>
+	                                <!-- 예약현황 테이블-->
+	                                <div class="table_wrap" id='all_status_wrap'>
+	                                    <!--모바일에서 고정되는 부분 -->
+	                                    <div id="left-data">
+										<!-- 동적으로 생성 -->
+	                                    </div>
+                                     	<div id="right-data">
+	                                    </div>
+	                                </div>
+									<div id="layer_captcha_wrap" style="text-align:center"></div>
+	                                <a href="javascript:fn_tennis_basket(window.courtList)" class="time_conf">확인</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <!-- 코트/시간선택 -->
+					</div><!--  end of tab_for_all -->
+
+                    <!-- 결제/신청정보 -->
+                    <div class="training_box">
+                        <div class="tit_area">
+                            <h3 class="tit_type">결제/신청정보</h3>
+                            <a href="#none" class="arrow" id='payment_folding'>닫기</a>
+                        </div>
+                        <div id="aplictn_info" class="con_area">
+                        </div>
+                    </div>
+                    <!-- //결제/신청정보 -->
+					<form id="listForm" method="post" action="./terms_agree.do"></form>
+
+                    <div class="btn_area" id='bottom_button_area'>
+                        <a href="#none" class="btn_base on" id='direct_payment'>바로결제</a>
+                        <a href="#none" class="btn_base blue" id='basket_button'>결제바구니</a>
+                    </div>
+                    <h3 class="tit_info">알려드립니다</h3>
+                    <ul class="txt_info">
+                        <li>예약 가능한 항목만 선택 가능 합니다. 미결제 시 결제바구니에 추가된 강좌는 1시간 후 결제바구니에서 자동 삭제됩니다.</li>
+                        <li>2020년도 부터는 <span class="txt_orange">본인 아이디로 1명(미성년자도 아이디 신규생성필요)만 신청이 가능</span>합니다.</li>
+                        <li>테니스장은 <span class="txt_orange">1인당 1코트당 3시간만 예약이 가능하며, 최대 2개 코트(총 6시간)예약</span>이 가능합니다.</li>
+                        <li>예약가능기간은 2020.10.13 ~ 2020.10.19 입니다.</li>
+                        <li>마감 및 정산으로 인해 당일 23:50부터 익일 00:10까지 온라인 예약 결제가 불가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //content -->
+
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/company/traffic.do" target="_blank" title="새창">찾아오시는길</a></li>
+					<li><a href="./sitemap.do">사이트맵</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="../skate/index.do" class="logo"><img src="../images/common/foot_logo.gif" alt="한국체육산업개발주식회사"></a>
+				<div class="mark_area">
+					<a href="#none"><img src="../images/common/icon_mark01.gif" alt="웹접근성품질인증마크"><span class="txt">웹접근성품질인증</span></a>
+					<a href="#none"><img src="../images/common/icon_mark02.gif" alt="개인정보보호우수사이트 인증마크"><span class="txt">개인정보보호<br>우수사이트 인증</span></a>
+				</div>
+				<div class="info">
+					<p class="company">사업자등록번호 : 215-81-12034, 대표자 : 김사엽</p>
+					<address>
+						주소 (05540) 서울시 송파구 올림픽로 424(방이동) 올림픽역도경기장 내
+					</address>
+					<p class="copyright">COPYRIGHT 2019 © KSPO&amp;CO ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

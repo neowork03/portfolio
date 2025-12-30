@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>올림픽테니스장 - 온라인예약시스템</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="description" content="올림픽스포츠센터 수강신청, 올림픽공원 테니스장, 축구장, 수영장, 미사경정공원 예약 등 " />
+<meta name="keyword" content="올림픽공원 스포츠센터 수강신청, 미사경정공원 대관, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="올림픽공원 스포츠센터 온라인예약시스템" />
+<meta name="naver-site-verification" content="b791ef9f800aaa9bb62231dfacf3559b31822fae" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+<script type='text/javascript'>
+	ssl_mapping();
+	function ssl_mapping() {
+		var currentAddress = location.href;
+		if (currentAddress.indexOf('http://') == 0
+				&& currentAddress.indexOf('localhost') < 0
+				&& currentAddress.indexOf('121.167.227.222') < 0) {
+			currentAddress = currentAddress.replace('http://', 'https://');
+			location.href = currentAddress;
+		}
+	}
+
+	$(document).ready(function() {
+		setPageInit();
+		setLogoutUrl("/online/SSOLegacy.do?pname=spLogout");
+		
+		// TODO : 모든 서브메인의 간편 예약신청 구현 후 제거해야함
+		// 서브메인의 간편예약 구현 시 not 영역에 container 클래스 추가
+		// ex ) not(.skate_main, .soccer_main)
+		/* $("#container:not(.skate_main, .soccer_main, .swim_main, .train_main, .parking_main, .edu_main)").find(".online_area a.btn_check").click(function() {
+			location.href = "./resrvtn_aplictn.do";
+		}); */
+	});
+</script>
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 온라인 예약 시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">올림픽테니스장</a>
+			</div>
+
+			<ul class="top_menu">
+				
+					
+				<li><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+				<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+				<li><a href="//www.ksponco.or.kr" target="_blank" title="새창">KSPO&amp;CO 바로가기</a></li>
+			</ul>
+		</div>
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+				
+					
+						<li class="mo"><a href="#" class="logout">유승아&nbsp;[로그아웃]</a></li>
+					
+					
+				
+					<li class="pc"><a href="../" class="home">메인으로</a></li>
+					<li><a href="./basket_list.do" class="cart">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="mypage">신청내역</a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			<div class="allmenu_area">
+				<h2 class="tit_type02">메뉴바로가기</h2>
+				<ul class="all_menu">
+					<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+					<li><a href="./usage_guide.do">시설이용안내</a></li>
+					<li><a href="./directns.do">오시는길</a></li>
+				</ul>
+				<ul class="all_menu">
+					<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+				
+					
+						<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+					
+					
+				
+					<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+					<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+					<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+				</ul>
+
+				<!-- [D] 2019-12-20 로그인정보 추가 -->
+				
+					
+						<!-- 로그인 후 -->
+						<div class="login_after">
+							<div class="login_inner">
+								<p class="txt">유승아님 안녕하세요.</p>
+								<a href="#" class="btn_base mid logout">로그아웃</a>
+							</div>
+						</div>
+					
+					
+				
+				<!-- //[D] 2019-12-20 로그인추가 -->
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+		</div>
+		
+	<!-- [D] 2019-12-12 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		<!-- [D] 2019-12-20 로그인정보 추가 -->
+		
+			
+				<!-- 로그인 후 -->
+				<p class="login_after">
+					<span class="member">유승아</span>
+					<a href="#none" class="btn_logout logout">로그아웃</a>
+				</p>
+			
+			
+		
+		<!-- //[D] 2019-12-20 로그인정보 추가 -->
+		<ul class="all_menu">
+			<li><a href="./resrvtn_aplictn.do">일일입장 예약신청</a></li>
+			<li><a href="./aplictn_guide.do">신청방법안내</a></li>
+			<li><a href="./usage_guide.do">시설이용안내</a></li>
+			<li><a href="./directns.do">오시는길</a></li>
+		</ul>
+		<ul class="all_menu">
+			<li><a href="./index.do" class="icon ic01">올림픽테니스장<br>메인</a></li>
+			
+				
+					<li><a href="//www.ksponco.or.kr/jsp/homepage/contents/mypage/my_meminfo_modify.do" class="icon ic02" target="_blank" title="새창">회원정보수정</a></li>
+				
+				
+			
+			<li><a href="./basket_list.do" class="icon ic03">결제바구니</a></li>
+			<li><a href="./aplictn_list.do" class="icon ic04">신청내역</a></li>
+			<li><a href="./notice_list.do?type_gbn=01" class="icon ic05">공지사항</a></li>
+		</ul>
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+
+	
+	<script type="text/javascript">
+	<!--
+	$(document).ready(fn_basket_length);
+	function fn_basket_length(){
+		$.ajax({
+			url: "./tennis_mbasket_list.do",
+			type:"POST",
+			dataType: "json",
+			success:function(data){
+				if(data.ss_check > 0){
+					var basket_length = data.tennis_basket_list.length;
+
+					if(basket_length > 0){
+						var inner_html = "<em class=\"num\">" + basket_length + "</em>";
+						$("a.cart").append(inner_html);
+					}
+				}
+			}
+		});
+	}
+	//-->
+	</script>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+			
+		
+		
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area tennis_sub">
+			<div class="inner">
+				<p class="txt">
+					삶의 활력소와 건강까지 챙기세요
+					<strong class="stress">올림픽테니스장</strong>
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+		
+	
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="./resrvtn_aplictn.html">일일입장 예약신청</a></li>
+					<li><a href="./aplictn_guide.html">신청방법안내</a></li>
+					<li><a href="./usage_guide.html">시설이용안내</a></li>
+					<li><a href="./directns.html">오시는길</a></li>
+				</ul>
+
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="./resrvtn_aplictn.html">일일입장 예약신청</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./aplictn_guide.html">신청방법안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./usage_guide.html">시설이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="./directns.html">오시는길</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+						<!-- location -->
+			<div class="location_area">
+				<span class="menu">홈</span>
+				<span class="menu">올림픽테니스장</span>
+				<strong class="menu">오시는 길</strong>
+			</div>
+			<!-- //location -->
+
+			<!-- title -->
+			<div class="tit_area">
+				<h1 class="tit_type01">오시는 길</h1>
+			</div>
+			<!-- //title -->
+
+
+			<h2 class="hidden">올림픽 테니스장</h2>
+
+			<div class="map_area">
+				<div class="map_con">
+					<img src="../images/content/map_teni.gif" alt="올림픽테니스장 지도">
+				</div>
+				<div class="detail_con">
+					<dl class="detail_info">
+						<dt class="tit">올림픽 테니스장</dt>
+						<dd class="location">
+							<span class="pc">(05540) 서울시 송파구 올림픽로 426(방이동)</span> 올림픽공원 실내테니스장 내
+						</dd>
+						<dd class="tel">02-2180-3778</dd>
+						<dd class="link">
+							<a href="http://olympicpark.kspo.or.kr/jsp/homepage/contents/guide/pop_olparkmap_all.jsp" class="btn_map" target="_blank" title="새창">올림픽공원 지도 보러가기</a>
+							<a href="https://map.naver.com/v5/entry/place/18881180?c=14151873.0948237,4511199.4583700,15,0,0,0,dh" class="btn_map naver" target="_blank" title="새창">네이버지도 보러가기</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+						<!-- 지하철/버스 이용-->
+			<h3 class="tit_type02">지하철 이용</h3>
+			<div class="tit_txt subway">
+				<h4 class="tit_type03 txt_subway5">지하철 5호선</h4>
+				<div class="con">
+					<ul class="txt">
+						<li>올림픽공원역 3번 출구</li>
+					</ul>
+				</div>
+
+				<h4 class="tit_type03 txt_subway9">지하철 9호선</h4>
+				<div class="con">
+					<ul class="txt">
+						<li>올림픽공원역 3번 출구</li>
+					</ul>
+				</div>
+			</div>
+
+			<h3 class="tit_type02">버스 이용</h3>
+			<table class="data_list">
+				<caption>버스 이용 상세</caption>
+				<colgroup>
+					<col style="width:14%;">
+					<col style="width:12%;">
+					<col style="width:30%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col"><span class="mo">공원</span>출입구</th>
+						<th scope="col"><span class="mo">버스</span>번호</th>
+						<th scope="col">종점</th>
+						<th scope="col">경유지</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="6">동2문<br>지하철5,9호선<br>올림픽공원역</td>
+						<td>3214</td>
+						<td class="ldata mo_center">마천동 ↔ 강변역</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>방이역, 올림픽공원역, 둔촌동역, 천호역</td>
+					</tr>
+					<tr>
+						<td class="bdl">3220</td>
+						<td class="ldata mo_center">오금동 ↔ 청량리</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>방이역, 올림픽공원역, 건대앞, 장한평역, 청량리</td>
+					</tr>
+					<tr>
+						<td class="bdl">3319</td>
+						<td class="ldata mo_center">장지공영차고지 ↔ 잠실역</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>방이역, 올림픽공원역, 몽촌토성역, 잠실역</td>
+					</tr>
+					<tr>
+						<td class="bdl">3412</td>
+						<td class="ldata mo_center">강동공영차고지 ↔ 우면동</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>상일동역, 둔촌동역, 올림픽공원역, 강남역</td>
+					</tr>
+					<tr>
+						<td class="bdl">3413</td>
+						<td class="ldata mo_center">강동공영차고지 ↔ 수서경찰서</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>상일동역, 길동역, 올림픽공원역, 가락시장역</td>
+					</tr>
+					<tr>
+						<td class="bdl">30-5</td>
+						<td class="ldata mo_center">하남공영차고지 ↔ 잠실역</td>
+						<td class="ldata"><span class="txt_label sky">경기버스</span>하남시청, 올림픽공원역, 몽촌토성역, 잠실역</td>
+					</tr>
+					<tr>
+						<td rowspan="6">남2문<br>벨로드룸<br>입구</td>
+						<td>3216</td>
+						<td class="ldata mo_center">오금동 ↔ 청량리</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>방이동, 올림픽공원 남2문, 건대앞, 청량리</td>
+					</tr>
+					<tr>
+						<td class="bdl">3412</td>
+						<td class="ldata mo_center">강동공영차고지 ↔ 우면동</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>상일동역, 둔촌동역, 올림픽공원역, 강남역</td>
+					</tr>
+					<tr>
+						<td class="bdl">3413</td>
+						<td class="ldata mo_center">강동공영차고지 ↔ 수서경찰서</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>상일동역, 올림픽공원 남2문, 석촌역, 가락시장역</td>
+					</tr>
+					<tr>
+						<td class="bdl">3414</td>
+						<td class="ldata mo_center">오금동 ↔ 고속터미널</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>남한산성입구, 올림픽공원 남2문, 고속터미널</td>
+					</tr>
+					<tr>
+						<td class="bdl">30</td>
+						<td class="ldata mo_center">하남종합운동장 ↔ 남한산성입구</td>
+						<td class="ldata"><span class="txt_label sky">경기버스</span>하남, 천호역, 올림픽공원 남2문, 송파역, 남한산성</td>
+					</tr>
+					<tr>
+						<td class="bdl">30-5</td>
+						<td class="ldata mo_center">하남공영차고지 ↔ 잠실역</td>
+						<td class="ldata"><span class="txt_label sky">경기버스</span>하남시청, 올림픽공원 남2문, 몽촌토성역, 잠실역</td>
+					</tr>
+					<tr>
+						<td rowspan="5">남4문<br>지하철8호선<br>몽촌토성역<br>(올림픽공원<br>평화의문<br>광장)</td>
+						<td>3412</td>
+						<td class="ldata mo_center">강동공영차고지 ↔ 우면동</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>상일동역, 올림픽공원평화의문광장, 강남역</td>
+					</tr>
+					<tr>
+						<td class="bdl">3413</td>
+						<td class="ldata mo_center">강동공영차고지 ↔ 수서경찰서</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>상일동역, 올림픽공원평화의문광장, 가락시장역</td>
+					</tr>
+					<tr>
+						<td class="bdl">340</td>
+						<td class="ldata mo_center">강동공영차고지 ↔ 강남역</td>
+						<td class="ldata"><span class="txt_label">서울버스</span>상일동역, 천호역, 올림픽공원평화의문광장, 강남역</td>
+					</tr>
+					<tr>
+						<td class="bdl">30-5</td>
+						<td class="ldata mo_center">하남공영차고지 ↔ 잠실역</td>
+						<td class="ldata"><span class="txt_label sky">경기버스</span>하남, 올림픽공원평화의문광장, 몽촌토성역, 잠실역</td>
+					</tr>
+					<tr>
+						<td class="bdl">30</td>
+						<td class="ldata mo_center">하남종합운동장 ↔ 남한산성입구</td>
+						<td class="ldata"><span class="txt_label sky">경기버스</span>하남, 올림픽회관, 올림픽공원평화의문광장, 남한산성</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- //지하철/버스 이용-->
+
+
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/company/traffic.do" target="_blank" title="새창">찾아오시는길</a></li>
+					<li><a href="./sitemap.do">사이트맵</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="../skate/index.do" class="logo"><img src="../images/common/foot_logo.gif" alt="한국체육산업개발주식회사"></a>
+				<div class="mark_area">
+					<a href="#none"><img src="../images/common/icon_mark01.gif" alt="웹접근성품질인증마크"><span class="txt">웹접근성품질인증</span></a>
+					<a href="#none"><img src="../images/common/icon_mark02.gif" alt="개인정보보호우수사이트 인증마크"><span class="txt">개인정보보호<br>우수사이트 인증</span></a>
+				</div>
+				<div class="info">
+					<p class="company">사업자등록번호 : 215-81-12034, 대표자 : 김사엽</p>
+					<address>
+						주소 (05540) 서울시 송파구 올림픽로 424(방이동) 올림픽역도경기장 내
+					</address>
+					<p class="copyright">COPYRIGHT 2019 © KSPO&amp;CO ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

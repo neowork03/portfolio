@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta name="description" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="keyword" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+
+<title>한국체육산업개발주식회사 - 대관예약시스템</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/jquery.bpopup.min.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+
+</head>
+<body class="">
+
+<div id="wrap">
+
+
+			 <div style="text-align:center; margin-top:100px;">
+						<strong style="font-size:20px;">아이디중복확인 팝업 </strong>
+                             <span class="wi130 mo">
+                             	<a href="#" class="btn_base small off" id="layer01">중복확인</a>
+                             </span>
+			</div>
+             <br><br><br>       
+           	<div style="text-align:center;">
+						<strong style="font-size:20px;">사업자등록증 파일업로드 </strong>
+					
+							<span class="wi130">
+                             	<a href="#" class="btn_base small " style="width:" id="layer02">파일첨부</a>
+                             </span>
+			<br><br><br>  <strong style="font-size:18px;">* 팝업 화면 : 각 버튼 클릭</strong>
+			</div>
+                    
+           
+
+	<!-- popup_아이디중복확인 -->
+	<div id="popup01" class="layer">
+		<div class="layerPop">
+			<p class="popTitle">아이디 중복확인</p>
+			<div class="layerCont">
+            	<!-- popup_내용 -->
+            	<div>
+                	<strong class="txt_sky">andrew999</strong>는 사용 가능한 아이디입니다.
+                 </div>
+				 <!-- //popup_내용  -->
+                <!-- btn -->
+                <div class="btn_area">
+                    <a href="#none" class="btn_base on mid">확인</a>
+                </div>
+			   <!-- //btn -->    
+			</div>
+			<a href="#none" class="layerClose b-close">닫기</a>
+		</div>
+	</div>
+	<!-- //popup_아이디중복확인 -->	
+    
+	<!-- popup_파일첨부 -->
+	<div id="popup02" class="layer">
+		<div class="layerPop">
+			<p class="popTitle">파일첨부</p>
+			<div class="layerCont">
+            	<!-- popup_내용 -->
+            	<div class="box">
+					<a href="#" class="btn_base small" id="layer02">파일선택</a>
+                	<strong class="txt_sky mgL15">선택한 파일</strong>이 없습니다.
+                    
+                    <p class="b_file_area">
+						<input type="text" id="" class="c_input" placeholder="선택된 파일 없음" title="첨부파일이미지 파일경로" style="width:260px;" readonly>
+						<span class="btn_base small" id="layer02">파일선택</span>
+						<input type="file" id="" class="realFile_btn" name="file_up" title="첨부파일이미지 찾아보기" onChange=""> 	
+					</p>  
+                    
+                 </div>
+				
+				 <!-- //popup_내용  -->
+                <!-- btn -->
+                <div class="btn_area">
+                    <a href="#none" class="btn_base on mid small">업로드</a>
+                </div>
+			   <!-- //btn -->    
+			</div>
+			<a href="#none" class="layerClose b-close">닫기</a>
+		</div>
+	</div>
+	<!-- //popup_파일첨부 -->	    
+	
+	<!-- popup -->
+	<script type="text/javascript">
+		$('#layer01').on('click', function(event) {
+			event.preventDefault();
+			$('#popup01').bPopup();
+		});
+
+		$('#layer02').on('click', function(event) {
+			event.preventDefault();
+			$('#popup02').bPopup();
+		});				
+	</script>	    
+</div>
+</body>
+</html>

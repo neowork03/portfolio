@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta name="description" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="keyword" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+
+<title>한국체육산업개발주식회사 - 대관예약시스템</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 대관예약시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">대관예약시스템</a>
+			</div>
+		</div>
+		
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+					<li><a href="#" class="logout">로그인</a></li>
+					<li><a href="#" >회원가입</a></li>
+					<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창"><span> KSPO&amp;CO 바로가기</span></a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			
+            <!-- PC-전체메뉴 -->
+			<div class="allmenu_area">
+            	<div class="top">
+                	<h2 class="tit_type05">전체메뉴</h2>
+                </div>
+				<!--h2 class="tit_type02">전체메뉴</h2-->
+				<ul class="all_menu view">
+					<li>
+						<strong class="sMenu arrow">대관예약절차안내</strong>
+						<ul>
+							<li><a href="#">대관예약절차</a></li>
+							<li><a href="#">올림픽시설물 대관운영규정</a></li>
+							<li><a href="#">올림픽시설물 대관운영시행세칙</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">대관이용안내</strong>
+						<ul>
+							<li><a href="#">이용안내</a></li>
+							<li><a href="#">Q&A </a></li>
+							<li><a href="#">담당자연락처</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">대관예약</strong>
+						<ul>
+							<li><a href="#">대관 모의계산기</a></li>
+							<li><a href="#">대관신청서 작성</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">마이페이지</strong>
+						<ul>
+							<li><a href="#">신청내역확인</a></li>
+							<li><a href="#">회원정보수정</a></li>
+							<li><a href="#">서브계정 추가</a></li>
+						</ul>
+					</li> 
+				</ul>
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+	        <!-- //PC-전체메뉴 -->  
+		</div>
+				
+	<!-- 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		
+		<h3 class="stit">대관예약절차안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관예약절차</a></li>
+			<li><a href="#">올림픽 시설물 대관운영 규정</a></li>
+			<li><a href="#">올림픽 시설물 대관시행 세칙</a></li>
+		</ul>
+		
+		<h3 class="stit">대관이용안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">Q&A</a></li>
+			<li><a href="#">담당자 연락처</a></li>
+		</ul>
+		
+		<h3 class="stit">대관예약</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관 모의계산기</a></li>
+			<li><a href="#">대관 신청서 작성</a></li>
+		</ul>
+		
+		<h3 class="stit">마이페이지</h3>
+		<ul class="all_menu">
+			<li><a href="#">회원정보 수정</a></li>
+			<li><a href="#">신청내역 확인</a></li>
+			<li><a href="#">서브계정 추가</a></li>
+		</ul>
+	
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	 <!--//모바일-전체메뉴 -->
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area culture_sub">
+			<div class="inner">
+				<p class="txt">					
+					<strong class="stress">대관예약시스템</strong>
+					올림픽시설물 대관은<br> 편리하게 안전하게, 투명하게 운영됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="#" class="">대관예약절차안내</a></li>
+					<li><a href="#">대관이용안내</a></li>
+					<li><a href="#">대관예약</a></li>
+					<li><a href="#" class="">마이페이지</a></li>
+				</ul>
+
+				<!-- 모바일-2nd메뉴 -->	
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="#">대관예약절차안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관예약</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">마이페이지</a></div>
+						</div>
+					</div>
+					<!--//Swiper -->
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+		
+		<!-- content -->
+		<div id="content">
+			<form id="frm" method="GET">
+				<!-- <input type="hidden" name="notice_seq" /> -->
+				<input type="hidden" name="pageIndex" value="1" />
+				<input type="hidden" name="type_gbn" value="" />
+				<!-- location -->
+				<div class="location_area">
+					<span class="menu">홈</span>
+                    <span class="menu">대관예약</span>
+					<strong class="menu">대관신청서 작성</strong>
+				</div>
+				<!-- //location -->
+           
+				<!-- title -->
+				<div class="tit_area">
+					<h1 class="tit_type01">대관신청서 작성</h1>
+				</div>
+				<!-- //title -->
+				
+				<div class="cal_srch">
+					
+					<ul class="pick_area">
+						<li class="">
+							<select name="" id="">
+								<option value="">대관구분</option>
+								<option value="01">실내</option>
+								<option value="02">실외</option>
+							</select>
+						</li>
+						<li class="">
+							<select name="" id="">
+								<option value="">대관장소</option>
+								<option value="01">뮤즈라이브</option>
+								<option value="02">KSPO DOME(체조경기장)</option>
+								<option value="03">핸드볼경기장</option>
+								<option value="04">평화의광장</option>
+								<option value="05">만남의광장</option>
+								<option value="07">K-아트홀</option>
+								<option value="07">우리금융아트홀</option>
+								<option value="08">88호수수변무대</option>
+								<option value="09">88잔디마당</option>
+								<option value="10">한얼광장</option>
+								<option value="11">몽촌해자수변무대A</option>
+								<option value="12">몽촌해자수변무대B</option>
+							</select>
+						</span>
+						<li class="">
+							<select name="" id="">
+								<option value="">대관목적</option>
+								<option value="01">문화예술행사</option>
+							</select>
+						</li>
+					</ul>
+					
+					<div class="all_area">
+						<a href="#" class="btn_srch">확인</a>
+					</div>
+				</div>
+				
+
+				<!-- 년,월 표기 -->   
+				<div class="cal-top">
+					<div class="cal-display">
+						<a href="#" class="btn-prev-end">이전달 보기2</a>
+	                	<a href="#" class="btn-prev">이전달 보기</a>
+						<strong><span class="hidden">현재달력</span><span>2020</span>.<span>11</span> </strong>
+						<a href="#" class="btn-next">다음달 보기</a>
+						<a href="#" class="btn-next-end">다음달 보기2</a>
+					</div>
+					<span class="hline"></span>
+					<div class="aside_txt" >
+						<span class=""> 신청가능 </span>
+						<span class=""> 신청불가 </span>
+					</div>
+				</div>	
+                <!-- //년,월 표기 -->     
+                
+				<!-- 달력 -->
+                <div class="tbl_cal mgB30">
+                    <table class="tbl_cal_list">
+                        <caption>달력</caption>
+                        <colgroup>
+                            <col style="width:14.28571%;">
+                            <col style="width:14.28571%;">
+                            <col style="width:14.28571%;">
+                            <col style="width:14.28571%;">
+                            <col style="width:14.28571%;">
+                            <col style="width:14.28571%;">
+                            <col style="width:14.28571%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">일</th>
+                                <th scope="col">월</th>
+                                <th scope="col">화</th>
+                                <th scope="col">수</th>
+                                <th scope="col">목</th>
+                                <th scope="col">금</th>
+                                <th scope="col">토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <span class="sun">31 </span> </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="on">3</td> <!-- 선택되었을 경우 class="on"-->
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td> <span class="sun">7 </span> </td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td> <span class="sun">14 </span> </td>
+                                <td class="finish-sch"> 15 </td>
+                                <td class="finish-sch">16</td>
+                                <td class="finish-sch">17</td>
+                                <td class="finish-sch">18</td>
+                                <td class="finish-sch">19</td>
+                                <td class="finish-sch">20</td>
+                            </tr>
+                            <tr>
+                                <td class="finish-sch"> <span class="sun">21 </span> </td>
+                                <td class="finish-sch">22</td>
+                                <td class="finish-sch">23</td>
+                                <td class="finish-sch">24</td>
+                                <td class="finish-sch">25</td>
+                                <td>26</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td> <span class="sun">28 </span> </td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>						
+                        </tbody>
+                    </table>
+                </div>    
+				<!-- //달력 -->
+               
+                <!-- list -->
+                <div class="board-basic-list3">
+                    <ol class="list">
+                        <!-- S:header -->
+                        <li class="header">
+                            <div class="th">대관장소</div>
+                            <div class="th">대관목적</div>
+                            <div class="th">대관일자</div>
+                            <div class="th">일수</div>
+                            <div class="th">선택</div>
+                        </li>
+                        <!-- E:header -->
+                        
+                        <!-- S:body -->
+                        <li>
+                            <div class="td"><span class="place"> 뮤즈라이브</span></div>
+                            <div class="td title"> <a href="#" class="subject">문화예술행사</a> </div>
+                            <div class="td"><span class="date">2020.08.19~2020.08.19</span>  </div>
+                            <div class="td"><span class="day">7</span> </div>
+                            <div class="td"><span class="add"><span class="txt_label sky">추가</span></span></div>
+                        </li>
+                        <!-- E:body -->
+                        <!-- S:body -->
+                        <li>
+                            <div class="td"> <span class="place">KSPO DOME(체조경기장) </span> </div>
+                            <div class="td title"> <a href="#" class="subject">문화예술행사</a> </div>
+                            <div class="td"><span class="date">2020.07.17~2020.07.17</span>  </div>
+                            <div class="td"><span class="day">10</span> </div>
+                            <div class="td"><span class="add"> <span class="txt_label green">추가</span> </span></div>
+                        </li>
+                        <!-- E:body -->
+                        <!-- S:body -->
+                        <li>
+                            <div class="td"> <span class="place">핸드볼경기장</span> </div>
+                            <div class="td title"> <a href="#" class="subject">일반행사</a> </div>
+                            <div class="td"><span class="date">2020.06.06~2020.06.06</span>  </div>
+                            <div class="td"><span class="day">3</span> </div>
+                            <div class="td"><span class="add"> <span class="txt_label green">추가</span> </span></div>
+                        </li>
+                        <!-- E:body -->
+                        <!-- S:body -->
+                        <li>
+                            <div class="td"> <span class="place">핸드볼보조경기장</span> </div>
+                            <div class="td title"> <a href="#" class="subject">일반행사</a> </div>
+                            <div class="td"><span class="date">2020.06.06~2020.06.06</span>  </div>
+                            <div class="td"><span class="day">2</span> </div>
+                            <div class="td"><span class="add"> <span class="txt_label sky">추가</span> </span></div>
+                        </li>
+                        <!-- E:body -->
+                    </ol>
+                </div>  
+                <!-- //list -->   
+                
+                <!-- 담당자 연락처  -->
+               <div class="person_info">                
+                    <div class="info_area">
+                        <h2 class="tit">양대관<span>/</span>010-3376-3376<span>/</span>dideod5@korea.com </h2>
+                        
+                    </div>   
+                </div>
+                <!-- //담당자 연락처-->                             
+                       
+                <!-- btn -->
+                <div class="btn_area">
+                    <a href="GUI-03-21.html" class="btn_base on">확인</a>
+                </div>
+                <!-- //btn -->                  
+                   
+          
+                    <h3 class="tit_info">유의사항 </h3>
+                    <ul class="txt_info">
+                        <li><span class="txt_orange">대관일자</span>는 무대셋업, 철수대관 포함</li>
+                        <li>대관 세부시간 지정은 대관 신청 후 담당자와 협의</li>
+                        <li><span class="txt_orange">정기대관 신청</span>일 경우 대관목적은 문화예술행사만 가능</li>
+                    </ul>
+                             
+		  </form>
+
+                              
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="sub/GUI-02-10.html" target="_blank" title="새창">대관이용안내</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="#" class="logo"></a>
+				<div class="info">
+					<address>
+						서울시 송파구 올림픽로 424 올림픽역도경기장내 (05540)
+					</address>
+					<p>
+					    <ul class="company">	
+							<li>사업자등록번호 : 215-81-12034</li>
+							<li>대표자 : 김사엽 </li>
+							<li>고객안내전화 : 02-2180-3564 </li>
+							<li>팩스 : 0000-0000 </li>
+						</ul>	
+					</p>
+					<p class="copyright">COPYRIGHT 2020 © KSPO&amp;CO. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>

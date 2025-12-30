@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="e-HR" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="#" />
+    <title>e-HR</title>
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+  </head>
+  <body>
+    <!-- wrapper -->
+    <div class="wrapper">
+      <!-- header -->
+      <div class="header">
+        <a href="#" class="btnBack" role="button"><span>Back</span></a>
+        <h1>일별근무현황</h1>
+        <a href="#" class="btnNav" role="button"><span>Menu</span></a>
+      </div>
+      <!-- //header -->
+      <!-- container -->
+      <div class="container">
+        <!-- content -->
+        <div class="content">
+          <!-- contTopWrap -->
+          <div class="contTopWrap bgColor1">
+            <div class="formWrap">
+              <div class="fieldGroup">
+                <span class="tit">기준일</span>
+                <div class="cal col">
+                  <div class="inputList">
+                    <input
+                      type="text"
+                      title="날짜선택 입력"
+                      placeholder="날짜선택을 입력해 주세요."
+                    />
+                    <a
+                      href="#"
+                      class="btnCalendar"
+                      title="날짜선택 새창열림"
+                      role="button"
+                      ><span class="blind">날짜선택</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //contTopWrap -->
+
+          <!-- toggle -->
+          <div class="stateViewWrap">
+            <div class="stateView toggleWrap">
+              <div class="toggleCont" style="display: block">
+                <div class="tabWrap">
+                  <!-- 디폴트 선택 li에 active 클래스 추가 -->
+                  <ul class="tabsNav">
+                    <!-- <li class="active"><a href="#con01">조직별</a></li> -->
+                    <li><a href="#con01">조직별</a></li>
+                    <li><a href="#con02">직급별</a></li>
+                    <li><a href="#con03" class="active">조회옵션</a></li>
+                  </ul>
+                  <div class="tabCont">
+                    <div id="con01" class="tab_list">조직도 area</div>
+                    <div id="con02" class="tab_list">
+                      <!-- con02 area -->
+                      <div class="formWrap">
+                        <div class="radioList">
+                          <input
+                            type="radio"
+                            id="r1"
+                            name="rr"
+                            checked="checked"
+                          />
+                          <label for="r1">전체</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r2" name="rr" />
+                          <label for="r2">상담사 Only / 직책자 제외</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r3" name="rr" />
+                          <label for="r3">대표이사</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r4" name="rr" />
+                          <label for="r4">그룹장</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r5" name="rr" />
+                          <label for="r5">경영지원본부</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r6" name="rr" />
+                          <label for="r6">HR팀</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r8" name="rr" />
+                          <label for="r8">유선본부</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r9" name="rr" />
+                          <label for="r9">수도권유선고객센터</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r10" name="rr" />
+                          <label for="r10">유선CS마케팅팀</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r11" name="rr" />
+                          <label for="r11">유선사업지원센터</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r12" name="rr" />
+                          <label for="r12">성북고객센터</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r13" name="rr" />
+                          <label for="r13">기업고객센터</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r14" name="rr" />
+                          <label for="r14">안양고객센터</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r15" name="rr" />
+                          <label for="r15">유선상담총괄</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r16" name="rr" />
+                          <label for="r16">마케팅본부</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r17" name="rr" />
+                          <label for="r17">역량개발팀</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r18" name="rr" />
+                          <label for="r18">마케팅전략팀</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r19" name="rr" />
+                          <label for="r19">무선본부</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r20" name="rr" />
+                          <label for="r20">로밍고객센터</label>
+                        </div>
+                      </div>
+                      <!-- //con02 area -->
+                    </div>
+                    <div id="con03" class="tab_list" style="display: block">
+                      <!-- con03 area -->
+                      <div class="formWrap">
+                        <div class="radioList">
+                          <input
+                            type="radio"
+                            id="r6"
+                            name="rrr"
+                            checked="checked"
+                          />
+                          <label for="r6">전체</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r7" name="rrr" />
+                          <label for="r7">입사 3개월 미만 제외</label>
+                        </div>
+                        <div class="radioList">
+                          <input type="radio" id="r8" name="rrr" />
+                          <label for="r8"
+                            >FULL근무 대비 환산
+                            <a
+                              href="#"
+                              class="btnFuncTip"
+                              title="툴팁(도움말) 새창 열기"
+                              onclick="popCenter();return false;"
+                              ><span class="blind">툴팁</span></a
+                            ></label
+                          >
+                        </div>
+                        <!-- popWrap -->
+                        <div class="popWrap centerLayer">
+                          <div class="dim"></div>
+                          <div
+                            class="dimCloseArea"
+                            onclick="popClose(this);return false;"
+                          >
+                            터치 시 해당 창을 닫습니다.
+                          </div>
+                          <!-- 닫기용 투명 dim 추가 -->
+
+                          <div class="popInner">
+                            <h1>알림</h1>
+                            <div class="popCont">
+                              <div class="confirmMsg type03">
+                                <p>
+                                  예시) 반차 0.5, 육아기단축근무(6시간) 0.75
+                                </p>
+                                <!-- <div class="guideList">
+																	<ul class="listDot">
+																		<li>
+																			해당 서비스 이용시간은
+																			<em class="pointColor">09:00~17:00</em
+																			>입니다.<br />
+																			자세한 사항은 서비스 이용시간을 참고하시기
+																			바랍니다.
+																		</li>
+																	</ul>
+																</div> -->
+                              </div>
+                            </div>
+
+                            <div class="popBtnWrap">
+                              <div class="popBtn">
+                                <a
+                                  href="#"
+                                  class="confirmBtn"
+                                  onclick="popClose(this);return false;"
+                                  >확인</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- //popWrap -->
+                        <div class="radioList">
+                          <input type="radio" id="r9" name="rrr" />
+                          <label for="r9">휴직제외</label>
+                        </div>
+                      </div>
+                      <!-- //con03 area -->
+                    </div>
+                  </div>
+                </div>
+                <!--  button_full -->
+                <div class="btnWrap inr">
+                  <button type="button" class="btn full">조회하기</button>
+                </div>
+                <!--  // button_full -->
+              </div>
+              <p class="toggleBtnWrap bg">
+                <a href="#" class="toggleBtn active"> 상세조회</a>
+              </p>
+            </div>
+          </div>
+          <!-- // toggle -->
+
+          <h2 class="defTit">조회결과</h2>
+          <!--grayBoxType -->
+          <div class="grayBoxTypeWrap">
+            <div class="grayBoxType">
+              <strong class="title">경영지원본부</strong>
+              <span class="badge">비계획<strong>2</strong>명</span>
+              <div class="groupArea">
+                <ul class="inner">
+                  <li>총 기준인력</li>
+                  <li>
+                    <strong class="pointColor3">100</strong
+                    ><em class="num">명</em>
+                  </li>
+                  <li>총 기준인력</li>
+                  <li>
+                    <strong class="pointColor4">90</strong
+                    ><em class="num">%</em>
+                  </li>
+                </ul>
+              </div>
+              <div class="workArea">
+                <div class="typeon">
+                  <p>
+                    <span class="on">근무</span>
+                    <span
+                      ><strong class="pointColor4">2672</strong>
+                      <span class="per">명</span></span
+                    >
+                  </p>
+                  <p>
+                    <span class="txt">내근</span> <em>2241</em
+                    ><span class="per txt">명</span><span>/</span>
+                    <span class="txt">재택</span> <em>431</em
+                    ><span class="per txt">명</span>
+                  </p>
+                  <div class="btnWrap detail">
+                    <button type="button" class="btn">상세보기</button>
+                  </div>
+                </div>
+                <div class="typeoff">
+                  <p>
+                    <span class="off">미근무</span>
+                    <span
+                      ><strong class="pointColor1">508</strong>
+                      <span class="per">명</span></span
+                    >
+                  </p>
+                  <p>
+                    <span class="txt">계획</span> <em>483</em
+                    ><span class="per txt">명</span><span>/</span>
+                    <span class="txt">비계획</span> <em>15</em
+                    ><span class="per txt">명</span>
+                  </p>
+                  <div class="btnWrap detail">
+                    <button type="button" class="btn btnPoint">상세보기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//grayBoxType -->
+          <!-- roudBoxType  -->
+          <div class="roudBoxTypeWrap">
+            <ul>
+              <li>
+                <div class="detailBoxType">
+                  <strong class="title">경영지원본부</strong>
+                  <span class="badge">비계획<strong>2</strong>명</span>
+                  <ul class="groupArea">
+                    <li>HR팀<span>B그룹</span></li>
+                    <li>
+                      근무율 <strong class="pointColor4">90</strong
+                      ><em class="per">%</em>
+                    </li>
+                  </ul>
+                  <div class="memberArea">
+                    <ul class="alignList">
+                      <li>
+                        <span>기준인력</span>
+                        <span><em class="pointColor1">154</em>명</span>
+                      </li>
+                      <li class="line"></li>
+                      <li>
+                        <span>근무</span>
+                        <span><em class="pointColor">144</em>명</span>
+                      </li>
+                      <li class="line"></li>
+                      <li>
+                        <span>미근무</span>
+                        <span><em class="pointColor5">10</em>명</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="detailBoxType">
+                  <strong class="title">경영지원본부</strong>
+                  <span class="badge">비계획<strong>2</strong>명</span>
+                  <ul class="groupArea">
+                    <li>경영기획팀<span>경영지원실</span></li>
+                    <li>
+                      근무율 <strong class="pointColor4">80</strong
+                      ><em class="per">%</em>
+                    </li>
+                  </ul>
+                  <div class="memberArea">
+                    <ul class="alignList">
+                      <li>
+                        <span>기준인력</span>
+                        <span><em class="pointColor1">16</em>명</span>
+                      </li>
+                      <li class="line"></li>
+                      <li>
+                        <span>근무</span>
+                        <span><em class="pointColor">16</em>명</span>
+                      </li>
+                      <li class="line"></li>
+                      <li>
+                        <span>미근무</span>
+                        <span><em class="pointColor5">4</em>명</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="detailBoxType">
+                  <strong class="title">경영지원본부</strong>
+                  <span class="badge">비계획<strong>2</strong>명</span>
+                  <ul class="groupArea">
+                    <li>쉐어드센터<span>쉐어드1팀</span></li>
+                    <li>
+                      근무율 <strong class="pointColor4">94</strong
+                      ><em class="per">%</em>
+                    </li>
+                  </ul>
+                  <div class="memberArea">
+                    <ul class="alignList">
+                      <li>
+                        <span>기준인력</span>
+                        <span><em class="pointColor1">50</em>명</span>
+                      </li>
+                      <li class="line"></li>
+                      <li>
+                        <span>근무</span>
+                        <span><em class="pointColor">47</em>명</span>
+                      </li>
+                      <li class="line"></li>
+                      <li>
+                        <span>미근무</span>
+                        <span><em class="pointColor5">10</em>명</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //roudBoxType  -->
+        </div>
+        <!-- //content -->
+      </div>
+
+      <!-- //container -->
+
+      <!-- footer -->
+      <!-- <div class="footer">
+				<div class="copyright">© TELECOM SERVICE Corp.</div>
+			</div> -->
+      <!-- //footer -->
+    </div>
+  </body>
+</html>

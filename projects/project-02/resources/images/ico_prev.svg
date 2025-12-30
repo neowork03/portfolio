@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #707070;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="_" data-name="&lt;" transform="translate(2 4.164)">
+    <rect id="area" class="cls-1" width="32" height="32" transform="translate(-2 -4.164)"/>
+    <path id="패스_66" data-name="패스 66" class="cls-2" d="M6-10V0L0-5Z" transform="translate(11 16.836)"/>
+  </g>
+</svg>

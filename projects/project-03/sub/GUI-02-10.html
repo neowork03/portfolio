@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta name="description" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="keyword" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+<meta name="author" content="대관예약시스템, KSPO&amp;CO, 한국체육산업개발주식회사" />
+
+<title>한국체육산업개발주식회사 - 대관예약시스템</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/pavicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/ui-common.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/jquery.swiper.min.js"></script>
+<script type="text/javascript" src="../js/animatescroll.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ors.js"></script>
+<script type="text/javascript">
+$(window).resize(function(){
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$(window).on('load', function () {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: true,
+		slideToClickedSlide:true,
+	});
+});
+
+$('.swipe_menu').click(function(){
+	$(this).addClass('checked').parent('div').siblings('div').find('a.checked').removeClass('checked');
+});
+</script>
+
+
+</head>
+<body>
+<div id="skipNavi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="../" class="logo_main">
+					<img src="../images/common/logo.gif" alt="한국체육산업개발주식회사 대관예약시스템">
+				</a>
+				<a href="./index.do" class="logo_sub">대관예약시스템</a>
+			</div>
+		</div>
+		
+		<div class="inner">
+			<nav class="gnb">
+				<a href="#allMenu" class="mo_allmenu"><span>전체메뉴</span></a>
+				<ul>
+					<li><a href="#" class="logout">로그인</a></li>
+					<li><a href="#" >회원가입</a></li>
+					<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창"><span> KSPO&amp;CO 바로가기</span></a></li>
+				</ul>
+			</nav>
+			<a href="#none" class="pc_allmenu"><span>전체메뉴</span></a>
+			
+            <!-- PC-전체메뉴 -->
+			<div class="allmenu_area">
+            	<div class="top">
+                	<h2 class="tit_type05">전체메뉴</h2>
+                </div>
+				<!--h2 class="tit_type02">전체메뉴</h2-->
+				<ul class="all_menu view">
+					<li>
+						<strong class="sMenu arrow">대관예약절차안내</strong>
+						<ul>
+							<li><a href="#">대관예약절차</a></li>
+							<li><a href="#">올림픽시설물 대관운영규정</a></li>
+							<li><a href="#">올림픽시설물 대관운영시행세칙</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">대관이용안내</strong>
+						<ul>
+							<li><a href="#">이용안내</a></li>
+							<li><a href="#">Q&A </a></li>
+							<li><a href="#">담당자연락처</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">대관예약</strong>
+						<ul>
+							<li><a href="#">대관 모의계산기</a></li>
+							<li><a href="#">대관신청서 작성</a></li>
+						</ul>
+					</li>
+					<li>
+						<strong class="sMenu arrow">마이페이지</strong>
+						<ul>
+							<li><a href="#">신청내역확인</a></li>
+							<li><a href="#">회원정보수정</a></li>
+							<li><a href="#">서브계정 추가</a></li>
+						</ul>
+					</li> 
+				</ul>
+				<a href="#none" class="btn_close">닫기</a>
+			</div>
+	        <!-- //PC-전체메뉴 -->  
+		</div>
+				
+	<!-- 모바일-전체메뉴 -->
+	<aside id="allMenu" class="allmenu_area_mo">
+		<h2 class="tit_type02 hidden">메뉴바로가기</h2>
+		
+		<h3 class="stit">대관예약절차안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관예약절차</a></li>
+			<li><a href="#">올림픽 시설물 대관운영 규정</a></li>
+			<li><a href="#">올림픽 시설물 대관시행 세칙</a></li>
+		</ul>
+		
+		<h3 class="stit">대관이용안내</h3>
+		<ul class="all_menu">
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">Q&A</a></li>
+			<li><a href="#">담당자 연락처</a></li>
+		</ul>
+		
+		<h3 class="stit">대관예약</h3>
+		<ul class="all_menu">
+			<li><a href="#">대관 모의계산기</a></li>
+			<li><a href="#">대관 신청서 작성</a></li>
+		</ul>
+		
+		<h3 class="stit">마이페이지</h3>
+		<ul class="all_menu">
+			<li><a href="#">회원정보 수정</a></li>
+			<li><a href="#">신청내역 확인</a></li>
+			<li><a href="#">서브계정 추가</a></li>
+		</ul>
+	
+		<a href="#none" class="btn_close">닫기</a>
+	</aside>
+	 <!--//모바일-전체메뉴 -->
+	<button type="button" class="btn_allmenu_close">전체메뉴닫기</button>
+	
+	</div>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+		<!-- 서브비쥬얼 -->
+		<div class="section visual_area culture_sub">
+			<div class="inner">
+				<p class="txt">					
+					<strong class="stress">대관예약시스템</strong>
+					올림픽시설물 대관은<br> 편리하게 안전하게, 투명하게 운영됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- //서브비쥬얼 -->
+
+		<!-- Sticky -->
+		<div class="section sticky_area">
+			<div class="inner">
+				<ul class="sticky_menu">
+					<li><a href="#" class="">대관예약절차안내</a></li>
+					<li><a href="#">대관이용안내</a></li>
+					<li><a href="#">대관예약</a></li>
+					<li><a href="#" class="">마이페이지</a></li>
+				</ul>
+
+				<!-- 모바일-2nd메뉴 -->	
+				<div class="swipemenu_wrap">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper_nav swiper-slide"><a style="width: 120px;" href="#">대관예약절차안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관이용안내</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">대관예약</a></div>
+							<div class="swiper_nav swiper-slide"><a href="#">마이페이지</a></div>
+						</div>
+					</div>
+					<!--//Swiper -->
+				</div>
+			</div>
+		</div>
+		<!-- //Sticky -->
+				
+		<!-- content -->
+		<div id="content">
+			<form id="frm" method="GET">
+				<!-- <input type="hidden" name="notice_seq" /> -->
+				<input type="hidden" name="pageIndex" value="1" />
+				<input type="hidden" name="type_gbn" value="" />
+				<!-- location -->
+				<div class="location_area">
+					<span class="menu">홈</span>
+                    <span class="menu">대관이용안내</span>
+					<strong class="menu">이용안내</strong>
+				</div>
+				<!-- //location -->
+           
+				<!-- title -->
+				<div class="tit_area">
+					<h1 class="tit_type01">이용안내</h1>
+				</div>
+				<!-- //title -->
+    
+                <!-- tab -->
+                <ul class="tab_list_ty1">
+                    <li><a href="#step01" class="" ><span class="line">메인화면</span></a></li>
+                    <li><a href="#step02"><span class="line">개인회원가입</span></a></li>
+                    <li><a href="#step03"><span class="line">기업회원가입</span></a></li>
+                    <li><a href="#step04"><span class="line">대관예약 신청서 작성</span></a></li>
+                    <li><a href="#step05"><span class="line">신청내역 확인</span></a></li>
+                    <li><a href="#step06"><span class="line">올림픽공원 대관 절차</span></a></li>
+                </ul>  	                
+                <!-- //tab -->
+                
+				<!-- 컨텐츠 -->
+				<div class="step_box" id="step01">
+					<h2 class="tit_type02">
+						<span class="num">01</span>
+						메인화면
+					</h2>
+				
+					<p class="img_area">
+						<img src="../images/content/img_use_01.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_01_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">대관예약시스템의 인트로 페이지로 가장 먼저 만날 수 있는 페이지 입니다. 
+                    <span class="txt_orange">대관 예약 가능일 검색</span>부터 대관과 관련된 모든 정보를 한눈에 볼 수 있습니다.</p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span> 대관예약절차, 시설대관운영지침, 대관이용안내, 대관예약 현황, 대관신청서 작성, 회원정보수정, 신청내역확인, 서브계정추가 등의 내용확인 가능 </li>
+                        <li><span class="num2">②</span> 대관 예약 가능한 날짜의 정보를 확인할 수 있습니다. 주황색으로 표시된 날짜는 예약이 가능하며, 회색으로 된 날짜는 예약이 불가합니다. 
+                        (메인화면에서는 정기대관, 수시대관 가능일이 모두 표시되고 대관신청서 작성시에  선택하여 등록)</li>
+                        <li><span class="num2">③</span> 대관절차안내, 시설대관 운영지침, 대관시설물 이용 준수사항, 공원 시설안내 및 대관료 정보 등을 확인할 수 있습니다.</li>	
+                        <li><span class="num2">④</span> 대관신청서 작성 및 대관현황 캘린더 등을 확인 및 입력할 수 있습니다.</li>		
+                        <li><span class="num2">⑤</span> 대관신청서 작성 및 대관현황 캘린더 등을 확인 및 입력할 수 있습니다.</li>			
+                        <li><span class="num2">⑥</span> 대관신청서 작성 및 대관현황 캘린더 등을 확인 및 입력할 수 있습니다.</li>				
+                    </ul>
+				</div>
+                
+				<div class="step_box" id="step02">
+					<h2 class="tit_type02">
+						<span class="num">02</span>
+						개인회원가입
+					</h2>
+					<p class="img_area">
+						<img src="../images/content/img_use_02.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_02_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">첫 번째 단계 입니다. <br> 우선 <span class="txt_orange">개인회원</span>혹은 기업회원 구분하여 회원 가입하셔야 합니다. 
+                    회원가입 후 같은 아이디와 패스워드로 대관예약시스템을 이용하실 수 있습니다. </p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span> 회원약관 동의 및 인증절차를 거친 다음 본인 정보 입력 후 가입완료 </li>
+                        <li><span class="num2">②</span> 기업회원은 회원약관 동의를 거쳐 기업정보 및 담당자 정보 입력</li>				
+                    </ul>
+				</div>                
+                
+				<div class="step_box" id="step03">
+					<h2 class="tit_type02">
+						<span class="num">03</span>
+						기업회원가입
+					</h2>
+					<p class="img_area">
+						<img src="../images/content/img_use_02-1.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_02-1_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">기업회원가입 </p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span> 개인정보처리방침 동의 후 기업정보 및 담당자 정보를 등록합니다. </li>
+                        <li><span class="num2">②</span> 사업자 등록 및 관련 서류를 입력하시면 담당자가 승인여부를 결정하고 결과는 SMS로 발송됩니다.
+                        	<ul class="txt_basic">
+                             	<li> - 회원약관 동의 및 기업정보, 담당자 정보 입력, 사업자 등록증 등록 </li> 
+                      		</ul>
+                        </li>				
+                    </ul>
+					<p class="img_area">
+						<img src="../images/content/img_use_02-2.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_02-2_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">기업회원 계정추가</p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span> 처음 기업회원으로 가입하신 분이 마스터 계정을 갖게 되고 서브계정 필요 시 마스터 계정으로 서브 계정을 생성할 수 있습니다.</li>
+                        <li><span class="num2">②</span> 기업회원은 마이페이지 서브계정 추가 메뉴를 선택하신 후 기업의 서브계정에 대한 추가 관리를 하실 수 있습니다. 
+                       		 <ul class="txt_basic">
+                             	<li> - 마이페이지는 회원정보수정, 신청내역 확인, 서브계정 추가 사용 </li> 
+                                <li> - 서브계정추가 메뉴 선택시 서브계정에 대한 추가 관리 가능 </li> 
+                                <li> - 오른쪽 상단 서브계정 추가 클릭 후 추가할 계정의 아이디, 비번 등 정보값 입력 </li> 
+                      		</ul>
+                        </li>				
+                    </ul>
+					<p class="img_area">
+						<img src="../images/content/img_use_02-3.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_02-3_mo.png" alt="" class="mo">
+					</p>
+                     <p class="txt2">기업회원 구분 및 비밀번호 찾기</p>
+                     <ul class="txt_num5">
+                        <li><span class="num2">①</span> 기업회원구분 
+                        	 <p class="strong txt_orange">- 마스터 계정</p>
+                             <ul class="txt_basic">
+                             	<li>가. 가입 : 기업을 대표하는 계정으로 가입 후 대관 담당자의 승인을 거쳐 이용가능(기업당 하나의 계정 발급) 승인이 완료되면 가입 시 등록한 휴대폰 번호로 SMS 발송 </li> 
+                                <li>나. 권한 : 대관을 필요로 하는 다른 부서 담당자가 퇴사시 사용 정지 시킬 수 있는 계정  </li> 
+                                <li>다. 탈퇴 : 서브 계정이 존재할 경우 각  서브 계정을 미사용으로 변경 후 탈퇴 신청</li> 
+                                <li>라. 변경 : 마스터 계정을 다른 담당자로 변경하고자 할 때에는 대관 담당자에게 문의 </li> 
+                             </ul>
+                             <p class="strong txt_orange">- 서브 계정 </p>
+                             <ul class="txt_basic">
+                             	<li>가. 기업회원 마스터 계정을 가진 담당자에게 요청하여 계정 생성  </li> 
+                                <li>나.해당 기업의 사업팀 별로 행사 담당 주체가 다른 경우 담당자별로 신규 생성하여 이용 </li> 
+                             </ul>
+                        </li>
+                        <li><span class="num2">②</span> 기업회원 비밀번호 찾기 <br>
+                        	<ul class="txt_basic">
+                             	<li>가. 회원가입 시 등록된 기업회원 담당자의 휴대폰 번호로 임시 비밀번호 발송 </li> 
+                                <li>나. 등록된 휴대폰 번호를 기억하지 못하는 경우 대관 담당자에게 암호 초기화 요청 </li> 
+                             </ul>
+                        </li>				
+                    </ul>
+				</div>
+
+				<div class="step_box" id="step04">
+					<h2 class="tit_type02">
+						<span class="num">04</span>
+						대관예약 신청서 작성
+					</h2>
+					<p class="img_area">
+						<img src="../images/content/img_use_03.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_03_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">대관예약 </p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span>메인 페이지의 대관예약 > 대관예약 현황을 클릭합니다.</li>
+                        <li><span class="num2">②</span>대관 장소별 예약이 가능한 날을 확인합니다.
+                      		<ul class="txt_basic">
+                             	<li>1. 대관예약 첫번째 단계, 대관예약현황 클릭 </li> 
+                                <li>2. 대관장소를 선택한 후 캘린더를 통해 예약가능 날짜 확인 </li> 
+                                <li>3. 대관예약신청 아이콘 클릭 </li> 
+                      		</ul>
+                        </li>			
+                    </ul>
+                    <p class="img_area">
+						<img src="../images/content/img_use_03-1.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_03-1_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">대관예약서 작성 </p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span>대관장소를 선택 후, 정기대관 혹은 수시대관을 구분하여 클릭합니다.</li>
+                        <li><span class="num2">②</span>대관장소. 대관목적, 대관일자(셋업, 철수대관 포함), 대관횟수 등을 입력합니다. 
+                      		<ul class="txt_basic">
+                             	<li>1. 대관장소에서 원하는 장소 클릭 </li> 
+                                <li>2. 정기대관 or 수시대관을 선택하면 캘린더에 예약 가능일이 표시됨(메인화면과 다르게 정기대관, 수시대관 가능일이 각각 표시됨)</li> 
+                                <li>3. 대관장소, 대관목적, 대관일자, 횟수를 명확히 입력 </li> 
+                      		</ul>
+                        </li>			
+                    </ul>
+                    <p class="img_area">
+						<img src="../images/content/img_use_03-2.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_03-2_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">대관예약서 작성(2) </p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span>대관구분에서 행사명, 행사유형, 행사내용을 입력합니다.</li>
+                        <li><span class="num2">②</span>대관기관에서는 관람유형(예상관람인원 스탠딩, 좌석), 행사인원에서는 예상티켓가격 및 예상입장객수를 유/무료로 구분하여 입력하고 
+                        공연계획서, 사업자등록증 사본, 통장사본 등의 파일을 첨부하고 임시저장 합니다.(신청서 제출을 누르시면 수정할 수 없습니다.)
+                      		<ul class="txt_basic">
+                             	<li>1. 대관구분 내 행사명, 행사유형, 내용 입력  </li> 
+                                <li>2. 대관기간 중 관람유형란 스탠징, 좌석 수 입력, 행사인원란 예상티켓가격(평균가 입력) <br>
+                                예상입장객수(유/무료) 구분입력, 공연계획서, 사업자등록증 사본, 통장사본 등 첨부파일 등록 <br>
+                                * 첨부파일은 hwp, doc, ppt, pdf만 가능<br>
+                                * 첨부용량은 10MB이하만 가능 
+                                </li> 
+                                <li>3. 임시저장, 신청서 제출 구분하여 클릭, 임시정장은 수정가능, 신청서 제출 클릭 후에는 수정 불가능  </li> 
+                      		</ul>
+                        </li>			
+                    </ul>
+                                       
+				</div>
+                
+				<div class="step_box" id="step05">
+					<h2 class="tit_type02">
+						<span class="num">05</span>
+						신청내역 확인
+					</h2>
+					<p class="img_area">
+						<img src="../images/content/img_use_04.png" alt="" class="pc">
+						<img src="../images/mobile/img_use_04_mo.png" alt="" class="mo">
+					</p>
+                    <p class="txt2">신청내역 확인 </p>
+                    <ul class="txt_num5">
+                        <li><span class="num2">①</span>대관신청한 내역을 확인합니다.</li>
+                        <li><span class="num2">②</span>신청상태에서 <span class="txt_orange">미확인</span>(담당자가 접수하지 않음, 자료수정가능), <span class="txt_orange">접수</span>(담당자가 확인하여 
+                        접수 및 심사대기 상태, 자료수정은 담당자에게 문의), <span class="txt_orange">심사완료</span> 승인/미승인(심사를 통한 승인/미승인 상태)등으로 구분합니다.</li>		
+                        <li><span class="num2">③</span>대관신청한 내역을 최종 확인합니다.</li>			
+                    </ul>
+				</div>                    
+                
+				<div class="step_box short" id="step06">
+					<h2 class="tit_type02">
+						<span class="num">06</span>
+						올림픽공원 대관 절차
+					</h2>
+				</div>           
+                <div class="step_block">	
+                    <div class="progui_box">	
+                        <ul class="progui_list">
+                        	<li >
+                                <strong>1단계 <p class="txt">온라인 대관신청</p> </strong>
+                            </li>
+                            <li >
+                                <strong>2단계 <p class="txt">대관승인</p> </strong>
+                            </li>
+                            <li>
+                                <strong>3단계 <p class="txt">계약금 납부</p> </strong>
+                            </li>
+                            <li>
+                                <strong>4단계 <p class="txt">대관 계약체결</p> </strong>
+                            </li>
+                            <li>
+                                <strong>5단계 <p class="txt">잔금납부</p> </strong>
+                            </li>		
+                            <li>
+                                <strong>6단계 <p class="txt">행사종료/정산</p> </strong>
+                            </li>
+    
+                        </ul>
+                    </div>			
+                </div>                                      
+				
+				<!-- //컨텐츠-->
+                
+               
+		  </form>
+			<!-- page top -->
+			<a href="#none" class="page_top">TOP</a>
+			<!-- //page top -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+
+	<!-- top button -->
+	<div id="quick">
+		<a href="#wrap" class="page_top">TOP</a>
+	</div>
+	<!-- //top button -->
+
+	<!-- footer -->
+	<div id="footer">
+				<div class="footer_top">
+			<div class="inner">
+				<ul class="foot_menu">
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/privacy.do" target="_blank" title="새창">개인정보처리방침</a></li>
+					<li><a href="http://www.ksponco.or.kr/jsp/homepage/contents/member/provision.do" target="_blank" title="새창">이용약관</a></li>
+					<li><a href="sub/GUI-02-10.html" target="_blank" title="새창">대관이용안내</a></li>
+				</ul>
+				<div class="family_site">
+					<div class="con_site">
+						<a href="#none" class="tit_site">패밀리사이트</a>
+						<ul class="list_site">
+							<li><a href="http://www.ksponco.or.kr/" target="_blank" title="새창">한국체육산업개발㈜</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a2" target="_blank" title="새창">올림픽공원스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a3" target="_blank" title="새창">올림픽수영장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=b1" target="_blank" title="새창">올림픽테니스장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a4" target="_blank" title="새창">올팍축구장</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a5" target="_blank" title="새창">분당올림픽스포츠센터</a></li>
+							<li><a href="http://sports.ksponco.or.kr/index.es?sid=a6" target="_blank" title="새창">일산올림픽스포츠센터</a></li>
+							<li><a href="http://edu.ksponco.or.kr/?sid=a7" target="_blank" title="새창">올림픽홀 평생교육원</a></li>
+							<li><a href="https://culture.ksponco.or.kr/index.do" target="_blank" title="새창">대관예약시스템</a></li>
+						</ul>
+					</div>
+					<div class="con_site">
+						<a href="#none" class="tit_site">관련사이트</a>
+						<ul class="list_site">
+							<li><a href="https://www.kspo.or.kr/kspo/main/main.do" target="_blank" title="새창">국민체육진흥공단</a></li>
+							<li><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank" title="새창">문화체육관광부</a></li>
+							<li><a href="http://www.krace.or.kr/contents/main/index.do" target="_blank" title="새창">경륜경정사업본부</a></li>
+							<li><a href="http://www.kcycle.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KCYCLE 경륜</a></li>
+							<li><a href="http://www.kboat.or.kr/contents/main/mainPage.do" target="_blank" title="새창">KBOAT 경정</a></li>
+							<li><a href="https://www.parktel.co.kr/" target="_blank" title="새창">서울올림픽파크텔</a></li>
+							<li><a href="https://www.sports.re.kr/front/main/main.do?menu_seq=0" target="_blank" title="새창">한국스포츠정책과학원</a></li>
+							<li><a href="https://88olympic.kspo.or.kr/homepage/korean/contents/index.asp" target="_blank" title="새창">서울올림픽기념관</a></li>
+							<li><a href="https://soma.kspo.or.kr/main" target="_blank" title="새창">소마미술관</a></li>
+							<li><a href="http://olympicpark.kspo.or.kr/" target="_blank" title="새창">올림픽공원</a></li>
+							<li><a href="http://www.nfc.or.kr/" target="_blank" title="새창">국민체력센터</a></li>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창">국민권익위원회</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="inner">
+				<a href="#" class="logo"></a>
+				<div class="info">
+					<address>
+						서울시 송파구 올림픽로 424 올림픽역도경기장내 (05540)
+					</address>
+					<p>
+					    <ul class="company">	
+							<li>사업자등록번호 : 215-81-12034</li>
+							<li>대표자 : 김사엽 </li>
+							<li>고객안내전화 : 02-2180-3564 </li>
+							<li>팩스 : 0000-0000 </li>
+						</ul>	
+					</p>
+					<p class="copyright">COPYRIGHT 2020 © KSPO&amp;CO. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+</div>
+</body>
+</html>
